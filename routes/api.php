@@ -22,3 +22,6 @@ Route::get('/', function() {
 
 Route::apiResource('users', UserController::class);
 Route::apiResource('roles', RoleController::class);
+
+
+// Content-Security-Policy "default-src 'self' http://www.just4bettors.mobi; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' http://placehold.it https://ssl.google-analytics.com https://s-static.ak.facebook.com https://assets.zendesk.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com  https://themes.googleusercontent.com https://assets.zendesk.com; font-src 'self' https://themes.googleusercontent.com https://fonts.gstatic.com; frame-src 'self'; object-src 'none'; connect-src http://just4bettors.mobi http://just4bettors.mobi:1337 http://www.just4bettors.mobi http://www.desktop.just4bettors.mobi;";
