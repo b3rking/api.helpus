@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('fullname', 250);
             $table->string('username', 20);
             $table->string('avatar')->nullable();
-            $table->integer('number');
+            $table->integer('number')->nullable();
             $table->integer('role_id')->default(2); // 1 => admin, 2 => donators!
             $table->string('adress', 250)->nullable();
             $table->string('password');

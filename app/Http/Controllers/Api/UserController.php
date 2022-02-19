@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Resources\User as UserResource;
+use Illuminate\Http\Client\Request as ClientRequest;
+use Illuminate\Http\Response;
 
 class UserController extends Controller
 {
@@ -14,9 +16,12 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return UserResource::collection(User::orderBy('created_at', 'desc')->paginate(3));
+        return Response([
+            'status' => 'ok',
+            'response' => UserResource::collection(User::orderBy('created_at', 'desc')->paginate(3))]
+        , 200);
     }
 
     /**
@@ -32,6 +37,15 @@ class UserController extends Controller
             'username' => 'required',
             'password' => 'required'
         ]);
+
+        User::create($request->all());
+
+        return Response([
+            'status' => 'ok',
+            'response' => [
+                'message' => 'successfuly created the account'
+            ]
+        ], 201);
     }
 
     /**
@@ -42,7 +56,10 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        return Response([
+            'status' => 'ok',
+            'response' => new UserResource($user)
+        ], 200);
     }
 
     /**
@@ -54,7 +71,20 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $request->validate([
+            'fullname' => 'required',
+            'username' => 'required',
+            'password' => 'required'
+        ]);
+
+        $user->update($request->all());
+
+        return Response([
+            'status' => 'ok',
+            'response' => [
+                'message' => 'successfuly updated the account'
+            ]
+        ], 201);
     }
 
     /**
@@ -65,6 +95,13 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        $user->delete();
+        
+        return Response([
+            'status' => 'ok',
+            'response' => [
+                'message' => 'successfuly deleted the account'
+            ]
+        ], 201);
     }
 }
