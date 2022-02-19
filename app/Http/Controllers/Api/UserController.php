@@ -16,7 +16,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return new UserResource(User::findOrFail(1));
+        return UserResource::collection(User::orderBy('created_at', 'desc')->paginate(3));
     }
 
     /**
@@ -27,7 +27,11 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'fullname' => 'required',
+            'username' => 'required',
+            'password' => 'required'
+        ]);
     }
 
     /**

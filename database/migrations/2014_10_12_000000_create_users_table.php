@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('username', 20);
             $table->string('avatar')->nullable();
             $table->integer('number');
-            $table->integer('role_id');
+            $table->integer('role_id')->default(2); // 1 => admin, 2 => donators!
             $table->string('adress', 250)->nullable();
             $table->string('password');
             $table->rememberToken();
