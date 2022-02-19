@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Resources\User as UserResource;
 
 class UserController extends Controller
 {
@@ -15,7 +16,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return User::all();
+        return new UserResource(User::findOrFail(1));
     }
 
     /**
