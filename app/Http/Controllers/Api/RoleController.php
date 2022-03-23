@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\RoleResource;
 use App\Models\Role;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class RoleController extends Controller
 {
@@ -15,7 +17,10 @@ class RoleController extends Controller
      */
     public function index()
     {
-        //
+        return Response([
+            'status' => 'ok',
+            'response' => RoleResource::collection(Role::orderBy('created_at', 'desc')->paginate(3))]
+        , 200);
     }
 
     /**
@@ -26,7 +31,18 @@ class RoleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required'
+        ]);
+
+        Role::create($request->all());
+
+        return Response([
+            'status' => 'ok',
+            'response' => [
+                'message' => 'role created successfuly'
+            ]
+        ]);
     }
 
     /**
@@ -37,7 +53,10 @@ class RoleController extends Controller
      */
     public function show(Role $role)
     {
-        //
+        return Response([
+            'status' => 'ok',
+            'response' => new RoleResource($role)
+        ]);
     }
 
     /**
@@ -49,7 +68,18 @@ class RoleController extends Controller
      */
     public function update(Request $request, Role $role)
     {
-        //
+        $request->validate([
+            'name' => 'required'
+        ]);
+
+        $role->update($request->all());
+
+        return Response([
+            'status' => 'ok',
+            'response' => [
+                'message' => 'role updated successfuly'
+            ]
+        ]);
     }
 
     /**
@@ -60,6 +90,13 @@ class RoleController extends Controller
      */
     public function destroy(Role $role)
     {
-        //
+        $role->delete();
+
+        return Response([
+            'status' => 'ok',
+            'response' => [
+                'message' => 'role deleted'
+            ]
+        ]);
     }
 }
