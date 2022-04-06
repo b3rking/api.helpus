@@ -6,8 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Resources\User as UserResource;
-use Illuminate\Http\Client\Request as ClientRequest;
-use Illuminate\Http\Response;
 
 class UserController extends Controller
 {
