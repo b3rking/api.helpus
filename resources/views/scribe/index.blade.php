@@ -192,18 +192,18 @@ fetch(url, {
 <code class="language-json">{
     &quot;data&quot;: [
         {
-            &quot;name&quot;: &quot;Segmental Paver&quot;,
-            &quot;user_id&quot;: 3,
-            &quot;updated_at&quot;: &quot;2022-04-07T13:33:14.000000Z&quot;,
-            &quot;created_at&quot;: &quot;2022-04-07T13:33:14.000000Z&quot;,
-            &quot;id&quot;: 15
+            &quot;name&quot;: &quot;Forest Fire Fighter&quot;,
+            &quot;user_id&quot;: 5,
+            &quot;updated_at&quot;: &quot;2022-04-07T13:44:11.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-04-07T13:44:11.000000Z&quot;,
+            &quot;id&quot;: 18
         },
         {
-            &quot;name&quot;: &quot;Welder-Fitter&quot;,
-            &quot;user_id&quot;: 1,
-            &quot;updated_at&quot;: &quot;2022-04-07T13:33:14.000000Z&quot;,
-            &quot;created_at&quot;: &quot;2022-04-07T13:33:14.000000Z&quot;,
-            &quot;id&quot;: 16
+            &quot;name&quot;: &quot;Illustrator&quot;,
+            &quot;user_id&quot;: 7,
+            &quot;updated_at&quot;: &quot;2022-04-07T13:44:11.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-04-07T13:44:11.000000Z&quot;,
+            &quot;id&quot;: 19
         }
     ]
 }</code>
@@ -276,8 +276,8 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"deserunt\",
-    \"user_id\": 9
+    \"name\": \"repellendus\",
+    \"user_id\": 18
 }"
 </code></pre></div>
 
@@ -293,8 +293,8 @@ const headers = {
 };
 
 let body = {
-    "name": "deserunt",
-    "user_id": 9
+    "name": "repellendus",
+    "user_id": 18
 };
 
 fetch(url, {
@@ -370,7 +370,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-roles"
-               value="deserunt"
+               value="repellendus"
                data-component="body" hidden>
     <br>
 <p>the name of the role</p>
@@ -380,7 +380,7 @@ fetch(url, {
                 <input type="number"
                name="user_id"
                data-endpoint="POSTapi-roles"
-               value="9"
+               value="18"
                data-component="body" hidden>
     <br>
 <p>the id of the user who created the new role</p>
@@ -401,14 +401,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "helpus.test/api/roles/12" \
+    --get "helpus.test/api/roles/8" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/roles/12"
+    "helpus.test/api/roles/8"
 );
 
 const headers = {
@@ -431,11 +431,11 @@ fetch(url, {
 
 <code class="language-json">{
     &quot;data&quot;: {
-        &quot;name&quot;: &quot;Range Manager&quot;,
-        &quot;user_id&quot;: 6,
-        &quot;updated_at&quot;: &quot;2022-04-07T13:33:14.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2022-04-07T13:33:14.000000Z&quot;,
-        &quot;id&quot;: 17
+        &quot;name&quot;: &quot;Home Economics Teacher&quot;,
+        &quot;user_id&quot;: 5,
+        &quot;updated_at&quot;: &quot;2022-04-07T13:44:11.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-04-07T13:44:11.000000Z&quot;,
+        &quot;id&quot;: 20
     }
 }</code>
  </pre>
@@ -493,7 +493,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="GETapi-roles--id-"
-               value="12"
+               value="8"
                data-component="url" hidden>
     <br>
 <p>id of the role</p>
@@ -514,19 +514,19 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "helpus.test/api/roles/2" \
+    "helpus.test/api/roles/3" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"aut\",
-    \"user_id\": 14
+    \"name\": \"laudantium\",
+    \"user_id\": 3
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/roles/2"
+    "helpus.test/api/roles/3"
 );
 
 const headers = {
@@ -535,8 +535,8 @@ const headers = {
 };
 
 let body = {
-    "name": "aut",
-    "user_id": 14
+    "name": "laudantium",
+    "user_id": 3
 };
 
 fetch(url, {
@@ -616,7 +616,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-roles--id-"
-               value="2"
+               value="3"
                data-component="url" hidden>
     <br>
 <p>id of the role</p>
@@ -627,7 +627,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="PUTapi-roles--id-"
-               value="aut"
+               value="laudantium"
                data-component="body" hidden>
     <br>
 <p>the name of the role</p>
@@ -637,7 +637,7 @@ fetch(url, {
                 <input type="number"
                name="user_id"
                data-endpoint="PUTapi-roles--id-"
-               value="14"
+               value="3"
                data-component="body" hidden>
     <br>
 <p>the id of the user who created the new role</p>
@@ -658,14 +658,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "helpus.test/api/roles/20" \
+    "helpus.test/api/roles/3" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/roles/20"
+    "helpus.test/api/roles/3"
 );
 
 const headers = {
@@ -745,7 +745,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-roles--id-"
-               value="20"
+               value="3"
                data-component="url" hidden>
     <br>
 <p>id of the role to delete</p>
@@ -803,22 +803,22 @@ fetch(url, {
 <code class="language-json">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 64,
-            &quot;fullname&quot;: &quot;Shanie Runolfsson&quot;,
-            &quot;username&quot;: &quot;Regan&quot;,
+            &quot;id&quot;: 67,
+            &quot;fullname&quot;: &quot;Gerda Bosco&quot;,
+            &quot;username&quot;: &quot;Hunter&quot;,
             &quot;role&quot;: &quot;Immigration Inspector OR Customs Inspector&quot;,
-            &quot;adress&quot;: &quot;71112 Onie Drive\nFunkport, MN 06645-2511&quot;,
-            &quot;number&quot;: 69208192,
-            &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/0099ee?text=+consequatur&quot;
+            &quot;adress&quot;: &quot;8549 Graciela Mountain\nPfefferland, ND 19773&quot;,
+            &quot;number&quot;: 74503928,
+            &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/00ee11?text=+ducimus&quot;
         },
         {
-            &quot;id&quot;: 65,
-            &quot;fullname&quot;: &quot;Annabelle Lemke&quot;,
-            &quot;username&quot;: &quot;Clair&quot;,
-            &quot;role&quot;: &quot;Immigration Inspector OR Customs Inspector&quot;,
-            &quot;adress&quot;: &quot;7494 Hand Ford\nCordiahaven, NY 30987&quot;,
-            &quot;number&quot;: 71213361,
-            &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/00aacc?text=+doloremque&quot;
+            &quot;id&quot;: 68,
+            &quot;fullname&quot;: &quot;Jayme Herman&quot;,
+            &quot;username&quot;: &quot;Estevan&quot;,
+            &quot;role&quot;: &quot;admin&quot;,
+            &quot;adress&quot;: &quot;7549 Colleen Wells\nBruenfurt, VT 50724&quot;,
+            &quot;number&quot;: 75723508,
+            &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/00ccaa?text=+magni&quot;
         }
     ]
 }</code>
@@ -892,13 +892,13 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"fullname\": \"eos\",
-    \"username\": \"perferendis\",
-    \"role_id\": 17,
-    \"password\": \"atque\",
-    \"adress\": \"nemo\",
-    \"number\": \"possimus\",
-    \"avatar\": \"impedit\"
+    \"fullname\": \"esse\",
+    \"username\": \"delectus\",
+    \"role_id\": 7,
+    \"password\": \"numquam\",
+    \"adress\": \"cum\",
+    \"number\": 3,
+    \"avatar\": \"aut\"
 }"
 </code></pre></div>
 
@@ -914,13 +914,13 @@ const headers = {
 };
 
 let body = {
-    "fullname": "eos",
-    "username": "perferendis",
-    "role_id": 17,
-    "password": "atque",
-    "adress": "nemo",
-    "number": "possimus",
-    "avatar": "impedit"
+    "fullname": "esse",
+    "username": "delectus",
+    "role_id": 7,
+    "password": "numquam",
+    "adress": "cum",
+    "number": 3,
+    "avatar": "aut"
 };
 
 fetch(url, {
@@ -998,7 +998,7 @@ fetch(url, {
                 <input type="text"
                name="fullname"
                data-endpoint="POSTapi-users"
-               value="eos"
+               value="esse"
                data-component="body" hidden>
     <br>
 <p>this user fullname</p>
@@ -1008,7 +1008,7 @@ fetch(url, {
                 <input type="text"
                name="username"
                data-endpoint="POSTapi-users"
-               value="perferendis"
+               value="delectus"
                data-component="body" hidden>
     <br>
 <p>this user username</p>
@@ -1018,7 +1018,7 @@ fetch(url, {
                 <input type="number"
                name="role_id"
                data-endpoint="POSTapi-users"
-               value="17"
+               value="7"
                data-component="body" hidden>
     <br>
 <p>this user role in the system</p>
@@ -1028,40 +1028,40 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-users"
-               value="atque"
+               value="numquam"
                data-component="body" hidden>
     <br>
 <p>this user role in the system</p>
         </p>
                 <p>
-            <b><code>adress</code></b>&nbsp;&nbsp;<small>this</small>     <i>optional</i> &nbsp;
+            <b><code>adress</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
                 <input type="text"
                name="adress"
                data-endpoint="POSTapi-users"
-               value="nemo"
+               value="cum"
                data-component="body" hidden>
     <br>
-<p>user adress</p>
+<p>this user adress</p>
         </p>
                 <p>
-            <b><code>number</code></b>&nbsp;&nbsp;<small>this</small>     <i>optional</i> &nbsp;
-                <input type="text"
+            <b><code>number</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
                name="number"
                data-endpoint="POSTapi-users"
-               value="possimus"
+               value="3"
                data-component="body" hidden>
     <br>
-<p>user mobile number</p>
+<p>this user mobile number</p>
         </p>
                 <p>
-            <b><code>avatar</code></b>&nbsp;&nbsp;<small>this</small>     <i>optional</i> &nbsp;
+            <b><code>avatar</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
                 <input type="text"
                name="avatar"
                data-endpoint="POSTapi-users"
-               value="impedit"
+               value="aut"
                data-component="body" hidden>
     <br>
-<p>user avatar link</p>
+<p>this user avatar link</p>
         </p>
         </form>
 
@@ -1079,14 +1079,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "helpus.test/api/users/11" \
+    --get "helpus.test/api/users/19" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/users/11"
+    "helpus.test/api/users/19"
 );
 
 const headers = {
@@ -1109,13 +1109,13 @@ fetch(url, {
 
 <code class="language-json">{
     &quot;data&quot;: {
-        &quot;id&quot;: 66,
-        &quot;fullname&quot;: &quot;Annie Okuneva I&quot;,
-        &quot;username&quot;: &quot;Lawson&quot;,
-        &quot;role&quot;: &quot;Immigration Inspector OR Customs Inspector&quot;,
-        &quot;adress&quot;: &quot;6223 Nitzsche Meadow Suite 200\nSibylmouth, UT 87625&quot;,
-        &quot;number&quot;: 72515959,
-        &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/00aa33?text=+cumque&quot;
+        &quot;id&quot;: 69,
+        &quot;fullname&quot;: &quot;Prof. Julien Simonis&quot;,
+        &quot;username&quot;: &quot;Rogers&quot;,
+        &quot;role&quot;: &quot;admin&quot;,
+        &quot;adress&quot;: &quot;460 Homenick Causeway Apt. 774\nWest Alexandermouth, OR 39918&quot;,
+        &quot;number&quot;: 74541678,
+        &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/00cc22?text=+neque&quot;
     }
 }</code>
  </pre>
@@ -1173,7 +1173,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="GETapi-users--id-"
-               value="11"
+               value="19"
                data-component="url" hidden>
     <br>
 <p>id of the user</p>
@@ -1194,24 +1194,24 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "helpus.test/api/users/4" \
+    "helpus.test/api/users/20" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"fullname\": \"quibusdam\",
-    \"username\": \"consequuntur\",
-    \"role_id\": 20,
-    \"password\": \"neque\",
-    \"adress\": \"sunt\",
-    \"number\": \"dolore\",
-    \"avatar\": \"culpa\"
+    \"fullname\": \"cupiditate\",
+    \"username\": \"molestiae\",
+    \"role_id\": 11,
+    \"password\": \"voluptatem\",
+    \"adress\": \"dolorum\",
+    \"number\": 12,
+    \"avatar\": \"ducimus\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/users/4"
+    "helpus.test/api/users/20"
 );
 
 const headers = {
@@ -1220,13 +1220,13 @@ const headers = {
 };
 
 let body = {
-    "fullname": "quibusdam",
-    "username": "consequuntur",
-    "role_id": 20,
-    "password": "neque",
-    "adress": "sunt",
-    "number": "dolore",
-    "avatar": "culpa"
+    "fullname": "cupiditate",
+    "username": "molestiae",
+    "role_id": 11,
+    "password": "voluptatem",
+    "adress": "dolorum",
+    "number": 12,
+    "avatar": "ducimus"
 };
 
 fetch(url, {
@@ -1308,7 +1308,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-users--id-"
-               value="4"
+               value="20"
                data-component="url" hidden>
     <br>
 <p>id of the user to update</p>
@@ -1319,7 +1319,7 @@ fetch(url, {
                 <input type="text"
                name="fullname"
                data-endpoint="PUTapi-users--id-"
-               value="quibusdam"
+               value="cupiditate"
                data-component="body" hidden>
     <br>
 <p>this user fullname</p>
@@ -1329,7 +1329,7 @@ fetch(url, {
                 <input type="text"
                name="username"
                data-endpoint="PUTapi-users--id-"
-               value="consequuntur"
+               value="molestiae"
                data-component="body" hidden>
     <br>
 <p>this user username</p>
@@ -1339,7 +1339,7 @@ fetch(url, {
                 <input type="number"
                name="role_id"
                data-endpoint="PUTapi-users--id-"
-               value="20"
+               value="11"
                data-component="body" hidden>
     <br>
 <p>this user role in the system</p>
@@ -1349,40 +1349,40 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="PUTapi-users--id-"
-               value="neque"
+               value="voluptatem"
                data-component="body" hidden>
     <br>
 <p>this user role in the system</p>
         </p>
                 <p>
-            <b><code>adress</code></b>&nbsp;&nbsp;<small>this</small>     <i>optional</i> &nbsp;
+            <b><code>adress</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
                 <input type="text"
                name="adress"
                data-endpoint="PUTapi-users--id-"
-               value="sunt"
+               value="dolorum"
                data-component="body" hidden>
     <br>
-<p>user adress</p>
+<p>this user adress</p>
         </p>
                 <p>
-            <b><code>number</code></b>&nbsp;&nbsp;<small>this</small>     <i>optional</i> &nbsp;
-                <input type="text"
+            <b><code>number</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
                name="number"
                data-endpoint="PUTapi-users--id-"
-               value="dolore"
+               value="12"
                data-component="body" hidden>
     <br>
-<p>user mobile number</p>
+<p>this user mobile number</p>
         </p>
                 <p>
-            <b><code>avatar</code></b>&nbsp;&nbsp;<small>this</small>     <i>optional</i> &nbsp;
+            <b><code>avatar</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
                 <input type="text"
                name="avatar"
                data-endpoint="PUTapi-users--id-"
-               value="culpa"
+               value="ducimus"
                data-component="body" hidden>
     <br>
-<p>user avatar link</p>
+<p>this user avatar link</p>
         </p>
         </form>
 
@@ -1400,14 +1400,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "helpus.test/api/users/14" \
+    "helpus.test/api/users/18" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/users/14"
+    "helpus.test/api/users/18"
 );
 
 const headers = {
@@ -1489,7 +1489,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-users--id-"
-               value="14"
+               value="18"
                data-component="url" hidden>
     <br>
 <p>id of the user to delete</p>

@@ -45,11 +45,11 @@ class UserController extends Controller
      * 
      * @bodyParam fullname string required this user fullname
      * @bodyParam username string required this user username
-     * @bodyParam role_id int this user role in the system
+     * @bodyParam role_id integer this user role in the system
      * @bodyParam password string required this user role in the system
-     * @bodyParam adress this user adress
-     * @bodyParam number this user mobile number
-     * @bodyParam avatar this user avatar link
+     * @bodyParam adress string this user adress
+     * @bodyParam number integer this user mobile number
+     * @bodyParam avatar string this user avatar link
      * 
      * @response 201 {
             'status' => 'ok',
@@ -83,7 +83,7 @@ class UserController extends Controller
      * 
      * endpoint which returns the data of the specified with all his data.
      * 
-     * @urlParam id int required id of the user
+     * @urlParam id integer required id of the user
      * 
      * @apiResource App\Http\Resources\User
      * @apiResourceModel App\Models\User
@@ -108,11 +108,11 @@ class UserController extends Controller
      * 
      * @bodyParam fullname string required this user fullname
      * @bodyParam username string required this user username
-     * @bodyParam role_id int this user role in the system
+     * @bodyParam role_id integer this user role in the system
      * @bodyParam password string required this user role in the system
-     * @bodyParam adress this user adress
-     * @bodyParam number this user mobile number
-     * @bodyParam avatar this user avatar link
+     * @bodyParam adress string this user adress
+     * @bodyParam number integer this user mobile number
+     * @bodyParam avatar string this user avatar link
      * 
      * @response 201 {
             'status' => 'ok',
@@ -155,7 +155,7 @@ class UserController extends Controller
             ]
             }
      *
-     * @urlParam id int required id of the user to delete
+     * @urlParam id integer required id of the user to delete
      * 
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response

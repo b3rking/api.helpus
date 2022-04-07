@@ -43,7 +43,7 @@ class RoleController extends Controller
      * endpoint to store new role in database
      * 
      * @bodyParam name string required the name of the role
-     * @bodyParam user_id int required the id of the user who created the new role
+     * @bodyParam user_id integer required the id of the user who created the new role
      * 
      * @response 201 {'status' => 'ok',
             'data' => [
@@ -75,7 +75,7 @@ class RoleController extends Controller
      * 
      * give the details of one role
      * 
-     * @urlParam id int required id of the role
+     * @urlParam id integer required id of the role
      * 
      * @apiResource App\Http\Resources\RoleResource
      * @apiResourceModel App\Models\Role
@@ -98,10 +98,10 @@ class RoleController extends Controller
      * 
      * endpoint to update a role with given id
      * 
-     * @urlParam id int required id of the role
+     * @urlParam id integer required id of the role
      * 
      * @bodyParam name string required the name of the role
-     * @bodyParam user_id int required the id of the user who created the new role
+     * @bodyParam user_id integer required the id of the user who created the new role
      * 
      * @response 201 {'status' => 'ok',
             'response' => [
@@ -133,7 +133,7 @@ class RoleController extends Controller
      * 
      * endpoint to delete a role from the system
      * 
-     * @urlParam id int required id of the role to delete
+     * @urlParam id integer required id of the role to delete
      * 
      * @response 200 {'status' => 'ok',
             'response' => [
