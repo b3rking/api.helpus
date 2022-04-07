@@ -1,6 +1,6 @@
 # Introduction
 
-
+official docs of the helpus api includes the whole website api
 
 This documentation aims to provide all the information you need to work with our API.
 

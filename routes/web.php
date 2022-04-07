@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/docs', function() {
+Route::get('api/docs', function() {
     return view('scribe.index');
 });

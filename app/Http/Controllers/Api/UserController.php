@@ -7,10 +7,24 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Resources\User as UserResource;
 
+/**
+ * 
+ * @group Users management endpoints
+ * 
+ * @authenticated
+ */
 class UserController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * 
+     * show all users
+     * 
+     * see all user with they info and everything relate to them
+     * this is not the handicap data it's only users data 
+     * like admins or simple user.
+     * 
+     * @apiResourceCollection App\Http\Resources\User
+     * @apiResourceModel App\Models\User
      *
      * @return \Illuminate\Http\Response
      */
@@ -18,13 +32,32 @@ class UserController extends Controller
     {
         return Response([
             'status' => 'ok',
-            'response' => UserResource::collection(User::orderBy('created_at', 'desc')->paginate(3))]
-        , 200);
+            'data' => UserResource::collection(User::orderBy('created_at', 'desc')->paginate(3))]
+        , 200, ['Content-type' => 'application/json']);
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a new user
+     * 
+     * this endpoint store a new user based on the data passed in the request
+     * <aside class="notice">make sure to pass all the the required data</aside>
      *
+     * 
+     * @bodyParam fullname string required this user fullname
+     * @bodyParam username string required this user username
+     * @bodyParam role_id int this user role in the system
+     * @bodyParam password string required this user role in the system
+     * @bodyParam adress this user adress
+     * @bodyParam number this user mobile number
+     * @bodyParam avatar this user avatar link
+     * 
+     * @response 201 {
+            'status' => 'ok',
+            'data' => [
+                'message' => 'successfuly created the account'
+            ]
+     *   }
+     * 
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
@@ -40,14 +73,20 @@ class UserController extends Controller
 
         return Response([
             'status' => 'ok',
-            'response' => [
+            'data' => [
                 'message' => 'successfuly created the account'
-            ]
-        ], 201);
+            ]], 201);
     }
 
     /**
-     * Display the specified resource.
+     * show one user
+     * 
+     * endpoint which returns the data of the specified with all his data.
+     * 
+     * @urlParam id int required id of the user
+     * 
+     * @apiResource App\Http\Resources\User
+     * @apiResourceModel App\Models\User
      *
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
@@ -56,12 +95,31 @@ class UserController extends Controller
     {
         return Response([
             'status' => 'ok',
-            'response' => new UserResource($user)
+            'data' => new UserResource($user)
         ], 200);
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update a user.
+     * 
+     * endpoint to update one user 
+     * 
+     * @urlParam id int required id of the user to update
+     * 
+     * @bodyParam fullname string required this user fullname
+     * @bodyParam username string required this user username
+     * @bodyParam role_id int this user role in the system
+     * @bodyParam password string required this user role in the system
+     * @bodyParam adress this user adress
+     * @bodyParam number this user mobile number
+     * @bodyParam avatar this user avatar link
+     * 
+     * @response 201 {
+            'status' => 'ok',
+            'response' => [
+                'message' => 'successfuly updated the account'
+            ]
+     *   }
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\User  $user
@@ -86,8 +144,19 @@ class UserController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified user
+     * 
+     * endpoint to remove the user with given id
+     * 
+     * @response {
+            'status' => 'ok',
+            'response' => [
+                'message' => 'successfuly deleted the account'
+            ]
+            }
      *
+     * @urlParam id int required id of the user to delete
+     * 
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
