@@ -24,7 +24,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":49,"fullname":"Otha Smith","username":"Jonathan","role":"Immigration Inspector OR Customs Inspector","adress":"163 Brandi Hollow Suite 530\nLake Howard, WA 81508","number":73264653,"avatar":"https:\/\/via.placeholder.com\/640x480.png\/00ff00?text=+quisquam"},{"id":50,"fullname":"Sylvan Grady","username":"Joel","role":"admin","adress":"3948 Katharina Trafficway\nJodyberg, DE 68127-0279","number":75618242,"avatar":"https:\/\/via.placeholder.com\/640x480.png\/007788?text=+velit"}]}'
+        content: '{"data":[{"id":64,"fullname":"Shanie Runolfsson","username":"Regan","role":"Immigration Inspector OR Customs Inspector","adress":"71112 Onie Drive\nFunkport, MN 06645-2511","number":69208192,"avatar":"https:\/\/via.placeholder.com\/640x480.png\/0099ee?text=+consequatur"},{"id":65,"fullname":"Annabelle Lemke","username":"Clair","role":"Immigration Inspector OR Customs Inspector","adress":"7494 Hand Ford\nCordiahaven, NY 30987","number":71213361,"avatar":"https:\/\/via.placeholder.com\/640x480.png\/00aacc?text=+doloremque"}]}'
         headers: []
         description: null
     responseFields: []
@@ -49,49 +49,49 @@ endpoints:
         name: fullname
         description: 'this user fullname'
         required: true
-        example: earum
+        example: eos
         type: string
         custom: []
       username:
         name: username
         description: 'this user username'
         required: true
-        example: ipsam
+        example: perferendis
         type: string
         custom: []
       role_id:
         name: role_id
         description: 'this user role in the system'
         required: false
-        example: 10
+        example: 17
         type: integer
         custom: []
       password:
         name: password
         description: 'this user role in the system'
         required: true
-        example: rerum
+        example: atque
         type: string
         custom: []
       adress:
         name: adress
         description: 'user adress'
         required: false
-        example: perferendis
+        example: nemo
         type: this
         custom: []
       number:
         name: number
         description: 'user mobile number'
         required: false
-        example: ullam
+        example: possimus
         type: this
         custom: []
       avatar:
         name: avatar
         description: 'user avatar link'
         required: false
-        example: in
+        example: impedit
         type: this
         custom: []
     responses:
@@ -124,7 +124,7 @@ endpoints:
         name: id
         description: 'id of the user'
         required: true
-        example: 3
+        example: 11
         type: integer
         custom: []
     queryParameters: []
@@ -132,7 +132,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"id":51,"fullname":"Dr. Heath Watsica","username":"Leonel","role":"Immigration Inspector OR Customs Inspector","adress":"119 Chelsie Crossing\nOlsonborough, SD 86029","number":71213763,"avatar":"https:\/\/via.placeholder.com\/640x480.png\/00aaaa?text=+et"}}'
+        content: '{"data":{"id":66,"fullname":"Annie Okuneva I","username":"Lawson","role":"Immigration Inspector OR Customs Inspector","adress":"6223 Nitzsche Meadow Suite 200\nSibylmouth, UT 87625","number":72515959,"avatar":"https:\/\/via.placeholder.com\/640x480.png\/00aa33?text=+cumque"}}'
         headers: []
         description: null
     responseFields: []
@@ -154,7 +154,7 @@ endpoints:
         name: id
         description: 'id of the user to update'
         required: true
-        example: 10
+        example: 4
         type: integer
         custom: []
     queryParameters: []
@@ -163,49 +163,49 @@ endpoints:
         name: fullname
         description: 'this user fullname'
         required: true
-        example: omnis
+        example: quibusdam
         type: string
         custom: []
       username:
         name: username
         description: 'this user username'
         required: true
-        example: et
+        example: consequuntur
         type: string
         custom: []
       role_id:
         name: role_id
         description: 'this user role in the system'
         required: false
-        example: 11
+        example: 20
         type: integer
         custom: []
       password:
         name: password
         description: 'this user role in the system'
         required: true
-        example: ut
+        example: neque
         type: string
         custom: []
       adress:
         name: adress
         description: 'user adress'
         required: false
-        example: recusandae
+        example: sunt
         type: this
         custom: []
       number:
         name: number
         description: 'user mobile number'
         required: false
-        example: unde
+        example: dolore
         type: this
         custom: []
       avatar:
         name: avatar
         description: 'user avatar link'
         required: false
-        example: qui
+        example: culpa
         type: this
         custom: []
     responses:
@@ -214,7 +214,7 @@ endpoints:
         content: |-
           {
           'status' => 'ok',
-          'response' => [
+          'data' => [
           'message' => 'successfuly updated the account'
           ]
             }

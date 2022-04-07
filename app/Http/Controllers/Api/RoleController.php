@@ -6,12 +6,26 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\RoleResource;
 use App\Models\Role;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
+
+/**
+ * 
+ * @group Role management endpoints
+ * @authenticated
+ * 
+ * List of endpoints for managing roles
+ * 
+ */
 class RoleController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * 
+     * Show all roles
+     * 
+     * endpoint to show all the roles available in the system
+     * 
+     * @apiResourceCollection App\Http\Resources\RoleResource
+     * @apiResourceModel App\Models\Role
      *
      * @return \Illuminate\Http\Response
      */
@@ -19,12 +33,22 @@ class RoleController extends Controller
     {
         return Response([
             'status' => 'ok',
-            'response' => RoleResource::collection(Role::orderBy('created_at', 'desc')->paginate(3))]
+            'data' => RoleResource::collection(Role::orderBy('created_at', 'desc')->paginate(3))]
         , 200);
     }
 
     /**
-     * Store a newly created resource in storage.
+     * store new role
+     * 
+     * endpoint to store new role in database
+     * 
+     * @bodyParam name string required the name of the role
+     * @bodyParam user_id int required the id of the user who created the new role
+     * 
+     * @response 201 {'status' => 'ok',
+            'data' => [
+                'message' => 'role created successfuly'
+            ]}
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -39,14 +63,23 @@ class RoleController extends Controller
 
         return Response([
             'status' => 'ok',
-            'response' => [
+            'data' => [
                 'message' => 'role created successfuly'
             ]
         ]);
     }
 
     /**
-     * Display the specified resource.
+     * 
+     * show a role
+     * 
+     * give the details of one role
+     * 
+     * @urlParam id int required id of the role
+     * 
+     * @apiResource App\Http\Resources\RoleResource
+     * @apiResourceModel App\Models\Role
+     * 
      *
      * @param  \App\Models\Role  $role
      * @return \Illuminate\Http\Response
@@ -55,12 +88,25 @@ class RoleController extends Controller
     {
         return Response([
             'status' => 'ok',
-            'response' => new RoleResource($role)
+            'data' => new RoleResource($role)
         ]);
     }
 
     /**
-     * Update the specified resource in storage.
+     * 
+     * update a role
+     * 
+     * endpoint to update a role with given id
+     * 
+     * @urlParam id int required id of the role
+     * 
+     * @bodyParam name string required the name of the role
+     * @bodyParam user_id int required the id of the user who created the new role
+     * 
+     * @response 201 {'status' => 'ok',
+            'response' => [
+                'message' => 'role updated successfuly'
+            ]}
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Role  $role
@@ -83,7 +129,16 @@ class RoleController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove a role
+     * 
+     * endpoint to delete a role from the system
+     * 
+     * @urlParam id int required id of the role to delete
+     * 
+     * @response 200 {'status' => 'ok',
+            'response' => [
+                'message' => 'role deleted'
+            ]}
      *
      * @param  \App\Models\Role  $role
      * @return \Illuminate\Http\Response
