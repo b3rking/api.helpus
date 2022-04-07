@@ -116,7 +116,7 @@ class UserController extends Controller
      * 
      * @response 201 {
             'status' => 'ok',
-            'response' => [
+            'data' => [
                 'message' => 'successfuly updated the account'
             ]
      *   }
@@ -137,7 +137,7 @@ class UserController extends Controller
 
         return Response([
             'status' => 'ok',
-            'response' => [
+            'data' => [
                 'message' => 'successfuly updated the account'
             ]
         ], 201);
@@ -166,7 +166,7 @@ class UserController extends Controller
         
         return Response([
             'status' => 'ok',
-            'response' => [
+            'data' => [
                 'message' => 'successfuly deleted the account'
             ]
         ], 201);
