@@ -17,12 +17,12 @@ class CreateHandicapsTable extends Migration
             $table->id();
             $table->string('fullname');
             $table->string('adress');
-            $table->integer('mobile_number');
+            $table->string('mobile_number');
             $table->integer('year_of_birth');
             $table->integer('ecocash_number')->nullable();
             $table->integer('lumicash_number')->nullable();
             $table->string('bank_name')->nullable();
-            $table->integer('bank_account_number')->nullable();
+            $table->string('bank_account_number')->nullable();
             $table->longText('story');
             $table->integer('needed_money');
             $table->string('state_of_health');

@@ -1,13 +1,13 @@
-name: 'Role management endpoints'
+name: 'handicap management endpoints'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: api/roles
+    uri: api/handicap
     metadata:
-      title: 'Show all roles'
-      description: 'endpoint to show all the roles available in the system'
+      title: 'Show the list of all handicap'
+      description: 'showing a list of the handicap with all their info needed to recognize them in the system'
       authenticated: true
       custom: []
     headers:
@@ -19,17 +19,17 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"name":"Surveyor","user_id":4,"updated_at":"2022-04-21T15:40:23.000000Z","created_at":"2022-04-21T15:40:23.000000Z","id":12},{"name":"Coroner","user_id":4,"updated_at":"2022-04-21T15:40:23.000000Z","created_at":"2022-04-21T15:40:23.000000Z","id":13}]}'
+        content: '{"data":[{"fullname":"Earline O''Hara","adress":"315 Desiree Isle Apt. 437\nEast Emely, AR 80775","mobile_number":"+1-229-617-3456","year_of_birth":"1985","ecocash_number":110022211,"lumicash_number":110022211,"bank_name":"Marvin Crossing","bank_account_number":6165273,"story":"At provident quod ut. Aut blanditiis rerum non aut dolore illo et. Et in veritatis earum voluptas repudiandae rem qui dolor. Quo perferendis sed corporis labore autem debitis.","needed_money":4151506,"state_of_health":"bad","image_id":3,"donation_status":"en cours","user_id":7,"family_situation":"orphelins","updated_at":"2022-04-21T16:53:02.000000Z","created_at":"2022-04-21T16:53:02.000000Z","id":16},{"fullname":"Elton Crona","adress":"81706 Kuhn Key Apt. 304\nLake Elveraland, MS 13234","mobile_number":"+1-541-320-1733","year_of_birth":"2010","ecocash_number":110022211,"lumicash_number":110022211,"bank_name":"Kunde Rapids","bank_account_number":6047188,"story":"Sequi maxime officiis mollitia consequuntur odit quas adipisci. Aut libero voluptas sed consequuntur aut ut. Natus quo quia sapiente aut qui. Corporis ipsum omnis voluptates consequuntur fuga.","needed_money":1761729,"state_of_health":"bad","image_id":6,"donation_status":"en cours","user_id":9,"family_situation":"orphelins","updated_at":"2022-04-21T16:53:02.000000Z","created_at":"2022-04-21T16:53:02.000000Z","id":17}]}'
         headers: []
         description: null
     responseFields: []
   -
     httpMethods:
       - POST
-    uri: api/roles
+    uri: api/handicap
     metadata:
-      title: 'store new role'
-      description: 'endpoint to store new role in database'
+      title: 'Store a newly created resource in storage.'
+      description: ''
       authenticated: true
       custom: []
     headers:
@@ -37,39 +37,16 @@ endpoints:
       Accept: application/json
     urlParameters: []
     queryParameters: []
-    bodyParameters:
-      name:
-        name: name
-        description: 'the name of the role'
-        required: true
-        example: placeat
-        type: string
-        custom: []
-      user_id:
-        name: user_id
-        description: 'the id of the user who created the new role'
-        required: true
-        example: 20
-        type: integer
-        custom: []
-    responses:
-      -
-        status: 201
-        content: |-
-          {'status' => 'ok',
-          'data' => [
-          'message' => 'role created successfuly'
-          ]}
-        headers: []
-        description: '201'
+    bodyParameters: []
+    responses: []
     responseFields: []
   -
     httpMethods:
       - GET
-    uri: 'api/roles/{id}'
+    uri: 'api/handicap/{id}'
     metadata:
-      title: 'show a role'
-      description: 'give the details of one role'
+      title: 'Display the specified resource.'
+      description: ''
       authenticated: true
       custom: []
     headers:
@@ -78,28 +55,381 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'id of the role'
+        description: 'The ID of the handicap.'
         required: true
-        example: 9
+        example: 1
         type: integer
         custom: []
     queryParameters: []
     bodyParameters: []
     responses:
       -
-        status: 200
-        content: '{"data":{"name":"Glazier","user_id":5,"updated_at":"2022-04-21T15:40:23.000000Z","created_at":"2022-04-21T15:40:23.000000Z","id":14}}'
-        headers: []
+        status: 404
+        content: |-
+          {
+              "message": "",
+              "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+              "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\AbstractRouteCollection.php",
+              "line": 43,
+              "trace": [
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteCollection.php",
+                      "line": 162,
+                      "function": "handleMatchedRoute",
+                      "class": "Illuminate\\Routing\\AbstractRouteCollection",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 673,
+                      "function": "match",
+                      "class": "Illuminate\\Routing\\RouteCollection",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 662,
+                      "function": "findRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 651,
+                      "function": "dispatchToRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+                      "line": 167,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 128,
+                      "function": "Illuminate\\Foundation\\Http\\{closure}",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php",
+                      "line": 31,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 167,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php",
+                      "line": 40,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 167,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+                      "line": 27,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 167,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
+                      "line": 86,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 167,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
+                      "line": 38,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 167,
+                      "function": "handle",
+                      "class": "Fruitcake\\Cors\\HandleCors",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php",
+                      "line": 39,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 167,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 103,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+                      "line": 142,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+                      "line": 111,
+                      "function": "sendRequestThroughRouter",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 299,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 287,
+                      "function": "callLaravelOrLumenRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 89,
+                      "function": "makeApiCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 45,
+                      "function": "makeResponseCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 35,
+                      "function": "makeResponseCallIfConditionsPass",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
+                      "line": 222,
+                      "function": "__invoke",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
+                      "line": 179,
+                      "function": "iterateThroughStrategies",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
+                      "line": 116,
+                      "function": "fetchResponses",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
+                      "line": 118,
+                      "function": "processRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
+                      "line": 75,
+                      "function": "extractEndpointsInfoFromLaravelApp",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
+                      "line": 51,
+                      "function": "extractEndpointsInfoAndWriteToDisk",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+                      "line": 50,
+                      "function": "get",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+                      "line": 36,
+                      "function": "handle",
+                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
+                      "line": 40,
+                      "function": "Illuminate\\Container\\{closure}",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+                      "line": 93,
+                      "function": "unwrapIfClosure",
+                      "class": "Illuminate\\Container\\Util",
+                      "type": "::"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+                      "line": 37,
+                      "function": "callBoundMethod",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+                      "line": 653,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+                      "line": 136,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\Container",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\symfony\\console\\Command\\Command.php",
+                      "line": 298,
+                      "function": "execute",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+                      "line": 121,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Command\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\symfony\\console\\Application.php",
+                      "line": 1015,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\symfony\\console\\Application.php",
+                      "line": 299,
+                      "function": "doRunCommand",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\symfony\\console\\Application.php",
+                      "line": 171,
+                      "function": "doRun",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+                      "line": 94,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+                      "line": 129,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\helpus\\artisan",
+                      "line": 37,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Console\\Kernel",
+                      "type": "->"
+                  }
+              ]
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
         description: null
     responseFields: []
   -
     httpMethods:
       - PUT
       - PATCH
-    uri: 'api/roles/{id}'
+    uri: 'api/handicap/{id}'
     metadata:
-      title: 'update a role'
-      description: 'endpoint to update a role with given id'
+      title: 'Update the specified resource in storage.'
+      description: ''
       authenticated: true
       custom: []
     headers:
@@ -108,68 +438,36 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'id of the role'
+        description: 'The ID of the handicap.'
         required: true
-        example: 3
-        type: integer
-        custom: []
-    queryParameters: []
-    bodyParameters:
-      name:
-        name: name
-        description: 'the name of the role'
-        required: true
-        example: iusto
-        type: string
-        custom: []
-      user_id:
-        name: user_id
-        description: 'the id of the user who created the new role'
-        required: true
-        example: 3
-        type: integer
-        custom: []
-    responses:
-      -
-        status: 201
-        content: |-
-          {'status' => 'ok',
-          'response' => [
-          'message' => 'role updated successfuly'
-          ]}
-        headers: []
-        description: '201'
-    responseFields: []
-  -
-    httpMethods:
-      - DELETE
-    uri: 'api/roles/{id}'
-    metadata:
-      title: 'Remove a role'
-      description: 'endpoint to delete a role from the system'
-      authenticated: true
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'id of the role to delete'
-        required: true
-        example: 10
+        example: 1
         type: integer
         custom: []
     queryParameters: []
     bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: |-
-          {'status' => 'ok',
-          'response' => [
-          'message' => 'role deleted'
-          ]}
-        headers: []
-        description: '200'
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/handicap/{id}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the handicap.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
     responseFields: []

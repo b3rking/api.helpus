@@ -70,6 +70,28 @@
                                                 </ul>
                     
                     <ul id="tocify-header-2" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="handicap-management-endpoints">
+                    <a href="#handicap-management-endpoints">handicap management endpoints</a>
+                </li>
+                                    <ul id="tocify-subheader-handicap-management-endpoints" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="handicap-management-endpoints-GETapi-handicap">
+                        <a href="#handicap-management-endpoints-GETapi-handicap">Show the list of all handicap</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="handicap-management-endpoints-POSTapi-handicap">
+                        <a href="#handicap-management-endpoints-POSTapi-handicap">Store a newly created resource in storage.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="handicap-management-endpoints-GETapi-handicap--id-">
+                        <a href="#handicap-management-endpoints-GETapi-handicap--id-">Display the specified resource.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="handicap-management-endpoints-PUTapi-handicap--id-">
+                        <a href="#handicap-management-endpoints-PUTapi-handicap--id-">Update the specified resource in storage.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="handicap-management-endpoints-DELETEapi-handicap--id-">
+                        <a href="#handicap-management-endpoints-DELETEapi-handicap--id-">Remove the specified resource from storage.</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-3" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="role-management-endpoints">
                     <a href="#role-management-endpoints">Role management endpoints</a>
                 </li>
@@ -91,7 +113,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-3" class="tocify-header">
+                    <ul id="tocify-header-4" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="users-management-endpoints">
                     <a href="#users-management-endpoints">Users management endpoints</a>
                 </li>
@@ -110,28 +132,6 @@
                     </li>
                                     <li class="tocify-item level-2" data-unique="users-management-endpoints-DELETEapi-users--id-">
                         <a href="#users-management-endpoints-DELETEapi-users--id-">Remove the specified user</a>
-                    </li>
-                                                    </ul>
-                            </ul>
-                    <ul id="tocify-header-4" class="tocify-header">
-                <li class="tocify-item level-1" data-unique="handicap-management-endpoint">
-                    <a href="#handicap-management-endpoint">handicap management endpoint</a>
-                </li>
-                                    <ul id="tocify-subheader-handicap-management-endpoint" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="handicap-management-endpoint-GETapi-handicap">
-                        <a href="#handicap-management-endpoint-GETapi-handicap">Show the list of all handicap</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="handicap-management-endpoint-POSTapi-handicap">
-                        <a href="#handicap-management-endpoint-POSTapi-handicap">Store a newly created resource in storage.</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="handicap-management-endpoint-GETapi-handicap--id-">
-                        <a href="#handicap-management-endpoint-GETapi-handicap--id-">Display the specified resource.</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="handicap-management-endpoint-PUTapi-handicap--id-">
-                        <a href="#handicap-management-endpoint-PUTapi-handicap--id-">Update the specified resource in storage.</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="handicap-management-endpoint-DELETEapi-handicap--id-">
-                        <a href="#handicap-management-endpoint-DELETEapi-handicap--id-">Remove the specified resource from storage.</a>
                     </li>
                                                     </ul>
                             </ul>
@@ -165,1366 +165,14 @@ You can switch the language used with the tabs at the top right (or from the nav
         <h1 id="authenticating-requests">Authenticating requests</h1>
 <p>This API is not authenticated.</p>
 
-        <h1 id="role-management-endpoints">Role management endpoints</h1>
+        <h1 id="handicap-management-endpoints">handicap management endpoints</h1>
 
     
 
-            <h2 id="role-management-endpoints-GETapi-roles">Show all roles</h2>
+            <h2 id="handicap-management-endpoints-GETapi-handicap">Show the list of all handicap</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
-</p>
-
-<p>endpoint to show all the roles available in the system</p>
-
-<span id="example-requests-GETapi-roles">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "helpus.test/api/roles" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/roles"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-roles">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: [
-        {
-            &quot;name&quot;: &quot;Surveyor&quot;,
-            &quot;user_id&quot;: 4,
-            &quot;updated_at&quot;: &quot;2022-04-21T15:40:23.000000Z&quot;,
-            &quot;created_at&quot;: &quot;2022-04-21T15:40:23.000000Z&quot;,
-            &quot;id&quot;: 12
-        },
-        {
-            &quot;name&quot;: &quot;Coroner&quot;,
-            &quot;user_id&quot;: 4,
-            &quot;updated_at&quot;: &quot;2022-04-21T15:40:23.000000Z&quot;,
-            &quot;created_at&quot;: &quot;2022-04-21T15:40:23.000000Z&quot;,
-            &quot;id&quot;: 13
-        }
-    ]
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-roles" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-roles"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-roles"></code></pre>
-</span>
-<span id="execution-error-GETapi-roles" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-roles"></code></pre>
-</span>
-<form id="form-GETapi-roles" data-method="GET"
-      data-path="api/roles"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-roles', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-roles"
-                    onclick="tryItOut('GETapi-roles');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-roles"
-                    onclick="cancelTryOut('GETapi-roles');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-roles" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/roles</code></b>
-        </p>
-                <p>
-            <label id="auth-GETapi-roles" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="GETapi-roles"
-                                                                data-component="header"></label>
-        </p>
-                </form>
-
-            <h2 id="role-management-endpoints-POSTapi-roles">store new role</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-<p>endpoint to store new role in database</p>
-
-<span id="example-requests-POSTapi-roles">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "helpus.test/api/roles" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"name\": \"placeat\",
-    \"user_id\": 20
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/roles"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "name": "placeat",
-    "user_id": 20
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-roles">
-            <blockquote>
-            <p>Example response (201):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{'status' =&gt; 'ok',
-'data' =&gt; [
-'message' =&gt; 'role created successfuly'
-]}</code>
- </pre>
-    </span>
-<span id="execution-results-POSTapi-roles" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-roles"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-roles"></code></pre>
-</span>
-<span id="execution-error-POSTapi-roles" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-roles"></code></pre>
-</span>
-<form id="form-POSTapi-roles" data-method="POST"
-      data-path="api/roles"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-roles', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-roles"
-                    onclick="tryItOut('POSTapi-roles');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-roles"
-                    onclick="cancelTryOut('POSTapi-roles');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-roles" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/roles</code></b>
-        </p>
-                <p>
-            <label id="auth-POSTapi-roles" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="POSTapi-roles"
-                                                                data-component="header"></label>
-        </p>
-                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="name"
-               data-endpoint="POSTapi-roles"
-               value="placeat"
-               data-component="body" hidden>
-    <br>
-<p>the name of the role</p>
-        </p>
-                <p>
-            <b><code>user_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="user_id"
-               data-endpoint="POSTapi-roles"
-               value="20"
-               data-component="body" hidden>
-    <br>
-<p>the id of the user who created the new role</p>
-        </p>
-        </form>
-
-            <h2 id="role-management-endpoints-GETapi-roles--id-">show a role</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-<p>give the details of one role</p>
-
-<span id="example-requests-GETapi-roles--id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "helpus.test/api/roles/9" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/roles/9"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-roles--id-">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: {
-        &quot;name&quot;: &quot;Glazier&quot;,
-        &quot;user_id&quot;: 5,
-        &quot;updated_at&quot;: &quot;2022-04-21T15:40:23.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2022-04-21T15:40:23.000000Z&quot;,
-        &quot;id&quot;: 14
-    }
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-roles--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-roles--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-roles--id-"></code></pre>
-</span>
-<span id="execution-error-GETapi-roles--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-roles--id-"></code></pre>
-</span>
-<form id="form-GETapi-roles--id-" data-method="GET"
-      data-path="api/roles/{id}"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-roles--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-roles--id-"
-                    onclick="tryItOut('GETapi-roles--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-roles--id-"
-                    onclick="cancelTryOut('GETapi-roles--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-roles--id-" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/roles/{id}</code></b>
-        </p>
-                <p>
-            <label id="auth-GETapi-roles--id-" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="GETapi-roles--id-"
-                                                                data-component="header"></label>
-        </p>
-                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <p>
-                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="id"
-               data-endpoint="GETapi-roles--id-"
-               value="9"
-               data-component="url" hidden>
-    <br>
-<p>id of the role</p>
-            </p>
-                    </form>
-
-            <h2 id="role-management-endpoints-PUTapi-roles--id-">update a role</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-<p>endpoint to update a role with given id</p>
-
-<span id="example-requests-PUTapi-roles--id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request PUT \
-    "helpus.test/api/roles/3" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"name\": \"iusto\",
-    \"user_id\": 3
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/roles/3"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "name": "iusto",
-    "user_id": 3
-};
-
-fetch(url, {
-    method: "PUT",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-PUTapi-roles--id-">
-            <blockquote>
-            <p>Example response (201):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{'status' =&gt; 'ok',
-'response' =&gt; [
-'message' =&gt; 'role updated successfuly'
-]}</code>
- </pre>
-    </span>
-<span id="execution-results-PUTapi-roles--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-PUTapi-roles--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-PUTapi-roles--id-"></code></pre>
-</span>
-<span id="execution-error-PUTapi-roles--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-PUTapi-roles--id-"></code></pre>
-</span>
-<form id="form-PUTapi-roles--id-" data-method="PUT"
-      data-path="api/roles/{id}"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('PUTapi-roles--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-PUTapi-roles--id-"
-                    onclick="tryItOut('PUTapi-roles--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-PUTapi-roles--id-"
-                    onclick="cancelTryOut('PUTapi-roles--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-PUTapi-roles--id-" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-darkblue">PUT</small>
-            <b><code>api/roles/{id}</code></b>
-        </p>
-            <p>
-            <small class="badge badge-purple">PATCH</small>
-            <b><code>api/roles/{id}</code></b>
-        </p>
-                <p>
-            <label id="auth-PUTapi-roles--id-" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="PUTapi-roles--id-"
-                                                                data-component="header"></label>
-        </p>
-                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <p>
-                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="id"
-               data-endpoint="PUTapi-roles--id-"
-               value="3"
-               data-component="url" hidden>
-    <br>
-<p>id of the role</p>
-            </p>
-                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="name"
-               data-endpoint="PUTapi-roles--id-"
-               value="iusto"
-               data-component="body" hidden>
-    <br>
-<p>the name of the role</p>
-        </p>
-                <p>
-            <b><code>user_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="user_id"
-               data-endpoint="PUTapi-roles--id-"
-               value="3"
-               data-component="body" hidden>
-    <br>
-<p>the id of the user who created the new role</p>
-        </p>
-        </form>
-
-            <h2 id="role-management-endpoints-DELETEapi-roles--id-">Remove a role</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-<p>endpoint to delete a role from the system</p>
-
-<span id="example-requests-DELETEapi-roles--id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request DELETE \
-    "helpus.test/api/roles/10" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/roles/10"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "DELETE",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-DELETEapi-roles--id-">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{'status' =&gt; 'ok',
-'response' =&gt; [
-'message' =&gt; 'role deleted'
-]}</code>
- </pre>
-    </span>
-<span id="execution-results-DELETEapi-roles--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-DELETEapi-roles--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-DELETEapi-roles--id-"></code></pre>
-</span>
-<span id="execution-error-DELETEapi-roles--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-DELETEapi-roles--id-"></code></pre>
-</span>
-<form id="form-DELETEapi-roles--id-" data-method="DELETE"
-      data-path="api/roles/{id}"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-roles--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-DELETEapi-roles--id-"
-                    onclick="tryItOut('DELETEapi-roles--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-DELETEapi-roles--id-"
-                    onclick="cancelTryOut('DELETEapi-roles--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-DELETEapi-roles--id-" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-red">DELETE</small>
-            <b><code>api/roles/{id}</code></b>
-        </p>
-                <p>
-            <label id="auth-DELETEapi-roles--id-" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="DELETEapi-roles--id-"
-                                                                data-component="header"></label>
-        </p>
-                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <p>
-                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="id"
-               data-endpoint="DELETEapi-roles--id-"
-               value="10"
-               data-component="url" hidden>
-    <br>
-<p>id of the role to delete</p>
-            </p>
-                    </form>
-
-        <h1 id="users-management-endpoints">Users management endpoints</h1>
-
-    
-
-            <h2 id="users-management-endpoints-GETapi-users">show all users</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-<p>see all user with they info and everything relate to them
-this is not the handicap data it's only users data
-like admins or simple user.</p>
-
-<span id="example-requests-GETapi-users">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "helpus.test/api/users" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/users"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-users">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: [
-        {
-            &quot;id&quot;: 18,
-            &quot;fullname&quot;: &quot;Nettie Rodriguez&quot;,
-            &quot;username&quot;: &quot;Travon&quot;,
-            &quot;role&quot;: &quot;admin&quot;,
-            &quot;adress&quot;: &quot;76828 Kyra Station Suite 855\nNorth Daniella, NH 02738-6666&quot;,
-            &quot;number&quot;: 72688862,
-            &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/008833?text=+autem&quot;
-        },
-        {
-            &quot;id&quot;: 19,
-            &quot;fullname&quot;: &quot;Brendan Swaniawski&quot;,
-            &quot;username&quot;: &quot;Buster&quot;,
-            &quot;role&quot;: &quot;admin&quot;,
-            &quot;adress&quot;: &quot;508 Berge Route Apt. 886\nEmilieport, AL 06023-8746&quot;,
-            &quot;number&quot;: 79159027,
-            &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/0088cc?text=+est&quot;
-        }
-    ]
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-users" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-users"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-users"></code></pre>
-</span>
-<span id="execution-error-GETapi-users" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-users"></code></pre>
-</span>
-<form id="form-GETapi-users" data-method="GET"
-      data-path="api/users"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-users', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-users"
-                    onclick="tryItOut('GETapi-users');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-users"
-                    onclick="cancelTryOut('GETapi-users');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-users" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/users</code></b>
-        </p>
-                <p>
-            <label id="auth-GETapi-users" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="GETapi-users"
-                                                                data-component="header"></label>
-        </p>
-                </form>
-
-            <h2 id="users-management-endpoints-POSTapi-users">Store a new user</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-<p>this endpoint store a new user based on the data passed in the request</p>
-<aside class="notice">make sure to pass all the the required data</aside>
-
-<span id="example-requests-POSTapi-users">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "helpus.test/api/users" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"fullname\": \"praesentium\",
-    \"username\": \"saepe\",
-    \"role_id\": 8,
-    \"password\": \"laudantium\",
-    \"adress\": \"id\",
-    \"number\": 20,
-    \"avatar\": \"odio\"
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/users"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "fullname": "praesentium",
-    "username": "saepe",
-    "role_id": 8,
-    "password": "laudantium",
-    "adress": "id",
-    "number": 20,
-    "avatar": "odio"
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-users">
-            <blockquote>
-            <p>Example response (201):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-'status' =&gt; 'ok',
-'data' =&gt; [
-'message' =&gt; 'successfuly created the account'
-]
-  }</code>
- </pre>
-    </span>
-<span id="execution-results-POSTapi-users" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-users"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-users"></code></pre>
-</span>
-<span id="execution-error-POSTapi-users" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-users"></code></pre>
-</span>
-<form id="form-POSTapi-users" data-method="POST"
-      data-path="api/users"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-users', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-users"
-                    onclick="tryItOut('POSTapi-users');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-users"
-                    onclick="cancelTryOut('POSTapi-users');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-users" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/users</code></b>
-        </p>
-                <p>
-            <label id="auth-POSTapi-users" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="POSTapi-users"
-                                                                data-component="header"></label>
-        </p>
-                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>fullname</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="fullname"
-               data-endpoint="POSTapi-users"
-               value="praesentium"
-               data-component="body" hidden>
-    <br>
-<p>this user fullname</p>
-        </p>
-                <p>
-            <b><code>username</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="username"
-               data-endpoint="POSTapi-users"
-               value="saepe"
-               data-component="body" hidden>
-    <br>
-<p>this user username</p>
-        </p>
-                <p>
-            <b><code>role_id</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
-                <input type="number"
-               name="role_id"
-               data-endpoint="POSTapi-users"
-               value="8"
-               data-component="body" hidden>
-    <br>
-<p>this user role in the system</p>
-        </p>
-                <p>
-            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="password"
-               data-endpoint="POSTapi-users"
-               value="laudantium"
-               data-component="body" hidden>
-    <br>
-<p>this user role in the system</p>
-        </p>
-                <p>
-            <b><code>adress</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-                <input type="text"
-               name="adress"
-               data-endpoint="POSTapi-users"
-               value="id"
-               data-component="body" hidden>
-    <br>
-<p>this user adress</p>
-        </p>
-                <p>
-            <b><code>number</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
-                <input type="number"
-               name="number"
-               data-endpoint="POSTapi-users"
-               value="20"
-               data-component="body" hidden>
-    <br>
-<p>this user mobile number</p>
-        </p>
-                <p>
-            <b><code>avatar</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-                <input type="text"
-               name="avatar"
-               data-endpoint="POSTapi-users"
-               value="odio"
-               data-component="body" hidden>
-    <br>
-<p>this user avatar link</p>
-        </p>
-        </form>
-
-            <h2 id="users-management-endpoints-GETapi-users--id-">show one user</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-<p>endpoint which returns the data of the specified with all his data.</p>
-
-<span id="example-requests-GETapi-users--id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "helpus.test/api/users/17" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/users/17"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-users--id-">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: {
-        &quot;id&quot;: 20,
-        &quot;fullname&quot;: &quot;Heath Bayer&quot;,
-        &quot;username&quot;: &quot;Marcelino&quot;,
-        &quot;role&quot;: &quot;Immigration Inspector OR Customs Inspector&quot;,
-        &quot;adress&quot;: &quot;9612 Kris Spurs Suite 130\nHarrytown, TX 09337-2955&quot;,
-        &quot;number&quot;: 77763811,
-        &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/00aa22?text=+quidem&quot;
-    }
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-users--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-users--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-users--id-"></code></pre>
-</span>
-<span id="execution-error-GETapi-users--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-users--id-"></code></pre>
-</span>
-<form id="form-GETapi-users--id-" data-method="GET"
-      data-path="api/users/{id}"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-users--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-users--id-"
-                    onclick="tryItOut('GETapi-users--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-users--id-"
-                    onclick="cancelTryOut('GETapi-users--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-users--id-" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/users/{id}</code></b>
-        </p>
-                <p>
-            <label id="auth-GETapi-users--id-" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="GETapi-users--id-"
-                                                                data-component="header"></label>
-        </p>
-                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <p>
-                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="id"
-               data-endpoint="GETapi-users--id-"
-               value="17"
-               data-component="url" hidden>
-    <br>
-<p>id of the user</p>
-            </p>
-                    </form>
-
-            <h2 id="users-management-endpoints-PUTapi-users--id-">Update a user.</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-<p>endpoint to update one user</p>
-
-<span id="example-requests-PUTapi-users--id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request PUT \
-    "helpus.test/api/users/6" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"fullname\": \"voluptas\",
-    \"username\": \"omnis\",
-    \"role_id\": 7,
-    \"password\": \"aspernatur\",
-    \"adress\": \"voluptate\",
-    \"number\": 3,
-    \"avatar\": \"voluptatibus\"
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/users/6"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "fullname": "voluptas",
-    "username": "omnis",
-    "role_id": 7,
-    "password": "aspernatur",
-    "adress": "voluptate",
-    "number": 3,
-    "avatar": "voluptatibus"
-};
-
-fetch(url, {
-    method: "PUT",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-PUTapi-users--id-">
-            <blockquote>
-            <p>Example response (201):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-'status' =&gt; 'ok',
-'data' =&gt; [
-'message' =&gt; 'successfuly updated the account'
-]
-  }</code>
- </pre>
-    </span>
-<span id="execution-results-PUTapi-users--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-PUTapi-users--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-PUTapi-users--id-"></code></pre>
-</span>
-<span id="execution-error-PUTapi-users--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-PUTapi-users--id-"></code></pre>
-</span>
-<form id="form-PUTapi-users--id-" data-method="PUT"
-      data-path="api/users/{id}"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('PUTapi-users--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-PUTapi-users--id-"
-                    onclick="tryItOut('PUTapi-users--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-PUTapi-users--id-"
-                    onclick="cancelTryOut('PUTapi-users--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-PUTapi-users--id-" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-darkblue">PUT</small>
-            <b><code>api/users/{id}</code></b>
-        </p>
-            <p>
-            <small class="badge badge-purple">PATCH</small>
-            <b><code>api/users/{id}</code></b>
-        </p>
-                <p>
-            <label id="auth-PUTapi-users--id-" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="PUTapi-users--id-"
-                                                                data-component="header"></label>
-        </p>
-                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <p>
-                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="id"
-               data-endpoint="PUTapi-users--id-"
-               value="6"
-               data-component="url" hidden>
-    <br>
-<p>id of the user to update</p>
-            </p>
-                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>fullname</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="fullname"
-               data-endpoint="PUTapi-users--id-"
-               value="voluptas"
-               data-component="body" hidden>
-    <br>
-<p>this user fullname</p>
-        </p>
-                <p>
-            <b><code>username</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="username"
-               data-endpoint="PUTapi-users--id-"
-               value="omnis"
-               data-component="body" hidden>
-    <br>
-<p>this user username</p>
-        </p>
-                <p>
-            <b><code>role_id</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
-                <input type="number"
-               name="role_id"
-               data-endpoint="PUTapi-users--id-"
-               value="7"
-               data-component="body" hidden>
-    <br>
-<p>this user role in the system</p>
-        </p>
-                <p>
-            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="password"
-               data-endpoint="PUTapi-users--id-"
-               value="aspernatur"
-               data-component="body" hidden>
-    <br>
-<p>this user role in the system</p>
-        </p>
-                <p>
-            <b><code>adress</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-                <input type="text"
-               name="adress"
-               data-endpoint="PUTapi-users--id-"
-               value="voluptate"
-               data-component="body" hidden>
-    <br>
-<p>this user adress</p>
-        </p>
-                <p>
-            <b><code>number</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
-                <input type="number"
-               name="number"
-               data-endpoint="PUTapi-users--id-"
-               value="3"
-               data-component="body" hidden>
-    <br>
-<p>this user mobile number</p>
-        </p>
-                <p>
-            <b><code>avatar</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-                <input type="text"
-               name="avatar"
-               data-endpoint="PUTapi-users--id-"
-               value="voluptatibus"
-               data-component="body" hidden>
-    <br>
-<p>this user avatar link</p>
-        </p>
-        </form>
-
-            <h2 id="users-management-endpoints-DELETEapi-users--id-">Remove the specified user</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-<p>endpoint to remove the user with given id</p>
-
-<span id="example-requests-DELETEapi-users--id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request DELETE \
-    "helpus.test/api/users/7" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/users/7"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "DELETE",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-DELETEapi-users--id-">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-'status' =&gt; 'ok',
-'response' =&gt; [
-'message' =&gt; 'successfuly deleted the account'
-]
-}</code>
- </pre>
-    </span>
-<span id="execution-results-DELETEapi-users--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-DELETEapi-users--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-DELETEapi-users--id-"></code></pre>
-</span>
-<span id="execution-error-DELETEapi-users--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-DELETEapi-users--id-"></code></pre>
-</span>
-<form id="form-DELETEapi-users--id-" data-method="DELETE"
-      data-path="api/users/{id}"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-users--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-DELETEapi-users--id-"
-                    onclick="tryItOut('DELETEapi-users--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-DELETEapi-users--id-"
-                    onclick="cancelTryOut('DELETEapi-users--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-DELETEapi-users--id-" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-red">DELETE</small>
-            <b><code>api/users/{id}</code></b>
-        </p>
-                <p>
-            <label id="auth-DELETEapi-users--id-" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="DELETEapi-users--id-"
-                                                                data-component="header"></label>
-        </p>
-                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <p>
-                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="id"
-               data-endpoint="DELETEapi-users--id-"
-               value="7"
-               data-component="url" hidden>
-    <br>
-<p>id of the user to delete</p>
-            </p>
-                    </form>
-
-        <h1 id="handicap-management-endpoint">handicap management endpoint</h1>
-
-    
-
-            <h2 id="handicap-management-endpoint-GETapi-handicap">Show the list of all handicap</h2>
-
-<p>
 </p>
 
 <p>showing a list of the handicap with all their info needed to recognize them in the system</p>
@@ -1565,8 +213,46 @@ fetch(url, {
 
 <code class="language-json">{
     &quot;data&quot;: [
-        [],
-        []
+        {
+            &quot;fullname&quot;: &quot;Earline O'Hara&quot;,
+            &quot;adress&quot;: &quot;315 Desiree Isle Apt. 437\nEast Emely, AR 80775&quot;,
+            &quot;mobile_number&quot;: &quot;+1-229-617-3456&quot;,
+            &quot;year_of_birth&quot;: &quot;1985&quot;,
+            &quot;ecocash_number&quot;: 110022211,
+            &quot;lumicash_number&quot;: 110022211,
+            &quot;bank_name&quot;: &quot;Marvin Crossing&quot;,
+            &quot;bank_account_number&quot;: 6165273,
+            &quot;story&quot;: &quot;At provident quod ut. Aut blanditiis rerum non aut dolore illo et. Et in veritatis earum voluptas repudiandae rem qui dolor. Quo perferendis sed corporis labore autem debitis.&quot;,
+            &quot;needed_money&quot;: 4151506,
+            &quot;state_of_health&quot;: &quot;bad&quot;,
+            &quot;image_id&quot;: 3,
+            &quot;donation_status&quot;: &quot;en cours&quot;,
+            &quot;user_id&quot;: 7,
+            &quot;family_situation&quot;: &quot;orphelins&quot;,
+            &quot;updated_at&quot;: &quot;2022-04-21T16:53:02.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-04-21T16:53:02.000000Z&quot;,
+            &quot;id&quot;: 16
+        },
+        {
+            &quot;fullname&quot;: &quot;Elton Crona&quot;,
+            &quot;adress&quot;: &quot;81706 Kuhn Key Apt. 304\nLake Elveraland, MS 13234&quot;,
+            &quot;mobile_number&quot;: &quot;+1-541-320-1733&quot;,
+            &quot;year_of_birth&quot;: &quot;2010&quot;,
+            &quot;ecocash_number&quot;: 110022211,
+            &quot;lumicash_number&quot;: 110022211,
+            &quot;bank_name&quot;: &quot;Kunde Rapids&quot;,
+            &quot;bank_account_number&quot;: 6047188,
+            &quot;story&quot;: &quot;Sequi maxime officiis mollitia consequuntur odit quas adipisci. Aut libero voluptas sed consequuntur aut ut. Natus quo quia sapiente aut qui. Corporis ipsum omnis voluptates consequuntur fuga.&quot;,
+            &quot;needed_money&quot;: 1761729,
+            &quot;state_of_health&quot;: &quot;bad&quot;,
+            &quot;image_id&quot;: 6,
+            &quot;donation_status&quot;: &quot;en cours&quot;,
+            &quot;user_id&quot;: 9,
+            &quot;family_situation&quot;: &quot;orphelins&quot;,
+            &quot;updated_at&quot;: &quot;2022-04-21T16:53:02.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-04-21T16:53:02.000000Z&quot;,
+            &quot;id&quot;: 17
+        }
     ]
 }</code>
  </pre>
@@ -1583,7 +269,7 @@ fetch(url, {
 </span>
 <form id="form-GETapi-handicap" data-method="GET"
       data-path="api/handicap"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
@@ -1610,11 +296,20 @@ fetch(url, {
             <small class="badge badge-green">GET</small>
             <b><code>api/handicap</code></b>
         </p>
-                    </form>
+                <p>
+            <label id="auth-GETapi-handicap" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-handicap"
+                                                                data-component="header"></label>
+        </p>
+                </form>
 
-            <h2 id="handicap-management-endpoint-POSTapi-handicap">Store a newly created resource in storage.</h2>
+            <h2 id="handicap-management-endpoints-POSTapi-handicap">Store a newly created resource in storage.</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -1661,7 +356,7 @@ fetch(url, {
 </span>
 <form id="form-POSTapi-handicap" data-method="POST"
       data-path="api/handicap"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
@@ -1688,11 +383,20 @@ fetch(url, {
             <small class="badge badge-black">POST</small>
             <b><code>api/handicap</code></b>
         </p>
-                    </form>
+                <p>
+            <label id="auth-POSTapi-handicap" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-handicap"
+                                                                data-component="header"></label>
+        </p>
+                </form>
 
-            <h2 id="handicap-management-endpoint-GETapi-handicap--id-">Display the specified resource.</h2>
+            <h2 id="handicap-management-endpoints-GETapi-handicap--id-">Display the specified resource.</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -1703,14 +407,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "helpus.test/api/handicap/2" \
+    --get "helpus.test/api/handicap/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/handicap/2"
+    "helpus.test/api/handicap/1"
 );
 
 const headers = {
@@ -2103,7 +807,7 @@ content-type: application/json
 </span>
 <form id="form-GETapi-handicap--id-" data-method="GET"
       data-path="api/handicap/{id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
@@ -2130,22 +834,31 @@ content-type: application/json
             <small class="badge badge-green">GET</small>
             <b><code>api/handicap/{id}</code></b>
         </p>
-                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                <p>
+            <label id="auth-GETapi-handicap--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-handicap--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <p>
                 <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
                 <input type="number"
                name="id"
                data-endpoint="GETapi-handicap--id-"
-               value="2"
+               value="1"
                data-component="url" hidden>
     <br>
 <p>The ID of the handicap.</p>
             </p>
                     </form>
 
-            <h2 id="handicap-management-endpoint-PUTapi-handicap--id-">Update the specified resource in storage.</h2>
+            <h2 id="handicap-management-endpoints-PUTapi-handicap--id-">Update the specified resource in storage.</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -2156,14 +869,14 @@ content-type: application/json
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "helpus.test/api/handicap/15" \
+    "helpus.test/api/handicap/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/handicap/15"
+    "helpus.test/api/handicap/1"
 );
 
 const headers = {
@@ -2192,7 +905,7 @@ fetch(url, {
 </span>
 <form id="form-PUTapi-handicap--id-" data-method="PUT"
       data-path="api/handicap/{id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
@@ -2223,22 +936,31 @@ fetch(url, {
             <small class="badge badge-purple">PATCH</small>
             <b><code>api/handicap/{id}</code></b>
         </p>
-                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                <p>
+            <label id="auth-PUTapi-handicap--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="PUTapi-handicap--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <p>
                 <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-handicap--id-"
-               value="15"
+               value="1"
                data-component="url" hidden>
     <br>
 <p>The ID of the handicap.</p>
             </p>
                     </form>
 
-            <h2 id="handicap-management-endpoint-DELETEapi-handicap--id-">Remove the specified resource from storage.</h2>
+            <h2 id="handicap-management-endpoints-DELETEapi-handicap--id-">Remove the specified resource from storage.</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -2249,14 +971,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "helpus.test/api/handicap/8" \
+    "helpus.test/api/handicap/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/handicap/8"
+    "helpus.test/api/handicap/1"
 );
 
 const headers = {
@@ -2285,7 +1007,7 @@ fetch(url, {
 </span>
 <form id="form-DELETEapi-handicap--id-" data-method="DELETE"
       data-path="api/handicap/{id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
@@ -2312,16 +1034,1377 @@ fetch(url, {
             <small class="badge badge-red">DELETE</small>
             <b><code>api/handicap/{id}</code></b>
         </p>
-                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                <p>
+            <label id="auth-DELETEapi-handicap--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="DELETEapi-handicap--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <p>
                 <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-handicap--id-"
-               value="8"
+               value="1"
                data-component="url" hidden>
     <br>
 <p>The ID of the handicap.</p>
+            </p>
+                    </form>
+
+        <h1 id="role-management-endpoints">Role management endpoints</h1>
+
+    
+
+            <h2 id="role-management-endpoints-GETapi-roles">Show all roles</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>endpoint to show all the roles available in the system</p>
+
+<span id="example-requests-GETapi-roles">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "helpus.test/api/roles" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "helpus.test/api/roles"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-roles">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: [
+        {
+            &quot;name&quot;: &quot;Sales Representative&quot;,
+            &quot;user_id&quot;: 2,
+            &quot;updated_at&quot;: &quot;2022-04-21T16:53:02.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-04-21T16:53:02.000000Z&quot;,
+            &quot;id&quot;: 3
+        },
+        {
+            &quot;name&quot;: &quot;Fitness Trainer&quot;,
+            &quot;user_id&quot;: 3,
+            &quot;updated_at&quot;: &quot;2022-04-21T16:53:02.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-04-21T16:53:02.000000Z&quot;,
+            &quot;id&quot;: 4
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-roles" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-roles"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-roles"></code></pre>
+</span>
+<span id="execution-error-GETapi-roles" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-roles"></code></pre>
+</span>
+<form id="form-GETapi-roles" data-method="GET"
+      data-path="api/roles"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-roles', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-roles"
+                    onclick="tryItOut('GETapi-roles');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-roles"
+                    onclick="cancelTryOut('GETapi-roles');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-roles" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/roles</code></b>
+        </p>
+                <p>
+            <label id="auth-GETapi-roles" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-roles"
+                                                                data-component="header"></label>
+        </p>
+                </form>
+
+            <h2 id="role-management-endpoints-POSTapi-roles">store new role</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>endpoint to store new role in database</p>
+
+<span id="example-requests-POSTapi-roles">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "helpus.test/api/roles" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"et\",
+    \"user_id\": 15
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "helpus.test/api/roles"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "et",
+    "user_id": 15
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-roles">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{'status' =&gt; 'ok',
+'data' =&gt; [
+'message' =&gt; 'role created successfuly'
+]}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-roles" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-roles"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-roles"></code></pre>
+</span>
+<span id="execution-error-POSTapi-roles" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-roles"></code></pre>
+</span>
+<form id="form-POSTapi-roles" data-method="POST"
+      data-path="api/roles"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-roles', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-roles"
+                    onclick="tryItOut('POSTapi-roles');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-roles"
+                    onclick="cancelTryOut('POSTapi-roles');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-roles" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/roles</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-roles" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-roles"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="POSTapi-roles"
+               value="et"
+               data-component="body" hidden>
+    <br>
+<p>the name of the role</p>
+        </p>
+                <p>
+            <b><code>user_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="user_id"
+               data-endpoint="POSTapi-roles"
+               value="15"
+               data-component="body" hidden>
+    <br>
+<p>the id of the user who created the new role</p>
+        </p>
+        </form>
+
+            <h2 id="role-management-endpoints-GETapi-roles--id-">show a role</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>give the details of one role</p>
+
+<span id="example-requests-GETapi-roles--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "helpus.test/api/roles/13" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "helpus.test/api/roles/13"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-roles--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: {
+        &quot;name&quot;: &quot;Agricultural Sales Representative&quot;,
+        &quot;user_id&quot;: 1,
+        &quot;updated_at&quot;: &quot;2022-04-21T16:53:02.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-04-21T16:53:02.000000Z&quot;,
+        &quot;id&quot;: 5
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-roles--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-roles--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-roles--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-roles--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-roles--id-"></code></pre>
+</span>
+<form id="form-GETapi-roles--id-" data-method="GET"
+      data-path="api/roles/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-roles--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-roles--id-"
+                    onclick="tryItOut('GETapi-roles--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-roles--id-"
+                    onclick="cancelTryOut('GETapi-roles--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-roles--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/roles/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-GETapi-roles--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-roles--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="GETapi-roles--id-"
+               value="13"
+               data-component="url" hidden>
+    <br>
+<p>id of the role</p>
+            </p>
+                    </form>
+
+            <h2 id="role-management-endpoints-PUTapi-roles--id-">update a role</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>endpoint to update a role with given id</p>
+
+<span id="example-requests-PUTapi-roles--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "helpus.test/api/roles/11" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"qui\",
+    \"user_id\": 1
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "helpus.test/api/roles/11"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "qui",
+    "user_id": 1
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-roles--id-">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{'status' =&gt; 'ok',
+'response' =&gt; [
+'message' =&gt; 'role updated successfuly'
+]}</code>
+ </pre>
+    </span>
+<span id="execution-results-PUTapi-roles--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-roles--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-roles--id-"></code></pre>
+</span>
+<span id="execution-error-PUTapi-roles--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-roles--id-"></code></pre>
+</span>
+<form id="form-PUTapi-roles--id-" data-method="PUT"
+      data-path="api/roles/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-roles--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-roles--id-"
+                    onclick="tryItOut('PUTapi-roles--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-roles--id-"
+                    onclick="cancelTryOut('PUTapi-roles--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-roles--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/roles/{id}</code></b>
+        </p>
+            <p>
+            <small class="badge badge-purple">PATCH</small>
+            <b><code>api/roles/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-PUTapi-roles--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="PUTapi-roles--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="PUTapi-roles--id-"
+               value="11"
+               data-component="url" hidden>
+    <br>
+<p>id of the role</p>
+            </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="PUTapi-roles--id-"
+               value="qui"
+               data-component="body" hidden>
+    <br>
+<p>the name of the role</p>
+        </p>
+                <p>
+            <b><code>user_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="user_id"
+               data-endpoint="PUTapi-roles--id-"
+               value="1"
+               data-component="body" hidden>
+    <br>
+<p>the id of the user who created the new role</p>
+        </p>
+        </form>
+
+            <h2 id="role-management-endpoints-DELETEapi-roles--id-">Remove a role</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>endpoint to delete a role from the system</p>
+
+<span id="example-requests-DELETEapi-roles--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "helpus.test/api/roles/14" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "helpus.test/api/roles/14"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-roles--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{'status' =&gt; 'ok',
+'response' =&gt; [
+'message' =&gt; 'role deleted'
+]}</code>
+ </pre>
+    </span>
+<span id="execution-results-DELETEapi-roles--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-roles--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-roles--id-"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-roles--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-roles--id-"></code></pre>
+</span>
+<form id="form-DELETEapi-roles--id-" data-method="DELETE"
+      data-path="api/roles/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-roles--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-roles--id-"
+                    onclick="tryItOut('DELETEapi-roles--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-roles--id-"
+                    onclick="cancelTryOut('DELETEapi-roles--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-roles--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/roles/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-DELETEapi-roles--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="DELETEapi-roles--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="DELETEapi-roles--id-"
+               value="14"
+               data-component="url" hidden>
+    <br>
+<p>id of the role to delete</p>
+            </p>
+                    </form>
+
+        <h1 id="users-management-endpoints">Users management endpoints</h1>
+
+    
+
+            <h2 id="users-management-endpoints-GETapi-users">show all users</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>see all user with they info and everything relate to them
+this is not the handicap data it's only users data
+like admins or simple user.</p>
+
+<span id="example-requests-GETapi-users">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "helpus.test/api/users" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "helpus.test/api/users"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-users">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 11,
+            &quot;fullname&quot;: &quot;Prof. Etha Hermann&quot;,
+            &quot;username&quot;: &quot;Helmer&quot;,
+            &quot;role&quot;: &quot;Transportation Attendant&quot;,
+            &quot;adress&quot;: &quot;77710 Seth Valleys\nLake Edwardo, OR 21759&quot;,
+            &quot;number&quot;: 72855600,
+            &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/00cc33?text=+veritatis&quot;
+        },
+        {
+            &quot;id&quot;: 12,
+            &quot;fullname&quot;: &quot;Miss Queen Cummerata&quot;,
+            &quot;username&quot;: &quot;Ramon&quot;,
+            &quot;role&quot;: &quot;Transportation Attendant&quot;,
+            &quot;adress&quot;: &quot;7476 Jacobi Neck\nLuellaberg, NV 97832-8232&quot;,
+            &quot;number&quot;: 78975987,
+            &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/00bb55?text=+sed&quot;
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-users" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-users"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-users"></code></pre>
+</span>
+<span id="execution-error-GETapi-users" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-users"></code></pre>
+</span>
+<form id="form-GETapi-users" data-method="GET"
+      data-path="api/users"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-users', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-users"
+                    onclick="tryItOut('GETapi-users');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-users"
+                    onclick="cancelTryOut('GETapi-users');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-users" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/users</code></b>
+        </p>
+                <p>
+            <label id="auth-GETapi-users" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-users"
+                                                                data-component="header"></label>
+        </p>
+                </form>
+
+            <h2 id="users-management-endpoints-POSTapi-users">Store a new user</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>this endpoint store a new user based on the data passed in the request</p>
+<aside class="notice">make sure to pass all the the required data</aside>
+
+<span id="example-requests-POSTapi-users">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "helpus.test/api/users" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"fullname\": \"sunt\",
+    \"username\": \"et\",
+    \"role_id\": 9,
+    \"password\": \"adipisci\",
+    \"adress\": \"distinctio\",
+    \"number\": 3,
+    \"avatar\": \"consectetur\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "helpus.test/api/users"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "fullname": "sunt",
+    "username": "et",
+    "role_id": 9,
+    "password": "adipisci",
+    "adress": "distinctio",
+    "number": 3,
+    "avatar": "consectetur"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-users">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+'status' =&gt; 'ok',
+'data' =&gt; [
+'message' =&gt; 'successfuly created the account'
+]
+  }</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-users" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-users"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-users"></code></pre>
+</span>
+<span id="execution-error-POSTapi-users" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-users"></code></pre>
+</span>
+<form id="form-POSTapi-users" data-method="POST"
+      data-path="api/users"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-users', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-users"
+                    onclick="tryItOut('POSTapi-users');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-users"
+                    onclick="cancelTryOut('POSTapi-users');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-users" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/users</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-users" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-users"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>fullname</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="fullname"
+               data-endpoint="POSTapi-users"
+               value="sunt"
+               data-component="body" hidden>
+    <br>
+<p>this user fullname</p>
+        </p>
+                <p>
+            <b><code>username</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="username"
+               data-endpoint="POSTapi-users"
+               value="et"
+               data-component="body" hidden>
+    <br>
+<p>this user username</p>
+        </p>
+                <p>
+            <b><code>role_id</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="role_id"
+               data-endpoint="POSTapi-users"
+               value="9"
+               data-component="body" hidden>
+    <br>
+<p>this user role in the system</p>
+        </p>
+                <p>
+            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="password"
+               data-endpoint="POSTapi-users"
+               value="adipisci"
+               data-component="body" hidden>
+    <br>
+<p>this user role in the system</p>
+        </p>
+                <p>
+            <b><code>adress</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="adress"
+               data-endpoint="POSTapi-users"
+               value="distinctio"
+               data-component="body" hidden>
+    <br>
+<p>this user adress</p>
+        </p>
+                <p>
+            <b><code>number</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="number"
+               data-endpoint="POSTapi-users"
+               value="3"
+               data-component="body" hidden>
+    <br>
+<p>this user mobile number</p>
+        </p>
+                <p>
+            <b><code>avatar</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="avatar"
+               data-endpoint="POSTapi-users"
+               value="consectetur"
+               data-component="body" hidden>
+    <br>
+<p>this user avatar link</p>
+        </p>
+        </form>
+
+            <h2 id="users-management-endpoints-GETapi-users--id-">show one user</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>endpoint which returns the data of the specified with all his data.</p>
+
+<span id="example-requests-GETapi-users--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "helpus.test/api/users/20" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "helpus.test/api/users/20"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-users--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: {
+        &quot;id&quot;: 13,
+        &quot;fullname&quot;: &quot;Ayla Mueller&quot;,
+        &quot;username&quot;: &quot;Amos&quot;,
+        &quot;role&quot;: &quot;Utility Meter Reader&quot;,
+        &quot;adress&quot;: &quot;6194 Hahn Track Apt. 803\nNew Elfriedabury, RI 67688-0890&quot;,
+        &quot;number&quot;: 75768477,
+        &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/006644?text=+minus&quot;
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-users--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-users--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-users--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-users--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-users--id-"></code></pre>
+</span>
+<form id="form-GETapi-users--id-" data-method="GET"
+      data-path="api/users/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-users--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-users--id-"
+                    onclick="tryItOut('GETapi-users--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-users--id-"
+                    onclick="cancelTryOut('GETapi-users--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-users--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/users/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-GETapi-users--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-users--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="GETapi-users--id-"
+               value="20"
+               data-component="url" hidden>
+    <br>
+<p>id of the user</p>
+            </p>
+                    </form>
+
+            <h2 id="users-management-endpoints-PUTapi-users--id-">Update a user.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>endpoint to update one user</p>
+
+<span id="example-requests-PUTapi-users--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "helpus.test/api/users/20" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"fullname\": \"voluptates\",
+    \"username\": \"error\",
+    \"role_id\": 6,
+    \"password\": \"aliquam\",
+    \"adress\": \"accusamus\",
+    \"number\": 5,
+    \"avatar\": \"eius\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "helpus.test/api/users/20"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "fullname": "voluptates",
+    "username": "error",
+    "role_id": 6,
+    "password": "aliquam",
+    "adress": "accusamus",
+    "number": 5,
+    "avatar": "eius"
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-users--id-">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+'status' =&gt; 'ok',
+'data' =&gt; [
+'message' =&gt; 'successfuly updated the account'
+]
+  }</code>
+ </pre>
+    </span>
+<span id="execution-results-PUTapi-users--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-users--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-users--id-"></code></pre>
+</span>
+<span id="execution-error-PUTapi-users--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-users--id-"></code></pre>
+</span>
+<form id="form-PUTapi-users--id-" data-method="PUT"
+      data-path="api/users/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-users--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-users--id-"
+                    onclick="tryItOut('PUTapi-users--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-users--id-"
+                    onclick="cancelTryOut('PUTapi-users--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-users--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/users/{id}</code></b>
+        </p>
+            <p>
+            <small class="badge badge-purple">PATCH</small>
+            <b><code>api/users/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-PUTapi-users--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="PUTapi-users--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="PUTapi-users--id-"
+               value="20"
+               data-component="url" hidden>
+    <br>
+<p>id of the user to update</p>
+            </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>fullname</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="fullname"
+               data-endpoint="PUTapi-users--id-"
+               value="voluptates"
+               data-component="body" hidden>
+    <br>
+<p>this user fullname</p>
+        </p>
+                <p>
+            <b><code>username</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="username"
+               data-endpoint="PUTapi-users--id-"
+               value="error"
+               data-component="body" hidden>
+    <br>
+<p>this user username</p>
+        </p>
+                <p>
+            <b><code>role_id</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="role_id"
+               data-endpoint="PUTapi-users--id-"
+               value="6"
+               data-component="body" hidden>
+    <br>
+<p>this user role in the system</p>
+        </p>
+                <p>
+            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="password"
+               data-endpoint="PUTapi-users--id-"
+               value="aliquam"
+               data-component="body" hidden>
+    <br>
+<p>this user role in the system</p>
+        </p>
+                <p>
+            <b><code>adress</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="adress"
+               data-endpoint="PUTapi-users--id-"
+               value="accusamus"
+               data-component="body" hidden>
+    <br>
+<p>this user adress</p>
+        </p>
+                <p>
+            <b><code>number</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="number"
+               data-endpoint="PUTapi-users--id-"
+               value="5"
+               data-component="body" hidden>
+    <br>
+<p>this user mobile number</p>
+        </p>
+                <p>
+            <b><code>avatar</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="avatar"
+               data-endpoint="PUTapi-users--id-"
+               value="eius"
+               data-component="body" hidden>
+    <br>
+<p>this user avatar link</p>
+        </p>
+        </form>
+
+            <h2 id="users-management-endpoints-DELETEapi-users--id-">Remove the specified user</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>endpoint to remove the user with given id</p>
+
+<span id="example-requests-DELETEapi-users--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "helpus.test/api/users/3" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "helpus.test/api/users/3"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-users--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+'status' =&gt; 'ok',
+'response' =&gt; [
+'message' =&gt; 'successfuly deleted the account'
+]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-DELETEapi-users--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-users--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-users--id-"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-users--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-users--id-"></code></pre>
+</span>
+<form id="form-DELETEapi-users--id-" data-method="DELETE"
+      data-path="api/users/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-users--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-users--id-"
+                    onclick="tryItOut('DELETEapi-users--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-users--id-"
+                    onclick="cancelTryOut('DELETEapi-users--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-users--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/users/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-DELETEapi-users--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="DELETEapi-users--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="DELETEapi-users--id-"
+               value="3"
+               data-component="url" hidden>
+    <br>
+<p>id of the user to delete</p>
             </p>
                     </form>
 

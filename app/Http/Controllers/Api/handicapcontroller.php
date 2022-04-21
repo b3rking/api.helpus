@@ -10,7 +10,9 @@ use Illuminate\Http\Request;
 /**
  * 
  *
- * @group handicap management endpoint
+ * @group handicap management endpoints
+ * 
+ * @authenticated
  * 
  * 
  **/
