@@ -2,8 +2,9 @@
 
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\RoleController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\handicapcontroller;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,4 @@ Route::get('/', function() {
 
 Route::apiResource('users', UserController::class);
 Route::apiResource('roles', RoleController::class);
+Route::apiResource('handicap', handicapcontroller::class);

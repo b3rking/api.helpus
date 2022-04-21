@@ -69,7 +69,11 @@ class UserController extends Controller
             'password' => 'required'
         ]);
 
-        User::create($request->all());
+        $data = $request->all();
+
+        $data['avatar'] = $request->file('avatar')->store('avatar');
+
+        User::create($data);
 
         return Response([
             'status' => 'ok',
