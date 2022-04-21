@@ -16,7 +16,7 @@ class handicap extends Model
         return $this->hasOne(User::class);
     }
 
-    public function image() {
+    public function images() {
         return $this->hasMany(Image::class);
     }
 }

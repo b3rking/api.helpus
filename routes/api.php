@@ -23,4 +23,4 @@ Route::get('/', function() {
 
 Route::apiResource('users', UserController::class);
 Route::apiResource('roles', RoleController::class);
-Route::apiResource('handicap', handicapcontroller::class);
+Route::apiResource('handicaps', handicapcontroller::class);
