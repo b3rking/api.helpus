@@ -1,5 +1,10 @@
 <?php
 
+// use Illuminate\Http\Client\Request;
+// use Illuminate\Http\Request;
+
+use App\Http\Controllers\Api\RoleController;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +25,9 @@ Route::get('/', function () {
 Route::get('docs', function() {
     return view('scribe.index');
 });
+
+Route::get('/form', function(Request $request) {
+    return view('some_test');
+});
+
+Route::post('t_files_u', [RoleController::class, 'test_file'])->name('t_files_u');

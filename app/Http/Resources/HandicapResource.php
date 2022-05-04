@@ -27,7 +27,11 @@ class HandicapResource extends JsonResource
             'story' => $this->story,
             'needed_money' => $this->needed_money,
             'state_of_health' => $this->state_of_health,
-            'images' => Image::where('handicap_id', $this->id)->get(),
+            'images' => [
+                'main_image' => $this->main_image,
+                'first_primary_image' => $this->first_primary_image,
+                'second_primary_image' => $this->second_primary_image
+            ],
             'donation_status' => $this->donation_status,
             'user' => $this->user_id,
             'family_situation' => $this->family_situation

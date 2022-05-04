@@ -25,7 +25,9 @@ class HandicapFactory extends Factory
             'story' => $this->faker->text(200),
             'needed_money' => $this->faker->numberBetween(100000, 5000000),
             'state_of_health' => 'bad',
-            'image_id' => $this->faker->numberBetween(1, 10),
+            'main_image' => $this->faker->imageUrl,
+            'first_primary_image' => $this->faker->imageUrl,
+            'second_primary_image' => $this->faker->imageUrl,
             'donation_status' => "en cours",
             'user_id' => $this->faker->numberBetween(1, 10),
             'family_situation' => "orphelins"

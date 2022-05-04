@@ -26,7 +26,9 @@ class CreateHandicapsTable extends Migration
             $table->longText('story');
             $table->integer('needed_money');
             $table->string('state_of_health');
-            $table->integer('image_id');
+            $table->string('main_image');
+            $table->string('first_primary_image')->nullable();
+            $table->string('second_primary_image')->nullable();
             $table->string('donation_status')->nullable();
             $table->integer('user_id');
             $table->string('family_situation');
