@@ -93,7 +93,12 @@ class handicapcontroller extends Controller
      */
     public function show(handicap $handicap)
     {
-        //
+        return response([
+            'status' => 'ok',
+            'data' => [
+                new HandicapResource($handicap)
+            ]
+            ], 201, ['Content-Type' => 'application/json']);
     }
 
     /**
@@ -116,6 +121,6 @@ class handicapcontroller extends Controller
      */
     public function destroy(handicap $handicap)
     {
-        //
+	    //
     }
 }
