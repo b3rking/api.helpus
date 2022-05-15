@@ -21,7 +21,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"fullname":"Louie Heidenreich","adress":"57672 Quitzon Wall Apt. 406\nJerelborough, HI 97100","mobile_number":"1-910-746-6078","year_of_birth":"2015","ecocash_number":110022211,"lumicash_number":110022211,"bank_name":"Swaniawski Branch","bank_account_number":5079500,"story":"Voluptates eveniet et nostrum quo enim. Possimus iste maxime optio quas id eum. Praesentium quasi porro ut eum sit et nam. Quasi ducimus aliquam laborum aut vitae. Aperiam eveniet et nulla.","needed_money":4339512,"state_of_health":"bad","images":[],"donation_status":"en cours","user":9,"family_situation":"orphelins"},{"fullname":"Karli Hessel","adress":"551 Bergnaum Throughway\nO''Konfort, NJ 34067","mobile_number":"1-847-406-5150","year_of_birth":"1977","ecocash_number":110022211,"lumicash_number":110022211,"bank_name":"Yoshiko Rapids","bank_account_number":5105579,"story":"Eum molestiae culpa voluptatum et cupiditate. Minus sed nobis omnis et. Quia quis eveniet eum.","needed_money":2744773,"state_of_health":"bad","images":[],"donation_status":"en cours","user":2,"family_situation":"orphelins"}]}'
+        content: '{"data":[{"fullname":"Dr. Eladio Feil","adress":"6874 Emmett Throughway Suite 366\nMullerborough, DC 81777","mobile_number":"(907) 278-6828","year_of_birth":"1971","ecocash_number":110022211,"lumicash_number":110022211,"bank_name":"Bartoletti Parkway","bank_account_number":6086712,"story":"Voluptatem ut optio et expedita soluta. Est sint omnis sunt explicabo amet sunt ipsa aut. Odio unde voluptate ut sit.","needed_money":2285787,"state_of_health":"bad","images":{"main_image":"https:\/\/via.placeholder.com\/640x480.png\/00aa22?text=velit","first_primary_image":"https:\/\/via.placeholder.com\/640x480.png\/00eedd?text=voluptatem","second_primary_image":"https:\/\/via.placeholder.com\/640x480.png\/002211?text=et"},"donation_status":"en cours","user":3,"family_situation":"orphelins"},{"fullname":"Casandra Rau","adress":"675 Adolphus Stravenue Apt. 881\nKuphaltown, CA 24603","mobile_number":"+1 (540) 236-6852","year_of_birth":"2013","ecocash_number":110022211,"lumicash_number":110022211,"bank_name":"Legros Locks","bank_account_number":5657964,"story":"Quia culpa blanditiis et tempora possimus impedit. Consequuntur hic sapiente dicta ducimus illum. Ex repudiandae magnam eius aliquid est sint et.","needed_money":160578,"state_of_health":"bad","images":{"main_image":"https:\/\/via.placeholder.com\/640x480.png\/001188?text=consequuntur","first_primary_image":"https:\/\/via.placeholder.com\/640x480.png\/007799?text=nostrum","second_primary_image":"https:\/\/via.placeholder.com\/640x480.png\/00eecc?text=quia"},"donation_status":"en cours","user":9,"family_situation":"orphelins"}]}'
         headers: []
         description: null
     responseFields: []
@@ -30,8 +30,8 @@ endpoints:
       - POST
     uri: api/handicaps
     metadata:
-      title: 'Store a newly created resource in storage.'
-      description: ''
+      title: 'add new handicap in the database'
+      description: 'call this endpoint to store new handicap based on the given data'
       authenticated: true
       custom: []
     headers:
@@ -39,16 +39,144 @@ endpoints:
       Accept: application/json
     urlParameters: []
     queryParameters: []
-    bodyParameters: []
-    responses: []
+    bodyParameters:
+      fullname:
+        name: fullname
+        description: 'the fullname of the handicap'
+        required: true
+        example: perspiciatis
+        type: string
+        custom: []
+      adress:
+        name: adress
+        description: 'the adress of the handicap'
+        required: true
+        example: perspiciatis
+        type: string
+        custom: []
+      mobile_number:
+        name: mobile_number
+        description: 'the mobile number of the handicap or his host'
+        required: true
+        example: eum
+        type: string
+        custom: []
+      year_of_birth:
+        name: year_of_birth
+        description: 'the year of birth for the handicap'
+        required: true
+        example: 9
+        type: integer
+        custom: []
+      ecocash_number:
+        name: ecocash_number
+        description: 'the ecocash number of the handicap'
+        required: false
+        example: 5
+        type: integer
+        custom: []
+      lumitel_number:
+        name: lumitel_number
+        description: 'the lumicash number of the handicap'
+        required: false
+        example: 12
+        type: integer
+        custom: []
+      bank_name:
+        name: bank_name
+        description: 'the name of the bank used by the handicap'
+        required: false
+        example: quo
+        type: string
+        custom: []
+      bank_account_number:
+        name: bank_account_number
+        description: 'the number of the bank account used by the handicap'
+        required: false
+        example: autem
+        type: string
+        custom: []
+      story:
+        name: story
+        description: 'the story of the handicap'
+        required: true
+        example: perspiciatis
+        type: string
+        custom: []
+      needed_money:
+        name: needed_money
+        description: 'the amount of money for the operation'
+        required: true
+        example: 18
+        type: integer
+        custom: []
+      state_of_health:
+        name: state_of_health
+        description: 'the health of the patient can take those values (simple, bad, worst)'
+        required: true
+        example: qui
+        type: string
+        custom: []
+      main_image:
+        name: main_image
+        description: 'the most important picture of the handicap'
+        required: true
+        example: quam
+        type: string
+        custom: []
+      first_primary_image:
+        name: first_primary_image
+        description: 'just another picture of the handicap'
+        required: false
+        example: quasi
+        type: string
+        custom: []
+      second_primary_image:
+        name: second_primary_image
+        description: 'just another picture of the handicap the second one'
+        required: false
+        example: eos
+        type: string
+        custom: []
+      donation_status:
+        name: donation_status
+        description: 'just the status of the donation process (not started, in progress, done)'
+        required: false
+        example: rerum
+        type: string
+        custom: []
+      user_id:
+        name: user_id
+        description: 'the id of the user who gonna add the handicap'
+        required: true
+        example: 19
+        type: integer
+        custom: []
+      family_situation:
+        name: family_situation
+        description: 'the state of his familly situation (orphans or with parents)'
+        required: true
+        example: nisi
+        type: string
+        custom: []
+    responses:
+      -
+        status: 201
+        content: |-
+          {'status' => 'ok',
+                'data' => [
+                     'message' => 'handicap created successfuly'
+               ]}
+        headers: []
+        description: '201'
     responseFields: []
   -
     httpMethods:
       - GET
     uri: 'api/handicaps/{id}'
     metadata:
-      title: 'Display the specified resource.'
-      description: ''
+      title: 'show one handicap'
+      description: 'returns one handicap found using the id provided in the request query'
       authenticated: true
       custom: []
     headers:
@@ -66,362 +194,9 @@ endpoints:
     bodyParameters: []
     responses:
       -
-        status: 404
-        content: |-
-          {
-              "message": "",
-              "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
-              "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\AbstractRouteCollection.php",
-              "line": 43,
-              "trace": [
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteCollection.php",
-                      "line": 162,
-                      "function": "handleMatchedRoute",
-                      "class": "Illuminate\\Routing\\AbstractRouteCollection",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
-                      "line": 673,
-                      "function": "match",
-                      "class": "Illuminate\\Routing\\RouteCollection",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
-                      "line": 662,
-                      "function": "findRoute",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
-                      "line": 651,
-                      "function": "dispatchToRoute",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
-                      "line": 167,
-                      "function": "dispatch",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-                      "line": 128,
-                      "function": "Illuminate\\Foundation\\Http\\{closure}",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-                      "line": 21,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php",
-                      "line": 31,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-                      "line": 167,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-                      "line": 21,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php",
-                      "line": 40,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-                      "line": 167,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
-                      "line": 27,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-                      "line": 167,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
-                      "line": 86,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-                      "line": 167,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
-                      "line": 38,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-                      "line": 167,
-                      "function": "handle",
-                      "class": "Fruitcake\\Cors\\HandleCors",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php",
-                      "line": 39,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-                      "line": 167,
-                      "function": "handle",
-                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-                      "line": 103,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
-                      "line": 142,
-                      "function": "then",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
-                      "line": 111,
-                      "function": "sendRequestThroughRouter",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-                      "line": 299,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-                      "line": 287,
-                      "function": "callLaravelOrLumenRoute",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-                      "line": 89,
-                      "function": "makeApiCall",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-                      "line": 45,
-                      "function": "makeResponseCall",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-                      "line": 35,
-                      "function": "makeResponseCallIfConditionsPass",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
-                      "line": 222,
-                      "function": "__invoke",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
-                      "line": 179,
-                      "function": "iterateThroughStrategies",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
-                      "line": 116,
-                      "function": "fetchResponses",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
-                      "line": 118,
-                      "function": "processRoute",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
-                      "line": 75,
-                      "function": "extractEndpointsInfoFromLaravelApp",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
-                      "line": 51,
-                      "function": "extractEndpointsInfoAndWriteToDisk",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
-                      "line": 50,
-                      "function": "get",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
-                      "line": 36,
-                      "function": "handle",
-                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
-                      "line": 40,
-                      "function": "Illuminate\\Container\\{closure}",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
-                      "line": 93,
-                      "function": "unwrapIfClosure",
-                      "class": "Illuminate\\Container\\Util",
-                      "type": "::"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
-                      "line": 37,
-                      "function": "callBoundMethod",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
-                      "line": 653,
-                      "function": "call",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
-                      "line": 136,
-                      "function": "call",
-                      "class": "Illuminate\\Container\\Container",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\symfony\\console\\Command\\Command.php",
-                      "line": 298,
-                      "function": "execute",
-                      "class": "Illuminate\\Console\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
-                      "line": 121,
-                      "function": "run",
-                      "class": "Symfony\\Component\\Console\\Command\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\symfony\\console\\Application.php",
-                      "line": 1015,
-                      "function": "run",
-                      "class": "Illuminate\\Console\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\symfony\\console\\Application.php",
-                      "line": 299,
-                      "function": "doRunCommand",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\symfony\\console\\Application.php",
-                      "line": 171,
-                      "function": "doRun",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
-                      "line": 94,
-                      "function": "run",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
-                      "line": 129,
-                      "function": "run",
-                      "class": "Illuminate\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\laragon\\www\\helpus\\artisan",
-                      "line": 37,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Console\\Kernel",
-                      "type": "->"
-                  }
-              ]
-          }
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
+        status: 200
+        content: '{"data":{"fullname":"Cecil Bayer","adress":"792 Marquardt Freeway Apt. 473\nWest Sigrid, AL 07763","mobile_number":"1-551-549-3241","year_of_birth":"1976","ecocash_number":110022211,"lumicash_number":110022211,"bank_name":"Pedro Way","bank_account_number":6993384,"story":"Corporis qui quia explicabo rerum id fuga vel. Sint quibusdam quo neque.","needed_money":2787138,"state_of_health":"bad","images":{"main_image":"https:\/\/via.placeholder.com\/640x480.png\/0066aa?text=ut","first_primary_image":"https:\/\/via.placeholder.com\/640x480.png\/0044dd?text=ut","second_primary_image":"https:\/\/via.placeholder.com\/640x480.png\/008822?text=dolores"},"donation_status":"en cours","user":7,"family_situation":"orphelins"}}'
+        headers: []
         description: null
     responseFields: []
   -
@@ -430,8 +205,8 @@ endpoints:
       - PATCH
     uri: 'api/handicaps/{id}'
     metadata:
-      title: 'Update the specified resource in storage.'
-      description: ''
+      title: 'Update the handicap'
+      description: 'update the handicap related data'
       authenticated: true
       custom: []
     headers:
@@ -446,16 +221,144 @@ endpoints:
         type: integer
         custom: []
     queryParameters: []
-    bodyParameters: []
-    responses: []
+    bodyParameters:
+      fullname:
+        name: fullname
+        description: 'the fullname of the handicap'
+        required: true
+        example: cupiditate
+        type: string
+        custom: []
+      adress:
+        name: adress
+        description: 'the adress of the handicap'
+        required: true
+        example: aspernatur
+        type: string
+        custom: []
+      mobile_number:
+        name: mobile_number
+        description: 'the mobile number of the handicap or his host'
+        required: true
+        example: voluptatem
+        type: string
+        custom: []
+      year_of_birth:
+        name: year_of_birth
+        description: 'the year of birth for the handicap'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+      ecocash_number:
+        name: ecocash_number
+        description: 'the ecocash number of the handicap'
+        required: false
+        example: 5
+        type: integer
+        custom: []
+      lumitel_number:
+        name: lumitel_number
+        description: 'the lumicash number of the handicap'
+        required: false
+        example: 8
+        type: integer
+        custom: []
+      bank_name:
+        name: bank_name
+        description: 'the name of the bank used by the handicap'
+        required: false
+        example: provident
+        type: string
+        custom: []
+      bank_account_number:
+        name: bank_account_number
+        description: 'the number of the bank account used by the handicap'
+        required: false
+        example: nulla
+        type: string
+        custom: []
+      story:
+        name: story
+        description: 'the story of the handicap'
+        required: true
+        example: nobis
+        type: string
+        custom: []
+      needed_money:
+        name: needed_money
+        description: 'the amount of money for the operation'
+        required: true
+        example: 6
+        type: integer
+        custom: []
+      state_of_health:
+        name: state_of_health
+        description: 'the health of the patient can take those values (simple, bad, worst)'
+        required: true
+        example: placeat
+        type: string
+        custom: []
+      main_image:
+        name: main_image
+        description: 'the most important picture of the handicap'
+        required: true
+        example: qui
+        type: string
+        custom: []
+      first_primary_image:
+        name: first_primary_image
+        description: 'just another picture of the handicap'
+        required: false
+        example: soluta
+        type: string
+        custom: []
+      second_primary_image:
+        name: second_primary_image
+        description: 'just another picture of the handicap the second one'
+        required: false
+        example: rerum
+        type: string
+        custom: []
+      donation_status:
+        name: donation_status
+        description: 'just the status of the donation process (not started, in progress, done)'
+        required: false
+        example: et
+        type: string
+        custom: []
+      user_id:
+        name: user_id
+        description: 'the id of the user who gonna add the handicap'
+        required: true
+        example: 9
+        type: integer
+        custom: []
+      family_situation:
+        name: family_situation
+        description: 'the state of his familly situation (orphans or with parents)'
+        required: true
+        example: sapiente
+        type: string
+        custom: []
+    responses:
+      -
+        status: 201
+        content: |-
+          {'status' => 'ok',
+                'data' => [
+                     'message' => 'successfuly updated the handicap data'
+               ]}
+        headers: []
+        description: '201'
     responseFields: []
   -
     httpMethods:
       - DELETE
     uri: 'api/handicaps/{id}'
     metadata:
-      title: 'Remove the specified resource from storage.'
-      description: ''
+      title: 'delete the handicap data'
+      description: 'delete the handicap data from the database'
       authenticated: true
       custom: []
     headers:
@@ -471,5 +374,14 @@ endpoints:
         custom: []
     queryParameters: []
     bodyParameters: []
-    responses: []
+    responses:
+      -
+        status: 201
+        content: |-
+          {'status' => 'ok',
+                'data' => [
+                     'message' => 'successfuly deleted the handicap data'
+               ]}
+        headers: []
+        description: '201'
     responseFields: []

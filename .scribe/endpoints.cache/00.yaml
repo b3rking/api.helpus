@@ -21,7 +21,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"name":"Military Officer","user_id":8,"updated_at":"2022-04-21T17:55:09.000000Z","created_at":"2022-04-21T17:55:09.000000Z","id":24},{"name":"Explosives Expert","user_id":8,"updated_at":"2022-04-21T17:55:09.000000Z","created_at":"2022-04-21T17:55:09.000000Z","id":25}]}'
+        content: '{"data":[{"name":"Tool and Die Maker","user_id":7,"updated_at":"2022-05-15T14:35:29.000000Z","created_at":"2022-05-15T14:35:29.000000Z","id":12},{"name":"Clinical School Psychologist","user_id":8,"updated_at":"2022-05-15T14:35:29.000000Z","created_at":"2022-05-15T14:35:29.000000Z","id":13}]}'
         headers: []
         description: null
     responseFields: []
@@ -44,14 +44,14 @@ endpoints:
         name: name
         description: 'the name of the role'
         required: true
-        example: tempora
+        example: qui
         type: string
         custom: []
       user_id:
         name: user_id
         description: 'the id of the user who created the new role'
         required: true
-        example: 14
+        example: 17
         type: integer
         custom: []
     responses:
@@ -82,7 +82,7 @@ endpoints:
         name: id
         description: 'id of the role'
         required: true
-        example: 11
+        example: 10
         type: integer
         custom: []
     queryParameters: []
@@ -90,7 +90,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"name":"Appliance Repairer","user_id":9,"updated_at":"2022-04-21T17:55:09.000000Z","created_at":"2022-04-21T17:55:09.000000Z","id":26}}'
+        content: '{"data":{"name":"Municipal Court Clerk","user_id":1,"updated_at":"2022-05-15T14:35:29.000000Z","created_at":"2022-05-15T14:35:29.000000Z","id":14}}'
         headers: []
         description: null
     responseFields: []
@@ -112,7 +112,7 @@ endpoints:
         name: id
         description: 'id of the role'
         required: true
-        example: 2
+        example: 18
         type: integer
         custom: []
     queryParameters: []
@@ -121,14 +121,14 @@ endpoints:
         name: name
         description: 'the name of the role'
         required: true
-        example: tempore
+        example: quisquam
         type: string
         custom: []
       user_id:
         name: user_id
         description: 'the id of the user who created the new role'
         required: true
-        example: 14
+        example: 17
         type: integer
         custom: []
     responses:
@@ -159,7 +159,7 @@ endpoints:
         name: id
         description: 'id of the role to delete'
         required: true
-        example: 19
+        example: 2
         type: integer
         custom: []
     queryParameters: []

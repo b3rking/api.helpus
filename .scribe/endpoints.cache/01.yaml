@@ -24,7 +24,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":32,"fullname":"Russell McCullough","username":"Raleigh","role":"Utility Meter Reader","adress":"669 Bradtke Cliff Apt. 670\nLeoside, TX 35184","number":78783062,"avatar":"https:\/\/via.placeholder.com\/640x480.png\/00ddbb?text=+alias"},{"id":33,"fullname":"Delbert Ritchie","username":"Milton","role":"Transportation Attendant","adress":"5427 Pollich Vista\nO''Connerbury, NY 63584","number":72987304,"avatar":"https:\/\/via.placeholder.com\/640x480.png\/00aaee?text=+voluptatem"}]}'
+        content: '{"data":[{"id":20,"fullname":"Ludie Stokes","username":"Camron","role":"Insurance Investigator","adress":"6514 Braun Walk\nSteuberburgh, IL 78009-7254","number":76507092,"avatar":"https:\/\/via.placeholder.com\/640x480.png\/001144?text=+autem"},{"id":21,"fullname":"Lamont Hill DVM","username":"Charles","role":"Event Planner","adress":"116 Annabell Hollow Apt. 602\nTorpview, AL 07775","number":72178055,"avatar":"https:\/\/via.placeholder.com\/640x480.png\/0044ee?text=+ut"}]}'
         headers: []
         description: null
     responseFields: []
@@ -49,49 +49,49 @@ endpoints:
         name: fullname
         description: 'this user fullname'
         required: true
-        example: nisi
+        example: qui
         type: string
         custom: []
       username:
         name: username
         description: 'this user username'
         required: true
-        example: delectus
+        example: quibusdam
         type: string
         custom: []
       role_id:
         name: role_id
         description: 'this user role in the system'
         required: false
-        example: 8
+        example: 1
         type: integer
         custom: []
       password:
         name: password
         description: 'this user role in the system'
         required: true
-        example: incidunt
+        example: aliquid
         type: string
         custom: []
       adress:
         name: adress
         description: 'this user adress'
         required: false
-        example: delectus
+        example: pariatur
         type: string
         custom: []
       number:
         name: number
         description: 'this user mobile number'
         required: false
-        example: 12
+        example: 18
         type: integer
         custom: []
       avatar:
         name: avatar
         description: 'this user avatar link'
         required: false
-        example: eius
+        example: vitae
         type: string
         custom: []
     responses:
@@ -124,7 +124,7 @@ endpoints:
         name: id
         description: 'id of the user'
         required: true
-        example: 6
+        example: 4
         type: integer
         custom: []
     queryParameters: []
@@ -132,7 +132,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"id":34,"fullname":"Lora Ullrich","username":"Kellen","role":"Utility Meter Reader","adress":"433 Hilpert Shoals\nWest Sisterstad, CT 84515-3138","number":71187501,"avatar":"https:\/\/via.placeholder.com\/640x480.png\/0033cc?text=+qui"}}'
+        content: '{"data":{"id":22,"fullname":"Prof. Edmund Vandervort","username":"Ramon","role":"Insurance Investigator","adress":"8115 Lyla Extensions\nRolfsontown, MD 22991-2342","number":75276074,"avatar":"https:\/\/via.placeholder.com\/640x480.png\/000055?text=+vitae"}}'
         headers: []
         description: null
     responseFields: []
@@ -154,7 +154,7 @@ endpoints:
         name: id
         description: 'id of the user to update'
         required: true
-        example: 1
+        example: 3
         type: integer
         custom: []
     queryParameters: []
@@ -163,49 +163,49 @@ endpoints:
         name: fullname
         description: 'this user fullname'
         required: true
-        example: sapiente
+        example: rerum
         type: string
         custom: []
       username:
         name: username
         description: 'this user username'
         required: true
-        example: magni
+        example: similique
         type: string
         custom: []
       role_id:
         name: role_id
         description: 'this user role in the system'
         required: false
-        example: 6
+        example: 3
         type: integer
         custom: []
       password:
         name: password
         description: 'this user role in the system'
         required: true
-        example: velit
+        example: voluptatum
         type: string
         custom: []
       adress:
         name: adress
         description: 'this user adress'
         required: false
-        example: corporis
+        example: similique
         type: string
         custom: []
       number:
         name: number
         description: 'this user mobile number'
         required: false
-        example: 3
+        example: 16
         type: integer
         custom: []
       avatar:
         name: avatar
         description: 'this user avatar link'
         required: false
-        example: aut
+        example: esse
         type: string
         custom: []
     responses:
@@ -238,7 +238,7 @@ endpoints:
         name: id
         description: 'id of the user to delete'
         required: true
-        example: 9
+        example: 2
         type: integer
         custom: []
     queryParameters: []

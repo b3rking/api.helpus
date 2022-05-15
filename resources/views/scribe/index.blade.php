@@ -122,16 +122,16 @@
                         <a href="#handicap-management-endpoints-GETapi-handicaps">Show the list of all handicap</a>
                     </li>
                                     <li class="tocify-item level-2" data-unique="handicap-management-endpoints-POSTapi-handicaps">
-                        <a href="#handicap-management-endpoints-POSTapi-handicaps">Store a newly created resource in storage.</a>
+                        <a href="#handicap-management-endpoints-POSTapi-handicaps">add new handicap in the database</a>
                     </li>
                                     <li class="tocify-item level-2" data-unique="handicap-management-endpoints-GETapi-handicaps--id-">
-                        <a href="#handicap-management-endpoints-GETapi-handicaps--id-">Display the specified resource.</a>
+                        <a href="#handicap-management-endpoints-GETapi-handicaps--id-">show one handicap</a>
                     </li>
                                     <li class="tocify-item level-2" data-unique="handicap-management-endpoints-PUTapi-handicaps--id-">
-                        <a href="#handicap-management-endpoints-PUTapi-handicaps--id-">Update the specified resource in storage.</a>
+                        <a href="#handicap-management-endpoints-PUTapi-handicaps--id-">Update the handicap</a>
                     </li>
                                     <li class="tocify-item level-2" data-unique="handicap-management-endpoints-DELETEapi-handicaps--id-">
-                        <a href="#handicap-management-endpoints-DELETEapi-handicaps--id-">Remove the specified resource from storage.</a>
+                        <a href="#handicap-management-endpoints-DELETEapi-handicaps--id-">delete the handicap data</a>
                     </li>
                                                     </ul>
                             </ul>
@@ -145,7 +145,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: April 21 2022</li>
+        <li>Last updated: May 15 2022</li>
     </ul>
 </div>
 
@@ -214,18 +214,18 @@ fetch(url, {
 <code class="language-json">{
     &quot;data&quot;: [
         {
-            &quot;name&quot;: &quot;Military Officer&quot;,
-            &quot;user_id&quot;: 8,
-            &quot;updated_at&quot;: &quot;2022-04-21T17:55:09.000000Z&quot;,
-            &quot;created_at&quot;: &quot;2022-04-21T17:55:09.000000Z&quot;,
-            &quot;id&quot;: 24
+            &quot;name&quot;: &quot;Tool and Die Maker&quot;,
+            &quot;user_id&quot;: 7,
+            &quot;updated_at&quot;: &quot;2022-05-15T14:35:29.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-05-15T14:35:29.000000Z&quot;,
+            &quot;id&quot;: 12
         },
         {
-            &quot;name&quot;: &quot;Explosives Expert&quot;,
+            &quot;name&quot;: &quot;Clinical School Psychologist&quot;,
             &quot;user_id&quot;: 8,
-            &quot;updated_at&quot;: &quot;2022-04-21T17:55:09.000000Z&quot;,
-            &quot;created_at&quot;: &quot;2022-04-21T17:55:09.000000Z&quot;,
-            &quot;id&quot;: 25
+            &quot;updated_at&quot;: &quot;2022-05-15T14:35:29.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-05-15T14:35:29.000000Z&quot;,
+            &quot;id&quot;: 13
         }
     ]
 }</code>
@@ -298,8 +298,8 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"tempora\",
-    \"user_id\": 14
+    \"name\": \"qui\",
+    \"user_id\": 17
 }"
 </code></pre></div>
 
@@ -315,8 +315,8 @@ const headers = {
 };
 
 let body = {
-    "name": "tempora",
-    "user_id": 14
+    "name": "qui",
+    "user_id": 17
 };
 
 fetch(url, {
@@ -392,7 +392,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-roles"
-               value="tempora"
+               value="qui"
                data-component="body" hidden>
     <br>
 <p>the name of the role</p>
@@ -402,7 +402,7 @@ fetch(url, {
                 <input type="number"
                name="user_id"
                data-endpoint="POSTapi-roles"
-               value="14"
+               value="17"
                data-component="body" hidden>
     <br>
 <p>the id of the user who created the new role</p>
@@ -423,14 +423,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "helpus.test/api/roles/11" \
+    --get "helpus.test/api/roles/10" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/roles/11"
+    "helpus.test/api/roles/10"
 );
 
 const headers = {
@@ -453,11 +453,11 @@ fetch(url, {
 
 <code class="language-json">{
     &quot;data&quot;: {
-        &quot;name&quot;: &quot;Appliance Repairer&quot;,
-        &quot;user_id&quot;: 9,
-        &quot;updated_at&quot;: &quot;2022-04-21T17:55:09.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2022-04-21T17:55:09.000000Z&quot;,
-        &quot;id&quot;: 26
+        &quot;name&quot;: &quot;Municipal Court Clerk&quot;,
+        &quot;user_id&quot;: 1,
+        &quot;updated_at&quot;: &quot;2022-05-15T14:35:29.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-05-15T14:35:29.000000Z&quot;,
+        &quot;id&quot;: 14
     }
 }</code>
  </pre>
@@ -515,7 +515,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="GETapi-roles--id-"
-               value="11"
+               value="10"
                data-component="url" hidden>
     <br>
 <p>id of the role</p>
@@ -536,19 +536,19 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "helpus.test/api/roles/2" \
+    "helpus.test/api/roles/18" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"tempore\",
-    \"user_id\": 14
+    \"name\": \"quisquam\",
+    \"user_id\": 17
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/roles/2"
+    "helpus.test/api/roles/18"
 );
 
 const headers = {
@@ -557,8 +557,8 @@ const headers = {
 };
 
 let body = {
-    "name": "tempore",
-    "user_id": 14
+    "name": "quisquam",
+    "user_id": 17
 };
 
 fetch(url, {
@@ -638,7 +638,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-roles--id-"
-               value="2"
+               value="18"
                data-component="url" hidden>
     <br>
 <p>id of the role</p>
@@ -649,7 +649,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="PUTapi-roles--id-"
-               value="tempore"
+               value="quisquam"
                data-component="body" hidden>
     <br>
 <p>the name of the role</p>
@@ -659,7 +659,7 @@ fetch(url, {
                 <input type="number"
                name="user_id"
                data-endpoint="PUTapi-roles--id-"
-               value="14"
+               value="17"
                data-component="body" hidden>
     <br>
 <p>the id of the user who created the new role</p>
@@ -680,14 +680,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "helpus.test/api/roles/19" \
+    "helpus.test/api/roles/2" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/roles/19"
+    "helpus.test/api/roles/2"
 );
 
 const headers = {
@@ -767,7 +767,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-roles--id-"
-               value="19"
+               value="2"
                data-component="url" hidden>
     <br>
 <p>id of the role to delete</p>
@@ -825,22 +825,22 @@ fetch(url, {
 <code class="language-json">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 32,
-            &quot;fullname&quot;: &quot;Russell McCullough&quot;,
-            &quot;username&quot;: &quot;Raleigh&quot;,
-            &quot;role&quot;: &quot;Utility Meter Reader&quot;,
-            &quot;adress&quot;: &quot;669 Bradtke Cliff Apt. 670\nLeoside, TX 35184&quot;,
-            &quot;number&quot;: 78783062,
-            &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/00ddbb?text=+alias&quot;
+            &quot;id&quot;: 20,
+            &quot;fullname&quot;: &quot;Ludie Stokes&quot;,
+            &quot;username&quot;: &quot;Camron&quot;,
+            &quot;role&quot;: &quot;Insurance Investigator&quot;,
+            &quot;adress&quot;: &quot;6514 Braun Walk\nSteuberburgh, IL 78009-7254&quot;,
+            &quot;number&quot;: 76507092,
+            &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/001144?text=+autem&quot;
         },
         {
-            &quot;id&quot;: 33,
-            &quot;fullname&quot;: &quot;Delbert Ritchie&quot;,
-            &quot;username&quot;: &quot;Milton&quot;,
-            &quot;role&quot;: &quot;Transportation Attendant&quot;,
-            &quot;adress&quot;: &quot;5427 Pollich Vista\nO'Connerbury, NY 63584&quot;,
-            &quot;number&quot;: 72987304,
-            &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/00aaee?text=+voluptatem&quot;
+            &quot;id&quot;: 21,
+            &quot;fullname&quot;: &quot;Lamont Hill DVM&quot;,
+            &quot;username&quot;: &quot;Charles&quot;,
+            &quot;role&quot;: &quot;Event Planner&quot;,
+            &quot;adress&quot;: &quot;116 Annabell Hollow Apt. 602\nTorpview, AL 07775&quot;,
+            &quot;number&quot;: 72178055,
+            &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/0044ee?text=+ut&quot;
         }
     ]
 }</code>
@@ -914,13 +914,13 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"fullname\": \"nisi\",
-    \"username\": \"delectus\",
-    \"role_id\": 8,
-    \"password\": \"incidunt\",
-    \"adress\": \"delectus\",
-    \"number\": 12,
-    \"avatar\": \"eius\"
+    \"fullname\": \"qui\",
+    \"username\": \"quibusdam\",
+    \"role_id\": 1,
+    \"password\": \"aliquid\",
+    \"adress\": \"pariatur\",
+    \"number\": 18,
+    \"avatar\": \"vitae\"
 }"
 </code></pre></div>
 
@@ -936,13 +936,13 @@ const headers = {
 };
 
 let body = {
-    "fullname": "nisi",
-    "username": "delectus",
-    "role_id": 8,
-    "password": "incidunt",
-    "adress": "delectus",
-    "number": 12,
-    "avatar": "eius"
+    "fullname": "qui",
+    "username": "quibusdam",
+    "role_id": 1,
+    "password": "aliquid",
+    "adress": "pariatur",
+    "number": 18,
+    "avatar": "vitae"
 };
 
 fetch(url, {
@@ -1020,7 +1020,7 @@ fetch(url, {
                 <input type="text"
                name="fullname"
                data-endpoint="POSTapi-users"
-               value="nisi"
+               value="qui"
                data-component="body" hidden>
     <br>
 <p>this user fullname</p>
@@ -1030,7 +1030,7 @@ fetch(url, {
                 <input type="text"
                name="username"
                data-endpoint="POSTapi-users"
-               value="delectus"
+               value="quibusdam"
                data-component="body" hidden>
     <br>
 <p>this user username</p>
@@ -1040,7 +1040,7 @@ fetch(url, {
                 <input type="number"
                name="role_id"
                data-endpoint="POSTapi-users"
-               value="8"
+               value="1"
                data-component="body" hidden>
     <br>
 <p>this user role in the system</p>
@@ -1050,7 +1050,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-users"
-               value="incidunt"
+               value="aliquid"
                data-component="body" hidden>
     <br>
 <p>this user role in the system</p>
@@ -1060,7 +1060,7 @@ fetch(url, {
                 <input type="text"
                name="adress"
                data-endpoint="POSTapi-users"
-               value="delectus"
+               value="pariatur"
                data-component="body" hidden>
     <br>
 <p>this user adress</p>
@@ -1070,7 +1070,7 @@ fetch(url, {
                 <input type="number"
                name="number"
                data-endpoint="POSTapi-users"
-               value="12"
+               value="18"
                data-component="body" hidden>
     <br>
 <p>this user mobile number</p>
@@ -1080,7 +1080,7 @@ fetch(url, {
                 <input type="text"
                name="avatar"
                data-endpoint="POSTapi-users"
-               value="eius"
+               value="vitae"
                data-component="body" hidden>
     <br>
 <p>this user avatar link</p>
@@ -1101,14 +1101,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "helpus.test/api/users/6" \
+    --get "helpus.test/api/users/4" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/users/6"
+    "helpus.test/api/users/4"
 );
 
 const headers = {
@@ -1131,13 +1131,13 @@ fetch(url, {
 
 <code class="language-json">{
     &quot;data&quot;: {
-        &quot;id&quot;: 34,
-        &quot;fullname&quot;: &quot;Lora Ullrich&quot;,
-        &quot;username&quot;: &quot;Kellen&quot;,
-        &quot;role&quot;: &quot;Utility Meter Reader&quot;,
-        &quot;adress&quot;: &quot;433 Hilpert Shoals\nWest Sisterstad, CT 84515-3138&quot;,
-        &quot;number&quot;: 71187501,
-        &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/0033cc?text=+qui&quot;
+        &quot;id&quot;: 22,
+        &quot;fullname&quot;: &quot;Prof. Edmund Vandervort&quot;,
+        &quot;username&quot;: &quot;Ramon&quot;,
+        &quot;role&quot;: &quot;Insurance Investigator&quot;,
+        &quot;adress&quot;: &quot;8115 Lyla Extensions\nRolfsontown, MD 22991-2342&quot;,
+        &quot;number&quot;: 75276074,
+        &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/000055?text=+vitae&quot;
     }
 }</code>
  </pre>
@@ -1195,7 +1195,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="GETapi-users--id-"
-               value="6"
+               value="4"
                data-component="url" hidden>
     <br>
 <p>id of the user</p>
@@ -1216,24 +1216,24 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "helpus.test/api/users/1" \
+    "helpus.test/api/users/3" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"fullname\": \"sapiente\",
-    \"username\": \"magni\",
-    \"role_id\": 6,
-    \"password\": \"velit\",
-    \"adress\": \"corporis\",
-    \"number\": 3,
-    \"avatar\": \"aut\"
+    \"fullname\": \"rerum\",
+    \"username\": \"similique\",
+    \"role_id\": 3,
+    \"password\": \"voluptatum\",
+    \"adress\": \"similique\",
+    \"number\": 16,
+    \"avatar\": \"esse\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/users/1"
+    "helpus.test/api/users/3"
 );
 
 const headers = {
@@ -1242,13 +1242,13 @@ const headers = {
 };
 
 let body = {
-    "fullname": "sapiente",
-    "username": "magni",
-    "role_id": 6,
-    "password": "velit",
-    "adress": "corporis",
-    "number": 3,
-    "avatar": "aut"
+    "fullname": "rerum",
+    "username": "similique",
+    "role_id": 3,
+    "password": "voluptatum",
+    "adress": "similique",
+    "number": 16,
+    "avatar": "esse"
 };
 
 fetch(url, {
@@ -1330,7 +1330,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-users--id-"
-               value="1"
+               value="3"
                data-component="url" hidden>
     <br>
 <p>id of the user to update</p>
@@ -1341,7 +1341,7 @@ fetch(url, {
                 <input type="text"
                name="fullname"
                data-endpoint="PUTapi-users--id-"
-               value="sapiente"
+               value="rerum"
                data-component="body" hidden>
     <br>
 <p>this user fullname</p>
@@ -1351,7 +1351,7 @@ fetch(url, {
                 <input type="text"
                name="username"
                data-endpoint="PUTapi-users--id-"
-               value="magni"
+               value="similique"
                data-component="body" hidden>
     <br>
 <p>this user username</p>
@@ -1361,7 +1361,7 @@ fetch(url, {
                 <input type="number"
                name="role_id"
                data-endpoint="PUTapi-users--id-"
-               value="6"
+               value="3"
                data-component="body" hidden>
     <br>
 <p>this user role in the system</p>
@@ -1371,7 +1371,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="PUTapi-users--id-"
-               value="velit"
+               value="voluptatum"
                data-component="body" hidden>
     <br>
 <p>this user role in the system</p>
@@ -1381,7 +1381,7 @@ fetch(url, {
                 <input type="text"
                name="adress"
                data-endpoint="PUTapi-users--id-"
-               value="corporis"
+               value="similique"
                data-component="body" hidden>
     <br>
 <p>this user adress</p>
@@ -1391,7 +1391,7 @@ fetch(url, {
                 <input type="number"
                name="number"
                data-endpoint="PUTapi-users--id-"
-               value="3"
+               value="16"
                data-component="body" hidden>
     <br>
 <p>this user mobile number</p>
@@ -1401,7 +1401,7 @@ fetch(url, {
                 <input type="text"
                name="avatar"
                data-endpoint="PUTapi-users--id-"
-               value="aut"
+               value="esse"
                data-component="body" hidden>
     <br>
 <p>this user avatar link</p>
@@ -1422,14 +1422,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "helpus.test/api/users/9" \
+    "helpus.test/api/users/2" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/users/9"
+    "helpus.test/api/users/2"
 );
 
 const headers = {
@@ -1511,7 +1511,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-users--id-"
-               value="9"
+               value="2"
                data-component="url" hidden>
     <br>
 <p>id of the user to delete</p>
@@ -1567,37 +1567,45 @@ fetch(url, {
 <code class="language-json">{
     &quot;data&quot;: [
         {
-            &quot;fullname&quot;: &quot;Louie Heidenreich&quot;,
-            &quot;adress&quot;: &quot;57672 Quitzon Wall Apt. 406\nJerelborough, HI 97100&quot;,
-            &quot;mobile_number&quot;: &quot;1-910-746-6078&quot;,
-            &quot;year_of_birth&quot;: &quot;2015&quot;,
+            &quot;fullname&quot;: &quot;Dr. Eladio Feil&quot;,
+            &quot;adress&quot;: &quot;6874 Emmett Throughway Suite 366\nMullerborough, DC 81777&quot;,
+            &quot;mobile_number&quot;: &quot;(907) 278-6828&quot;,
+            &quot;year_of_birth&quot;: &quot;1971&quot;,
             &quot;ecocash_number&quot;: 110022211,
             &quot;lumicash_number&quot;: 110022211,
-            &quot;bank_name&quot;: &quot;Swaniawski Branch&quot;,
-            &quot;bank_account_number&quot;: 5079500,
-            &quot;story&quot;: &quot;Voluptates eveniet et nostrum quo enim. Possimus iste maxime optio quas id eum. Praesentium quasi porro ut eum sit et nam. Quasi ducimus aliquam laborum aut vitae. Aperiam eveniet et nulla.&quot;,
-            &quot;needed_money&quot;: 4339512,
+            &quot;bank_name&quot;: &quot;Bartoletti Parkway&quot;,
+            &quot;bank_account_number&quot;: 6086712,
+            &quot;story&quot;: &quot;Voluptatem ut optio et expedita soluta. Est sint omnis sunt explicabo amet sunt ipsa aut. Odio unde voluptate ut sit.&quot;,
+            &quot;needed_money&quot;: 2285787,
             &quot;state_of_health&quot;: &quot;bad&quot;,
-            &quot;images&quot;: [],
+            &quot;images&quot;: {
+                &quot;main_image&quot;: &quot;https://via.placeholder.com/640x480.png/00aa22?text=velit&quot;,
+                &quot;first_primary_image&quot;: &quot;https://via.placeholder.com/640x480.png/00eedd?text=voluptatem&quot;,
+                &quot;second_primary_image&quot;: &quot;https://via.placeholder.com/640x480.png/002211?text=et&quot;
+            },
             &quot;donation_status&quot;: &quot;en cours&quot;,
-            &quot;user&quot;: 9,
+            &quot;user&quot;: 3,
             &quot;family_situation&quot;: &quot;orphelins&quot;
         },
         {
-            &quot;fullname&quot;: &quot;Karli Hessel&quot;,
-            &quot;adress&quot;: &quot;551 Bergnaum Throughway\nO'Konfort, NJ 34067&quot;,
-            &quot;mobile_number&quot;: &quot;1-847-406-5150&quot;,
-            &quot;year_of_birth&quot;: &quot;1977&quot;,
+            &quot;fullname&quot;: &quot;Casandra Rau&quot;,
+            &quot;adress&quot;: &quot;675 Adolphus Stravenue Apt. 881\nKuphaltown, CA 24603&quot;,
+            &quot;mobile_number&quot;: &quot;+1 (540) 236-6852&quot;,
+            &quot;year_of_birth&quot;: &quot;2013&quot;,
             &quot;ecocash_number&quot;: 110022211,
             &quot;lumicash_number&quot;: 110022211,
-            &quot;bank_name&quot;: &quot;Yoshiko Rapids&quot;,
-            &quot;bank_account_number&quot;: 5105579,
-            &quot;story&quot;: &quot;Eum molestiae culpa voluptatum et cupiditate. Minus sed nobis omnis et. Quia quis eveniet eum.&quot;,
-            &quot;needed_money&quot;: 2744773,
+            &quot;bank_name&quot;: &quot;Legros Locks&quot;,
+            &quot;bank_account_number&quot;: 5657964,
+            &quot;story&quot;: &quot;Quia culpa blanditiis et tempora possimus impedit. Consequuntur hic sapiente dicta ducimus illum. Ex repudiandae magnam eius aliquid est sint et.&quot;,
+            &quot;needed_money&quot;: 160578,
             &quot;state_of_health&quot;: &quot;bad&quot;,
-            &quot;images&quot;: [],
+            &quot;images&quot;: {
+                &quot;main_image&quot;: &quot;https://via.placeholder.com/640x480.png/001188?text=consequuntur&quot;,
+                &quot;first_primary_image&quot;: &quot;https://via.placeholder.com/640x480.png/007799?text=nostrum&quot;,
+                &quot;second_primary_image&quot;: &quot;https://via.placeholder.com/640x480.png/00eecc?text=quia&quot;
+            },
             &quot;donation_status&quot;: &quot;en cours&quot;,
-            &quot;user&quot;: 2,
+            &quot;user&quot;: 9,
             &quot;family_situation&quot;: &quot;orphelins&quot;
         }
     ]
@@ -1653,13 +1661,13 @@ fetch(url, {
         </p>
                 </form>
 
-            <h2 id="handicap-management-endpoints-POSTapi-handicaps">Store a newly created resource in storage.</h2>
+            <h2 id="handicap-management-endpoints-POSTapi-handicaps">add new handicap in the database</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
 </p>
 
-
+<p>call this endpoint to store new handicap based on the given data</p>
 
 <span id="example-requests-POSTapi-handicaps">
 <blockquote>Example request:</blockquote>
@@ -1669,7 +1677,27 @@ fetch(url, {
     <pre><code class="language-bash">curl --request POST \
     "helpus.test/api/handicaps" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --data "{
+    \"fullname\": \"perspiciatis\",
+    \"adress\": \"perspiciatis\",
+    \"mobile_number\": \"eum\",
+    \"year_of_birth\": 9,
+    \"ecocash_number\": 5,
+    \"lumitel_number\": 12,
+    \"bank_name\": \"quo\",
+    \"bank_account_number\": \"autem\",
+    \"story\": \"perspiciatis\",
+    \"needed_money\": 18,
+    \"state_of_health\": \"qui\",
+    \"main_image\": \"quam\",
+    \"first_primary_image\": \"quasi\",
+    \"second_primary_image\": \"eos\",
+    \"donation_status\": \"rerum\",
+    \"user_id\": 19,
+    \"family_situation\": \"nisi\"
+}"
+</code></pre></div>
 
 
 <div class="javascript-example">
@@ -1682,15 +1710,46 @@ const headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "fullname": "perspiciatis",
+    "adress": "perspiciatis",
+    "mobile_number": "eum",
+    "year_of_birth": 9,
+    "ecocash_number": 5,
+    "lumitel_number": 12,
+    "bank_name": "quo",
+    "bank_account_number": "autem",
+    "story": "perspiciatis",
+    "needed_money": 18,
+    "state_of_health": "qui",
+    "main_image": "quam",
+    "first_primary_image": "quasi",
+    "second_primary_image": "eos",
+    "donation_status": "rerum",
+    "user_id": 19,
+    "family_situation": "nisi"
+};
+
 fetch(url, {
     method: "POST",
     headers,
+    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
 
 <span id="example-responses-POSTapi-handicaps">
-</span>
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{'status' =&gt; 'ok',
+      'data' =&gt; [
+           'message' =&gt; 'handicap created successfuly'
+     ]}</code>
+ </pre>
+    </span>
 <span id="execution-results-POSTapi-handicaps" hidden>
     <blockquote>Received response<span
                 id="execution-response-status-POSTapi-handicaps"></span>:
@@ -1738,15 +1797,186 @@ fetch(url, {
                                                                 data-endpoint="POSTapi-handicaps"
                                                                 data-component="header"></label>
         </p>
-                </form>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>fullname</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="fullname"
+               data-endpoint="POSTapi-handicaps"
+               value="perspiciatis"
+               data-component="body" hidden>
+    <br>
+<p>the fullname of the handicap</p>
+        </p>
+                <p>
+            <b><code>adress</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="adress"
+               data-endpoint="POSTapi-handicaps"
+               value="perspiciatis"
+               data-component="body" hidden>
+    <br>
+<p>the adress of the handicap</p>
+        </p>
+                <p>
+            <b><code>mobile_number</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="mobile_number"
+               data-endpoint="POSTapi-handicaps"
+               value="eum"
+               data-component="body" hidden>
+    <br>
+<p>the mobile number of the handicap or his host</p>
+        </p>
+                <p>
+            <b><code>year_of_birth</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="year_of_birth"
+               data-endpoint="POSTapi-handicaps"
+               value="9"
+               data-component="body" hidden>
+    <br>
+<p>the year of birth for the handicap</p>
+        </p>
+                <p>
+            <b><code>ecocash_number</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="ecocash_number"
+               data-endpoint="POSTapi-handicaps"
+               value="5"
+               data-component="body" hidden>
+    <br>
+<p>the ecocash number of the handicap</p>
+        </p>
+                <p>
+            <b><code>lumitel_number</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="lumitel_number"
+               data-endpoint="POSTapi-handicaps"
+               value="12"
+               data-component="body" hidden>
+    <br>
+<p>the lumicash number of the handicap</p>
+        </p>
+                <p>
+            <b><code>bank_name</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="bank_name"
+               data-endpoint="POSTapi-handicaps"
+               value="quo"
+               data-component="body" hidden>
+    <br>
+<p>the name of the bank used by the handicap</p>
+        </p>
+                <p>
+            <b><code>bank_account_number</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="bank_account_number"
+               data-endpoint="POSTapi-handicaps"
+               value="autem"
+               data-component="body" hidden>
+    <br>
+<p>the number of the bank account used by the handicap</p>
+        </p>
+                <p>
+            <b><code>story</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="story"
+               data-endpoint="POSTapi-handicaps"
+               value="perspiciatis"
+               data-component="body" hidden>
+    <br>
+<p>the story of the handicap</p>
+        </p>
+                <p>
+            <b><code>needed_money</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="needed_money"
+               data-endpoint="POSTapi-handicaps"
+               value="18"
+               data-component="body" hidden>
+    <br>
+<p>the amount of money for the operation</p>
+        </p>
+                <p>
+            <b><code>state_of_health</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="state_of_health"
+               data-endpoint="POSTapi-handicaps"
+               value="qui"
+               data-component="body" hidden>
+    <br>
+<p>the health of the patient can take those values (simple, bad, worst)</p>
+        </p>
+                <p>
+            <b><code>main_image</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="main_image"
+               data-endpoint="POSTapi-handicaps"
+               value="quam"
+               data-component="body" hidden>
+    <br>
+<p>the most important picture of the handicap</p>
+        </p>
+                <p>
+            <b><code>first_primary_image</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="first_primary_image"
+               data-endpoint="POSTapi-handicaps"
+               value="quasi"
+               data-component="body" hidden>
+    <br>
+<p>just another picture of the handicap</p>
+        </p>
+                <p>
+            <b><code>second_primary_image</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="second_primary_image"
+               data-endpoint="POSTapi-handicaps"
+               value="eos"
+               data-component="body" hidden>
+    <br>
+<p>just another picture of the handicap the second one</p>
+        </p>
+                <p>
+            <b><code>donation_status</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="donation_status"
+               data-endpoint="POSTapi-handicaps"
+               value="rerum"
+               data-component="body" hidden>
+    <br>
+<p>just the status of the donation process (not started, in progress, done)</p>
+        </p>
+                <p>
+            <b><code>user_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="user_id"
+               data-endpoint="POSTapi-handicaps"
+               value="19"
+               data-component="body" hidden>
+    <br>
+<p>the id of the user who gonna add the handicap</p>
+        </p>
+                <p>
+            <b><code>family_situation</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="family_situation"
+               data-endpoint="POSTapi-handicaps"
+               value="nisi"
+               data-component="body" hidden>
+    <br>
+<p>the state of his familly situation (orphans or with parents)</p>
+        </p>
+        </form>
 
-            <h2 id="handicap-management-endpoints-GETapi-handicaps--id-">Display the specified resource.</h2>
+            <h2 id="handicap-management-endpoints-GETapi-handicaps--id-">show one handicap</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
 </p>
 
-
+<p>returns one handicap found using the id provided in the request query</p>
 
 <span id="example-requests-GETapi-handicaps--id-">
 <blockquote>Example request:</blockquote>
@@ -1778,367 +2008,32 @@ fetch(url, {
 
 <span id="example-responses-GETapi-handicaps--id-">
             <blockquote>
-            <p>Example response (404):</p>
+            <p>Example response (200):</p>
         </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
- </code></pre>
-        </details>         <pre>
+                <pre>
 
 <code class="language-json">{
-    &quot;message&quot;: &quot;&quot;,
-    &quot;exception&quot;: &quot;Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException&quot;,
-    &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\AbstractRouteCollection.php&quot;,
-    &quot;line&quot;: 43,
-    &quot;trace&quot;: [
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteCollection.php&quot;,
-            &quot;line&quot;: 162,
-            &quot;function&quot;: &quot;handleMatchedRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\AbstractRouteCollection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
+    &quot;data&quot;: {
+        &quot;fullname&quot;: &quot;Cecil Bayer&quot;,
+        &quot;adress&quot;: &quot;792 Marquardt Freeway Apt. 473\nWest Sigrid, AL 07763&quot;,
+        &quot;mobile_number&quot;: &quot;1-551-549-3241&quot;,
+        &quot;year_of_birth&quot;: &quot;1976&quot;,
+        &quot;ecocash_number&quot;: 110022211,
+        &quot;lumicash_number&quot;: 110022211,
+        &quot;bank_name&quot;: &quot;Pedro Way&quot;,
+        &quot;bank_account_number&quot;: 6993384,
+        &quot;story&quot;: &quot;Corporis qui quia explicabo rerum id fuga vel. Sint quibusdam quo neque.&quot;,
+        &quot;needed_money&quot;: 2787138,
+        &quot;state_of_health&quot;: &quot;bad&quot;,
+        &quot;images&quot;: {
+            &quot;main_image&quot;: &quot;https://via.placeholder.com/640x480.png/0066aa?text=ut&quot;,
+            &quot;first_primary_image&quot;: &quot;https://via.placeholder.com/640x480.png/0044dd?text=ut&quot;,
+            &quot;second_primary_image&quot;: &quot;https://via.placeholder.com/640x480.png/008822?text=dolores&quot;
         },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 673,
-            &quot;function&quot;: &quot;match&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\RouteCollection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 662,
-            &quot;function&quot;: &quot;findRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 651,
-            &quot;function&quot;: &quot;dispatchToRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;dispatch&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 128,
-            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php&quot;,
-            &quot;line&quot;: 31,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php&quot;,
-            &quot;line&quot;: 40,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php&quot;,
-            &quot;line&quot;: 27,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
-            &quot;line&quot;: 86,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php&quot;,
-            &quot;line&quot;: 38,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Fruitcake\\Cors\\HandleCors&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php&quot;,
-            &quot;line&quot;: 39,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 103,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 142,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 111,
-            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 299,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 287,
-            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 89,
-            &quot;function&quot;: &quot;makeApiCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 45,
-            &quot;function&quot;: &quot;makeResponseCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 222,
-            &quot;function&quot;: &quot;__invoke&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 179,
-            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 116,
-            &quot;function&quot;: &quot;fetchResponses&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 118,
-            &quot;function&quot;: &quot;processRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 75,
-            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 51,
-            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
-            &quot;line&quot;: 50,
-            &quot;function&quot;: &quot;get&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 36,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php&quot;,
-            &quot;line&quot;: 40,
-            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 93,
-            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 37,
-            &quot;function&quot;: &quot;callBoundMethod&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php&quot;,
-            &quot;line&quot;: 653,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
-            &quot;line&quot;: 136,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\symfony\\console\\Command\\Command.php&quot;,
-            &quot;line&quot;: 298,
-            &quot;function&quot;: &quot;execute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
-            &quot;line&quot;: 121,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 1015,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 299,
-            &quot;function&quot;: &quot;doRunCommand&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 171,
-            &quot;function&quot;: &quot;doRun&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php&quot;,
-            &quot;line&quot;: 94,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
-            &quot;line&quot;: 129,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\helpus\\artisan&quot;,
-            &quot;line&quot;: 37,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        }
-    ]
+        &quot;donation_status&quot;: &quot;en cours&quot;,
+        &quot;user&quot;: 7,
+        &quot;family_situation&quot;: &quot;orphelins&quot;
+    }
 }</code>
  </pre>
     </span>
@@ -2202,13 +2097,13 @@ content-type: application/json
             </p>
                     </form>
 
-            <h2 id="handicap-management-endpoints-PUTapi-handicaps--id-">Update the specified resource in storage.</h2>
+            <h2 id="handicap-management-endpoints-PUTapi-handicaps--id-">Update the handicap</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
 </p>
 
-
+<p>update the handicap related data</p>
 
 <span id="example-requests-PUTapi-handicaps--id-">
 <blockquote>Example request:</blockquote>
@@ -2218,7 +2113,27 @@ content-type: application/json
     <pre><code class="language-bash">curl --request PUT \
     "helpus.test/api/handicaps/1" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --data "{
+    \"fullname\": \"cupiditate\",
+    \"adress\": \"aspernatur\",
+    \"mobile_number\": \"voluptatem\",
+    \"year_of_birth\": 1,
+    \"ecocash_number\": 5,
+    \"lumitel_number\": 8,
+    \"bank_name\": \"provident\",
+    \"bank_account_number\": \"nulla\",
+    \"story\": \"nobis\",
+    \"needed_money\": 6,
+    \"state_of_health\": \"placeat\",
+    \"main_image\": \"qui\",
+    \"first_primary_image\": \"soluta\",
+    \"second_primary_image\": \"rerum\",
+    \"donation_status\": \"et\",
+    \"user_id\": 9,
+    \"family_situation\": \"sapiente\"
+}"
+</code></pre></div>
 
 
 <div class="javascript-example">
@@ -2231,15 +2146,46 @@ const headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "fullname": "cupiditate",
+    "adress": "aspernatur",
+    "mobile_number": "voluptatem",
+    "year_of_birth": 1,
+    "ecocash_number": 5,
+    "lumitel_number": 8,
+    "bank_name": "provident",
+    "bank_account_number": "nulla",
+    "story": "nobis",
+    "needed_money": 6,
+    "state_of_health": "placeat",
+    "main_image": "qui",
+    "first_primary_image": "soluta",
+    "second_primary_image": "rerum",
+    "donation_status": "et",
+    "user_id": 9,
+    "family_situation": "sapiente"
+};
+
 fetch(url, {
     method: "PUT",
     headers,
+    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
 
 <span id="example-responses-PUTapi-handicaps--id-">
-</span>
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{'status' =&gt; 'ok',
+      'data' =&gt; [
+           'message' =&gt; 'successfuly updated the handicap data'
+     ]}</code>
+ </pre>
+    </span>
 <span id="execution-results-PUTapi-handicaps--id-" hidden>
     <blockquote>Received response<span
                 id="execution-response-status-PUTapi-handicaps--id-"></span>:
@@ -2302,15 +2248,186 @@ fetch(url, {
     <br>
 <p>The ID of the handicap.</p>
             </p>
-                    </form>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>fullname</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="fullname"
+               data-endpoint="PUTapi-handicaps--id-"
+               value="cupiditate"
+               data-component="body" hidden>
+    <br>
+<p>the fullname of the handicap</p>
+        </p>
+                <p>
+            <b><code>adress</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="adress"
+               data-endpoint="PUTapi-handicaps--id-"
+               value="aspernatur"
+               data-component="body" hidden>
+    <br>
+<p>the adress of the handicap</p>
+        </p>
+                <p>
+            <b><code>mobile_number</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="mobile_number"
+               data-endpoint="PUTapi-handicaps--id-"
+               value="voluptatem"
+               data-component="body" hidden>
+    <br>
+<p>the mobile number of the handicap or his host</p>
+        </p>
+                <p>
+            <b><code>year_of_birth</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="year_of_birth"
+               data-endpoint="PUTapi-handicaps--id-"
+               value="1"
+               data-component="body" hidden>
+    <br>
+<p>the year of birth for the handicap</p>
+        </p>
+                <p>
+            <b><code>ecocash_number</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="ecocash_number"
+               data-endpoint="PUTapi-handicaps--id-"
+               value="5"
+               data-component="body" hidden>
+    <br>
+<p>the ecocash number of the handicap</p>
+        </p>
+                <p>
+            <b><code>lumitel_number</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="lumitel_number"
+               data-endpoint="PUTapi-handicaps--id-"
+               value="8"
+               data-component="body" hidden>
+    <br>
+<p>the lumicash number of the handicap</p>
+        </p>
+                <p>
+            <b><code>bank_name</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="bank_name"
+               data-endpoint="PUTapi-handicaps--id-"
+               value="provident"
+               data-component="body" hidden>
+    <br>
+<p>the name of the bank used by the handicap</p>
+        </p>
+                <p>
+            <b><code>bank_account_number</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="bank_account_number"
+               data-endpoint="PUTapi-handicaps--id-"
+               value="nulla"
+               data-component="body" hidden>
+    <br>
+<p>the number of the bank account used by the handicap</p>
+        </p>
+                <p>
+            <b><code>story</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="story"
+               data-endpoint="PUTapi-handicaps--id-"
+               value="nobis"
+               data-component="body" hidden>
+    <br>
+<p>the story of the handicap</p>
+        </p>
+                <p>
+            <b><code>needed_money</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="needed_money"
+               data-endpoint="PUTapi-handicaps--id-"
+               value="6"
+               data-component="body" hidden>
+    <br>
+<p>the amount of money for the operation</p>
+        </p>
+                <p>
+            <b><code>state_of_health</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="state_of_health"
+               data-endpoint="PUTapi-handicaps--id-"
+               value="placeat"
+               data-component="body" hidden>
+    <br>
+<p>the health of the patient can take those values (simple, bad, worst)</p>
+        </p>
+                <p>
+            <b><code>main_image</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="main_image"
+               data-endpoint="PUTapi-handicaps--id-"
+               value="qui"
+               data-component="body" hidden>
+    <br>
+<p>the most important picture of the handicap</p>
+        </p>
+                <p>
+            <b><code>first_primary_image</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="first_primary_image"
+               data-endpoint="PUTapi-handicaps--id-"
+               value="soluta"
+               data-component="body" hidden>
+    <br>
+<p>just another picture of the handicap</p>
+        </p>
+                <p>
+            <b><code>second_primary_image</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="second_primary_image"
+               data-endpoint="PUTapi-handicaps--id-"
+               value="rerum"
+               data-component="body" hidden>
+    <br>
+<p>just another picture of the handicap the second one</p>
+        </p>
+                <p>
+            <b><code>donation_status</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="donation_status"
+               data-endpoint="PUTapi-handicaps--id-"
+               value="et"
+               data-component="body" hidden>
+    <br>
+<p>just the status of the donation process (not started, in progress, done)</p>
+        </p>
+                <p>
+            <b><code>user_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="user_id"
+               data-endpoint="PUTapi-handicaps--id-"
+               value="9"
+               data-component="body" hidden>
+    <br>
+<p>the id of the user who gonna add the handicap</p>
+        </p>
+                <p>
+            <b><code>family_situation</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="family_situation"
+               data-endpoint="PUTapi-handicaps--id-"
+               value="sapiente"
+               data-component="body" hidden>
+    <br>
+<p>the state of his familly situation (orphans or with parents)</p>
+        </p>
+        </form>
 
-            <h2 id="handicap-management-endpoints-DELETEapi-handicaps--id-">Remove the specified resource from storage.</h2>
+            <h2 id="handicap-management-endpoints-DELETEapi-handicaps--id-">delete the handicap data</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
 </p>
 
-
+<p>delete the handicap data from the database</p>
 
 <span id="example-requests-DELETEapi-handicaps--id-">
 <blockquote>Example request:</blockquote>
@@ -2341,7 +2458,17 @@ fetch(url, {
 </span>
 
 <span id="example-responses-DELETEapi-handicaps--id-">
-</span>
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{'status' =&gt; 'ok',
+      'data' =&gt; [
+           'message' =&gt; 'successfuly deleted the handicap data'
+     ]}</code>
+ </pre>
+    </span>
 <span id="execution-results-DELETEapi-handicaps--id-" hidden>
     <blockquote>Received response<span
                 id="execution-response-status-DELETEapi-handicaps--id-"></span>:
