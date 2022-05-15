@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\HandicapResource;
+use App\Http\Resources\SingleHandicapResource;
 use App\Models\handicap;
 use Illuminate\Http\Request;
 
@@ -35,7 +36,7 @@ class handicapcontroller extends Controller
         return response(
             [
                 'status' => 'ok',
-                'data' => HandicapResource::collection(handicap::orderBy('created_at', 'desc')->paginate(5))
+                'data' => SingleHandicapResource::collection(handicap::orderBy('created_at', 'desc')->get())
             ],
             200,
             ['Content-type' => 'application/json']
