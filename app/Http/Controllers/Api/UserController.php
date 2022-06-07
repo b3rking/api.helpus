@@ -32,7 +32,7 @@ class UserController extends Controller
     {
         return Response([
             'status' => 'ok',
-            'data' => UserResource::collection(User::orderBy('created_at', 'desc')->paginate(3))]
+            'data' => User::all()]
         , 200, ['Content-type' => 'application/json']);
     }
 
@@ -52,10 +52,10 @@ class UserController extends Controller
      * @bodyParam avatar string this user avatar link
      * 
      * @response 201 {
-            'status' => 'ok',
-            'data' => [
-                'message' => 'successfuly created the account'
-            ]
+     *       'status' => 'ok',
+     *       'data' => [
+     *           'message' => 'successfuly created the account'
+     *      ]
      *   }
      * 
      * @param  \Illuminate\Http\Request  $request
@@ -66,7 +66,7 @@ class UserController extends Controller
         $request->validate([
             'fullname' => 'required',
             'username' => 'required',
-            'password' => 'required'
+            'password' => 'required',
         ]);
 
         $data = $request->all();

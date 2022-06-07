@@ -79,7 +79,7 @@ class handicapcontroller extends Controller
     {
 
         $request->validate([
-            'fullname' => 'required|text|min:10',
+            'fullname' => 'required|min:10',
             'adress' => 'required|min:4',
             'mobile_number' => 'required|min:6',
             'year_of_birth' => 'required',
@@ -88,10 +88,10 @@ class handicapcontroller extends Controller
             'bank_name' => 'min:3',
             'bank_account_number' => 'min:3',
             'story' => 'required|min:30',
-            'needed_money' => 'required|min:1',
+            'needed_money' => 'required',
             'state_of_health' => 'required',
             'main_image' => 'required',
-            'user' => 'required',
+            'user_id' => 'required',
             'family_situation' => 'required'
         ]);
 
