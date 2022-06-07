@@ -1,2 +1,2 @@
-- [ ] Mercury
+- [x] Mercury
 - [ ] second step
