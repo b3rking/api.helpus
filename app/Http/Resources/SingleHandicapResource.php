@@ -15,6 +15,7 @@ class SingleHandicapResource extends JsonResource
     public function toArray($request)
     {
         return [
+            'id' => $this->id,
             'fullname' => $this->fullname,
             'adress' => $this->adress,
             'year_of_birth' => $this->year_of_birth,

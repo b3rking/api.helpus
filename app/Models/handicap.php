@@ -9,7 +9,7 @@ use App\Models\User;
 
 class handicap extends Model
 {
-    protected $guard = [];
+    protected $guarded = [];
     use HasFactory;
 
     public function user() {

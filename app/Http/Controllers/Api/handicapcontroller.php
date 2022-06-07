@@ -7,6 +7,7 @@ use App\Http\Resources\HandicapResource;
 use App\Http\Resources\SingleHandicapResource;
 use App\Models\handicap;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 
 /**
@@ -78,7 +79,26 @@ class handicapcontroller extends Controller
     public function store(Request $request)
     {
 
-        $request->validate([
+        // return ['before validation' => "it's passes", "data" => $request->story];
+
+        // $validated = $request->validate([
+        //     'fullname' => 'required|min:10',
+        //     'adress' => 'required|min:4',
+        //     'mobile_number' => 'required|min:6',
+        //     'year_of_birth' => 'required',
+        //     'ecocash_number' => 'min:6',
+        //     'lumicash_number' => 'min:6',
+        //     'bank_name' => 'min:3',
+        //     'bank_account_number' => 'min:3',
+        //     'story' => 'required|min:30',
+        //     'needed_money' => 'required',
+        //     'state_of_health' => 'required',
+        //     'main_image' => 'required',
+        //     'user_id' => 'required',
+        //     'family_situation' => 'required'
+        // ]);
+
+        $validated = Validator::make($request->all(), [
             'fullname' => 'required|min:10',
             'adress' => 'required|min:4',
             'mobile_number' => 'required|min:6',
@@ -91,9 +111,15 @@ class handicapcontroller extends Controller
             'needed_money' => 'required',
             'state_of_health' => 'required',
             'main_image' => 'required',
+            'first_primary_image' => 'required',
+            'second_primary_image' => 'required',
             'user_id' => 'required',
             'family_situation' => 'required'
         ]);
+
+        if ($validated->fails()) {
+            return ['error' => $validated->errors()];
+        }
 
         $main_image = $request->file('main_image')->store('handicap/main');
         $first_prim_image = $request->file('first_primary_image')->store('handicap/secondary');
