@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Resources\User as UserResource;
+use Illuminate\Support\Facades\Validator;
 
 /**
  * 
@@ -64,10 +65,18 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            
+        ]);
+
+        $validated = Validator::make($request->all(), [
             'fullname' => 'required',
             'username' => 'required',
             'password' => 'required',
         ]);
+
+        if ($validated->fails()) {
+            return ['errors' => $validated->errors()];
+        }
 
         $data = $request->all();
 
@@ -131,11 +140,15 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $request->validate([
+        $validated = Validator::make($request->all(), [
             'fullname' => 'required',
             'username' => 'required',
             'password' => 'required'
         ]);
+
+        if ($validated->fails()) {
+            return ['errors' => $validated->errors()];
+        }
 
         $user->update($request->all());
 

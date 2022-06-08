@@ -98,7 +98,7 @@ class handicapcontroller extends Controller
         ]);
 
         if ($validated->fails()) {
-            return ['error' => $validated->errors()];
+            return ['errors' => $validated->errors()];
         }
 
         $main_image = $request->file('main_image')->store('handicap/main');
@@ -197,7 +197,7 @@ class handicapcontroller extends Controller
         ]);
 
         if ($validated->fails()) {
-            return ['error' => $validated->errors()];
+            return ['errors' => $validated->errors()];
         }
 
         $main_image = $request->file('main_image')->store('handicap/main');

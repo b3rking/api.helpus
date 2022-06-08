@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\RoleResource;
 use App\Models\Role;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Validator;
 
 /**
  * 
@@ -56,9 +56,13 @@ class RoleController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $validated = Validator::make($request->all(), [
             'name' => 'required'
         ]);
+
+        if ($validated->fails()) {
+            return ['errors' => $validated->errors()];
+        }
 
         Role::create($request->all());
 
@@ -115,9 +119,13 @@ class RoleController extends Controller
      */
     public function update(Request $request, Role $role)
     {
-        $request->validate([
+        $validated = Validator::make($request->all(), [
             'name' => 'required'
         ]);
+
+        if ($validated->fails()) {
+            return ['errors' => $validated->errors()];
+        }
 
         $role->update($request->all());
 
