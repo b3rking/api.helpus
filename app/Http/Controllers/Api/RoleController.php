@@ -33,7 +33,7 @@ class RoleController extends Controller
     public function index()
     {
         return Response([
-            'status' => 'ok',
+            'success' => 'true',
             'data' => RoleResource::collection(Role::orderBy('created_at', 'desc')->paginate(3))]
         , 200);
     }
@@ -46,10 +46,10 @@ class RoleController extends Controller
      * @bodyParam name string required the name of the role
      * @bodyParam user_id integer required the id of the user who created the new role
      * 
-     * @response 201 {'status' => 'ok',
-            'data' => [
-                'message' => 'role created successfuly'
-            ]}
+     * @response 201 {'success' => 'true',
+     *       'data' => [
+     *           'message' => 'role created successfuly'
+     *       ]}
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -63,7 +63,7 @@ class RoleController extends Controller
         Role::create($request->all());
 
         return Response([
-            'status' => 'ok',
+            'success' => 'true',
             'data' => [
                 'message' => 'role created successfuly'
             ]
@@ -88,7 +88,7 @@ class RoleController extends Controller
     public function show(Role $role)
     {
         return Response([
-            'status' => 'ok',
+            'success' => 'true',
             'data' => new RoleResource($role)
         ]);
     }
@@ -104,10 +104,10 @@ class RoleController extends Controller
      * @bodyParam name string required the name of the role
      * @bodyParam user_id integer required the id of the user who created the new role
      * 
-     * @response 201 {'status' => 'ok',
-            'response' => [
-                'message' => 'role updated successfuly'
-            ]}
+     * @response 201 {'success' => 'true',
+     *       'response' => [
+     *           'message' => 'role updated successfuly'
+     *       ]}
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Role  $role
@@ -122,7 +122,7 @@ class RoleController extends Controller
         $role->update($request->all());
 
         return Response([
-            'status' => 'ok',
+            'success' => 'true',
             'response' => [
                 'message' => 'role updated successfuly'
             ]
@@ -136,10 +136,10 @@ class RoleController extends Controller
      * 
      * @urlParam id integer required id of the role to delete
      * 
-     * @response 200 {'status' => 'ok',
-            'response' => [
-                'message' => 'role deleted'
-            ]}
+     * @response 200 {'success' => 'true',
+     *       'response' => [
+     *           'message' => 'role deleted'
+     *       ]}
      *
      * @param  \App\Models\Role  $role
      * @return \Illuminate\Http\Response
@@ -149,7 +149,7 @@ class RoleController extends Controller
         $role->delete();
 
         return Response([
-            'status' => 'ok',
+            'success' => 'true',
             'response' => [
                 'message' => 'role deleted'
             ]
