@@ -36,7 +36,7 @@ class handicapcontroller extends Controller
     {
         return response(
             [
-                'status' => 'ok',
+                'success' => 'true',
                 'data' => SingleHandicapResource::collection(handicap::orderBy('created_at', 'desc')->get())
             ],
             200,
@@ -67,7 +67,7 @@ class handicapcontroller extends Controller
      * @bodyParam user_id integer required the id of the user who gonna add the handicap
      * @bodyParam family_situation string required the state of his familly situation (orphans or with parents)
      * 
-     * @response 201 {'status' => 'ok',
+     * @response 201 {'success' => 'true',
      *       'data' => [
      *            'message' => 'handicap created successfuly'
      *      ]}
@@ -78,26 +78,6 @@ class handicapcontroller extends Controller
      */
     public function store(Request $request)
     {
-
-        // return ['before validation' => "it's passes", "data" => $request->story];
-
-        // $validated = $request->validate([
-        //     'fullname' => 'required|min:10',
-        //     'adress' => 'required|min:4',
-        //     'mobile_number' => 'required|min:6',
-        //     'year_of_birth' => 'required',
-        //     'ecocash_number' => 'min:6',
-        //     'lumicash_number' => 'min:6',
-        //     'bank_name' => 'min:3',
-        //     'bank_account_number' => 'min:3',
-        //     'story' => 'required|min:30',
-        //     'needed_money' => 'required',
-        //     'state_of_health' => 'required',
-        //     'main_image' => 'required',
-        //     'user_id' => 'required',
-        //     'family_situation' => 'required'
-        // ]);
-
         $validated = Validator::make($request->all(), [
             'fullname' => 'required|min:10',
             'adress' => 'required|min:4',
@@ -134,7 +114,7 @@ class handicapcontroller extends Controller
 
         return response(
             [
-                'status' => 'ok',
+                'success' => 'true',
                 'data' => [
                     'message' => 'successfuly created the new handicap'
                 ]
@@ -158,7 +138,7 @@ class handicapcontroller extends Controller
     public function show(handicap $handicap)
     {
         return response([
-            'status' => 'ok',
+            'success' => 'true',
             'data' => [
                 new HandicapResource($handicap)
             ]
@@ -188,7 +168,7 @@ class handicapcontroller extends Controller
      * @bodyParam user_id integer required the id of the user who gonna add the handicap
      * @bodyParam family_situation string required the state of his familly situation (orphans or with parents)
      * 
-     * @response 201 {'status' => 'ok',
+     * @response 201 {'success' => 'true',
      *       'data' => [
      *            'message' => 'successfuly updated the handicap data'
      *      ]}
@@ -229,7 +209,7 @@ class handicapcontroller extends Controller
 
         return response(
             [
-                'status' => 'ok',
+                'success' => 'true',
                 'data' => [
                     'message' => 'successfuly updated the handicap data'
                 ]
@@ -244,7 +224,7 @@ class handicapcontroller extends Controller
      * 
      * delete the handicap data from the database
      *
-     * @response 201 {'status' => 'ok',
+     * @response 201 {'success' => 'true',
      *       'data' => [
      *            'message' => 'successfuly deleted the handicap data'
      *      ]}
@@ -257,7 +237,7 @@ class handicapcontroller extends Controller
         $handicap->delete();
 
         return response([
-            'status' => 'ok',
+            'success' => 'true',
             'data' => [
                 'message' => 'successfuly deleted the handicap data'
             ]

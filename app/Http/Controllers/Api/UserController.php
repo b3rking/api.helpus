@@ -31,7 +31,7 @@ class UserController extends Controller
     public function index()
     {
         return Response([
-            'status' => 'ok',
+            'success' => 'true',
             'data' => User::all()]
         , 200, ['Content-type' => 'application/json']);
     }
@@ -52,7 +52,7 @@ class UserController extends Controller
      * @bodyParam avatar string this user avatar link
      * 
      * @response 201 {
-     *       'status' => 'ok',
+     *       'success' => 'true',
      *       'data' => [
      *           'message' => 'successfuly created the account'
      *      ]
@@ -76,7 +76,7 @@ class UserController extends Controller
         User::create($data);
 
         return Response([
-            'status' => 'ok',
+            'success' => 'true',
             'data' => [
                 'message' => 'successfuly created the account'
             ]], 201);
@@ -98,7 +98,7 @@ class UserController extends Controller
     public function show(User $user)
     {
         return Response([
-            'status' => 'ok',
+            'success' => 'true',
             'data' => new UserResource($user)
         ], 200);
     }
@@ -119,10 +119,10 @@ class UserController extends Controller
      * @bodyParam avatar string this user avatar link
      * 
      * @response 201 {
-            'status' => 'ok',
-            'data' => [
-                'message' => 'successfuly updated the account'
-            ]
+     *       'success' => 'true',
+     *       'data' => [
+     *           'message' => 'successfuly updated the account'
+     *       ]
      *   }
      *
      * @param  \Illuminate\Http\Request  $request
@@ -140,7 +140,7 @@ class UserController extends Controller
         $user->update($request->all());
 
         return Response([
-            'status' => 'ok',
+            'success' => 'true',
             'data' => [
                 'message' => 'successfuly updated the account'
             ]
@@ -153,11 +153,11 @@ class UserController extends Controller
      * endpoint to remove the user with given id
      * 
      * @response {
-            'status' => 'ok',
-            'response' => [
-                'message' => 'successfuly deleted the account'
-            ]
-            }
+     *       'success' => 'true',
+     *       'response' => [
+     *           'message' => 'successfuly deleted the account'
+     *       ]
+     *       }
      *
      * @urlParam id integer required id of the user to delete
      * 
@@ -169,7 +169,7 @@ class UserController extends Controller
         $user->delete();
         
         return Response([
-            'status' => 'ok',
+            'success' => 'true',
             'data' => [
                 'message' => 'successfuly deleted the account'
             ]
