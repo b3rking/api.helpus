@@ -1,6 +1,6 @@
 - [x] fixing the images uploading error on handicap
 - [x] refactor the key in json returned from status to success and passes a bool value
-- [ ] implement the validation errors messages on all controller
+- [x] implement the validation errors messages on all controller
 - [ ] implement the update and delete method on the handicap controller
 - [ ] test the code of roles, users and handicaps
 - [ ] implement the donation and anonymous donation
