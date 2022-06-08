@@ -179,7 +179,7 @@ class handicapcontroller extends Controller
      */
     public function update(Request $request, handicap $handicap)
     {
-        $request->validate([
+        $validated = Validator::make($request->all(), [
             'fullname' => 'required|text|min:10',
             'adress' => 'required|min:4',
             'mobile_number' => 'required|min:6',
@@ -195,6 +195,10 @@ class handicapcontroller extends Controller
             'user' => 'required',
             'family_situation' => 'required'
         ]);
+
+        if ($validated->fails()) {
+            return ['error' => $validated->errors()];
+        }
 
         $main_image = $request->file('main_image')->store('handicap/main');
         $first_prim_image = $request->file('first_primary_image')->store('handicap/secondary');
