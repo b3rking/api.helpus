@@ -1,7 +1,7 @@
 - [x] fixing the images uploading error on handicap
-- [] refactor the key in json returned from status to success and passes a bool value
-- [] implement the update and delete method on the handicap controller
-- [] test the code of roles, users and handicaps
-- [] implement the donation and anonymous donation
-- [] implement the authentication
-- [] implement full docs and add test
+- [ ] refactor the key in json returned from status to success and passes a bool value
+- [ ] implement the update and delete method on the handicap controller
+- [ ] test the code of roles, users and handicaps
+- [ ] implement the donation and anonymous donation
+- [ ] implement the authentication
+- [ ] implement full docs and add test
