@@ -79,14 +79,14 @@ class handicapcontroller extends Controller
     public function store(Request $request)
     {
         $validated = Validator::make($request->all(), [
-            'fullname' => 'required|min:10|unique:handicaps, fullname',
+            'fullname' => 'required|min:10|unique:handicaps,fullname',
             'adress' => 'required|min:4',
-            'mobile_number' => 'required|min:6|unique:handicaps, mobile_number',
+            'mobile_number' => 'required|min:6|unique:handicaps,mobile_number',
             'year_of_birth' => 'required',
-            'ecocash_number' => 'min:6|unique:handicaps, ecocash_number',
-            'lumicash_number' => 'min:6|unique:handicaps, lumicash_number',
+            'ecocash_number' => 'min:6|unique:handicaps,ecocash_number',
+            'lumicash_number' => 'min:6|unique:handicaps,lumicash_number',
             'bank_name' => 'min:3',
-            'bank_account_number' => 'min:3|unique:handicaps, bank_account_number',
+            'bank_account_number' => 'min:3|unique:handicaps,bank_account_number',
             'story' => 'required|min:30',
             'needed_money' => 'required',
             'state_of_health' => 'required',
@@ -180,14 +180,14 @@ class handicapcontroller extends Controller
     public function update(Request $request, handicap $handicap)
     {
         $validated = Validator::make($request->all(), [
-            'fullname' => 'required|min:10|unique:handicaps, fullname',
+            'fullname' => 'required|min:10|unique:handicaps,fullname',
             'adress' => 'required|min:4',
-            'mobile_number' => 'required|min:6|unique:handicaps, mobile_number',
+            'mobile_number' => 'required|min:6|unique:handicaps,mobile_number',
             'year_of_birth' => 'required',
-            'ecocash_number' => 'min:6|unique:handicaps, ecocash_number',
-            'lumicash_number' => 'min:6|unique:handicaps, lumicash_number',
+            'ecocash_number' => 'min:6|unique:handicaps,ecocash_number',
+            'lumicash_number' => 'min:6|unique:handicaps,lumicash_number',
             'bank_name' => 'min:3',
-            'bank_account_number' => 'min:3|unique:handicaps, bank_account_number',
+            'bank_account_number' => 'min:3|unique:handicaps,bank_account_number',
             'story' => 'required|min:30',
             'needed_money' => 'required',
             'state_of_health' => 'required',
