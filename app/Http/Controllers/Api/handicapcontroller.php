@@ -79,20 +79,20 @@ class handicapcontroller extends Controller
     public function store(Request $request)
     {
         $validated = Validator::make($request->all(), [
-            'fullname' => 'required|min:10',
+            'fullname' => 'required|min:10|unique:handicaps, fullname',
             'adress' => 'required|min:4',
-            'mobile_number' => 'required|min:6',
+            'mobile_number' => 'required|min:6|unique:handicaps, mobile_number',
             'year_of_birth' => 'required',
-            'ecocash_number' => 'min:6',
-            'lumicash_number' => 'min:6',
+            'ecocash_number' => 'min:6|unique:handicaps, ecocash_number',
+            'lumicash_number' => 'min:6|unique:handicaps, lumicash_number',
             'bank_name' => 'min:3',
-            'bank_account_number' => 'min:3',
+            'bank_account_number' => 'min:3|unique:handicaps, bank_account_number',
             'story' => 'required|min:30',
             'needed_money' => 'required',
             'state_of_health' => 'required',
-            'main_image' => 'required',
-            'first_primary_image' => 'required',
-            'second_primary_image' => 'required',
+            'main_image' => 'required|image',
+            'first_primary_image' => 'required|image',
+            'second_primary_image' => 'required|image',
             'user_id' => 'required',
             'family_situation' => 'required'
         ]);
@@ -180,19 +180,21 @@ class handicapcontroller extends Controller
     public function update(Request $request, handicap $handicap)
     {
         $validated = Validator::make($request->all(), [
-            'fullname' => 'required|text|min:10',
+            'fullname' => 'required|min:10|unique:handicaps, fullname',
             'adress' => 'required|min:4',
-            'mobile_number' => 'required|min:6',
+            'mobile_number' => 'required|min:6|unique:handicaps, mobile_number',
             'year_of_birth' => 'required',
-            'ecocash_number' => 'min:6',
-            'lumicash_number' => 'min:6',
+            'ecocash_number' => 'min:6|unique:handicaps, ecocash_number',
+            'lumicash_number' => 'min:6|unique:handicaps, lumicash_number',
             'bank_name' => 'min:3',
-            'bank_account_number' => 'min:3',
+            'bank_account_number' => 'min:3|unique:handicaps, bank_account_number',
             'story' => 'required|min:30',
-            'needed_money' => 'required|min:1',
+            'needed_money' => 'required',
             'state_of_health' => 'required',
-            'main_image' => 'required',
-            'user' => 'required',
+            'main_image' => 'required|image',
+            'first_primary_image' => 'required|image',
+            'second_primary_image' => 'required|image',
+            'user_id' => 'required',
             'family_situation' => 'required'
         ]);
 
