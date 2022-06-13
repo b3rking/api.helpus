@@ -2,7 +2,10 @@
 
 namespace App\Exceptions;
 
+use GrahamCampbell\ResultType\Success;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\Routing\Exception\RouteNotFoundException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -36,6 +39,17 @@ class Handler extends ExceptionHandler
     {
         $this->reportable(function (Throwable $e) {
             //
+        });
+
+        $this->renderable(function (NotFoundHttpException $e, $request) {
+            if ($request->is('api/*')) {
+                return response([
+                    'success' => 'false',
+                    'errors' => [
+                        'not found' => ['wrong endpoint, check docs!']
+                    ]
+                ], 404);
+            }
         });
     }
 }
