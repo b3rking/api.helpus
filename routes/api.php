@@ -22,7 +22,7 @@ Route::get('/', function() {
 });
 
 Route::apiResource('users', UserController::class);
-Route::apiResource('roles', RoleController::class);
+Route::apiResource('roles', RoleController::class)->middleware('auth:sanctum');
 Route::apiResource('handicaps', handicapcontroller::class);
 
 Route::prefix('auth')->group(function() {
