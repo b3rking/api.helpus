@@ -4,7 +4,7 @@ use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\RoleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\handicapcontroller;
-
+use App\Http\Controllers\Auth\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +24,7 @@ Route::get('/', function() {
 Route::apiResource('users', UserController::class);
 Route::apiResource('roles', RoleController::class);
 Route::apiResource('handicaps', handicapcontroller::class);
+
+Route::prefix('auth')->group(function() {
+    Route::post('login', [AuthController::class, 'login']);
+});
