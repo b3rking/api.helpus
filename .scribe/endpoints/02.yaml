@@ -19,7 +19,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"fullname":"Dr. Eladio Feil","adress":"6874 Emmett Throughway Suite 366\nMullerborough, DC 81777","mobile_number":"(907) 278-6828","year_of_birth":"1971","ecocash_number":110022211,"lumicash_number":110022211,"bank_name":"Bartoletti Parkway","bank_account_number":6086712,"story":"Voluptatem ut optio et expedita soluta. Est sint omnis sunt explicabo amet sunt ipsa aut. Odio unde voluptate ut sit.","needed_money":2285787,"state_of_health":"bad","images":{"main_image":"https:\/\/via.placeholder.com\/640x480.png\/00aa22?text=velit","first_primary_image":"https:\/\/via.placeholder.com\/640x480.png\/00eedd?text=voluptatem","second_primary_image":"https:\/\/via.placeholder.com\/640x480.png\/002211?text=et"},"donation_status":"en cours","user":3,"family_situation":"orphelins"},{"fullname":"Casandra Rau","adress":"675 Adolphus Stravenue Apt. 881\nKuphaltown, CA 24603","mobile_number":"+1 (540) 236-6852","year_of_birth":"2013","ecocash_number":110022211,"lumicash_number":110022211,"bank_name":"Legros Locks","bank_account_number":5657964,"story":"Quia culpa blanditiis et tempora possimus impedit. Consequuntur hic sapiente dicta ducimus illum. Ex repudiandae magnam eius aliquid est sint et.","needed_money":160578,"state_of_health":"bad","images":{"main_image":"https:\/\/via.placeholder.com\/640x480.png\/001188?text=consequuntur","first_primary_image":"https:\/\/via.placeholder.com\/640x480.png\/007799?text=nostrum","second_primary_image":"https:\/\/via.placeholder.com\/640x480.png\/00eecc?text=quia"},"donation_status":"en cours","user":9,"family_situation":"orphelins"}]}'
+        content: '{"data":[{"id":16,"fullname":"Dr. Alexandre Feest V","adress":"8422 Prosacco Circle Apt. 318\nPort Buckport, IA 80576","mobile_number":"1-408-973-9723","year_of_birth":"2021","ecocash_number":110022211,"lumicash_number":110022211,"bank_name":"Rolfson Coves","bank_account_number":6844845,"story":"Odit temporibus non dolorem provident dolor. Cupiditate omnis libero numquam quidem nesciunt quas modi. Aperiam voluptatem repudiandae enim ea et reiciendis.","needed_money":3233033,"state_of_health":"bad","images":{"main_image":"https:\/\/via.placeholder.com\/640x480.png\/00ccaa?text=molestias","first_primary_image":"https:\/\/via.placeholder.com\/640x480.png\/00ffee?text=cum","second_primary_image":"https:\/\/via.placeholder.com\/640x480.png\/006622?text=ut"},"donation_status":"en cours","user":3,"family_situation":"orphelins"},{"id":17,"fullname":"Enola O''Connell","adress":"468 Dicki Trail\nNorth Alanaborough, IN 07703-8148","mobile_number":"+18083970708","year_of_birth":"2001","ecocash_number":110022211,"lumicash_number":110022211,"bank_name":"Pablo Run","bank_account_number":5633246,"story":"Sunt placeat dolor labore culpa. Fugiat esse ducimus architecto placeat ut nihil. Qui vero placeat rerum.","needed_money":3549525,"state_of_health":"bad","images":{"main_image":"https:\/\/via.placeholder.com\/640x480.png\/00cc77?text=ullam","first_primary_image":"https:\/\/via.placeholder.com\/640x480.png\/00bb99?text=amet","second_primary_image":"https:\/\/via.placeholder.com\/640x480.png\/00eebb?text=architecto"},"donation_status":"en cours","user":10,"family_situation":"orphelins"}]}'
         headers: []
         description: null
     responseFields: []
@@ -42,126 +42,133 @@ endpoints:
         name: fullname
         description: 'the fullname of the handicap'
         required: true
-        example: perspiciatis
+        example: aut
         type: string
         custom: []
       adress:
         name: adress
         description: 'the adress of the handicap'
         required: true
-        example: perspiciatis
+        example: voluptas
         type: string
         custom: []
       mobile_number:
         name: mobile_number
         description: 'the mobile number of the handicap or his host'
         required: true
-        example: eum
+        example: corrupti
         type: string
         custom: []
       year_of_birth:
         name: year_of_birth
         description: 'the year of birth for the handicap'
         required: true
-        example: 9
+        example: 6
         type: integer
         custom: []
       ecocash_number:
         name: ecocash_number
         description: 'the ecocash number of the handicap'
         required: false
-        example: 5
+        example: 1
         type: integer
         custom: []
-      lumitel_number:
-        name: lumitel_number
-        description: 'the lumicash number of the handicap'
+      lumicash_number:
+        name: lumicash_number
+        description: 'Must be at least 6 characters.'
         required: false
-        example: 12
-        type: integer
+        example: dni
+        type: string
         custom: []
       bank_name:
         name: bank_name
         description: 'the name of the bank used by the handicap'
         required: false
-        example: quo
+        example: porro
         type: string
         custom: []
       bank_account_number:
         name: bank_account_number
         description: 'the number of the bank account used by the handicap'
         required: false
-        example: autem
+        example: et
         type: string
         custom: []
       story:
         name: story
         description: 'the story of the handicap'
         required: true
-        example: perspiciatis
+        example: quia
         type: string
         custom: []
       needed_money:
         name: needed_money
         description: 'the amount of money for the operation'
         required: true
-        example: 18
+        example: 10
         type: integer
         custom: []
       state_of_health:
         name: state_of_health
         description: 'the health of the patient can take those values (simple, bad, worst)'
         required: true
-        example: qui
+        example: ut
         type: string
         custom: []
       main_image:
         name: main_image
         description: 'the most important picture of the handicap'
         required: true
-        example: quam
+        example: minus
         type: string
         custom: []
       first_primary_image:
         name: first_primary_image
         description: 'just another picture of the handicap'
         required: false
-        example: quasi
+        example: aperiam
         type: string
         custom: []
       second_primary_image:
         name: second_primary_image
         description: 'just another picture of the handicap the second one'
         required: false
-        example: eos
-        type: string
-        custom: []
-      donation_status:
-        name: donation_status
-        description: 'just the status of the donation process (not started, in progress, done)'
-        required: false
-        example: rerum
+        example: ut
         type: string
         custom: []
       user_id:
         name: user_id
         description: 'the id of the user who gonna add the handicap'
         required: true
-        example: 19
+        example: 8
         type: integer
         custom: []
       family_situation:
         name: family_situation
         description: 'the state of his familly situation (orphans or with parents)'
         required: true
-        example: nisi
+        example: dolorem
+        type: string
+        custom: []
+      lumitel_number:
+        name: lumitel_number
+        description: 'the lumicash number of the handicap'
+        required: false
+        example: 1
+        type: integer
+        custom: []
+      donation_status:
+        name: donation_status
+        description: 'just the status of the donation process (not started, in progress, done)'
+        required: false
+        example: sed
         type: string
         custom: []
     responses:
       -
         status: 201
         content: |-
-          {'status' => 'ok',
+          {'success' => 'true',
                 'data' => [
                      'message' => 'handicap created successfuly'
                ]}
@@ -193,7 +200,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"fullname":"Cecil Bayer","adress":"792 Marquardt Freeway Apt. 473\nWest Sigrid, AL 07763","mobile_number":"1-551-549-3241","year_of_birth":"1976","ecocash_number":110022211,"lumicash_number":110022211,"bank_name":"Pedro Way","bank_account_number":6993384,"story":"Corporis qui quia explicabo rerum id fuga vel. Sint quibusdam quo neque.","needed_money":2787138,"state_of_health":"bad","images":{"main_image":"https:\/\/via.placeholder.com\/640x480.png\/0066aa?text=ut","first_primary_image":"https:\/\/via.placeholder.com\/640x480.png\/0044dd?text=ut","second_primary_image":"https:\/\/via.placeholder.com\/640x480.png\/008822?text=dolores"},"donation_status":"en cours","user":7,"family_situation":"orphelins"}}'
+        content: '{"data":{"id":18,"fullname":"Genevieve Hahn","adress":"283 McDermott Springs Apt. 852\nMcKenziehaven, TX 68216-6351","mobile_number":"+1-747-857-8073","year_of_birth":"2002","ecocash_number":110022211,"lumicash_number":110022211,"bank_name":"Gaylord Locks","bank_account_number":6486774,"story":"Omnis eveniet harum dicta quasi est assumenda optio. Reiciendis et praesentium ab molestiae. Dolor quos delectus distinctio non ut inventore unde. Rerum consequatur consequuntur quia porro.","needed_money":3182255,"state_of_health":"bad","images":{"main_image":"https:\/\/via.placeholder.com\/640x480.png\/0022aa?text=hic","first_primary_image":"https:\/\/via.placeholder.com\/640x480.png\/0000ee?text=accusantium","second_primary_image":"https:\/\/via.placeholder.com\/640x480.png\/002233?text=autem"},"donation_status":"en cours","user":9,"family_situation":"orphelins"}}'
         headers: []
         description: null
     responseFields: []
@@ -224,126 +231,133 @@ endpoints:
         name: fullname
         description: 'the fullname of the handicap'
         required: true
-        example: cupiditate
+        example: ut
         type: string
         custom: []
       adress:
         name: adress
         description: 'the adress of the handicap'
         required: true
-        example: aspernatur
+        example: aut
         type: string
         custom: []
       mobile_number:
         name: mobile_number
         description: 'the mobile number of the handicap or his host'
         required: true
-        example: voluptatem
+        example: fuga
         type: string
         custom: []
       year_of_birth:
         name: year_of_birth
         description: 'the year of birth for the handicap'
         required: true
-        example: 1
+        example: 5
         type: integer
         custom: []
       ecocash_number:
         name: ecocash_number
         description: 'the ecocash number of the handicap'
         required: false
-        example: 5
+        example: 13
         type: integer
         custom: []
-      lumitel_number:
-        name: lumitel_number
-        description: 'the lumicash number of the handicap'
+      lumicash_number:
+        name: lumicash_number
+        description: 'Must be at least 6 characters.'
         required: false
-        example: 8
-        type: integer
+        example: mj
+        type: string
         custom: []
       bank_name:
         name: bank_name
         description: 'the name of the bank used by the handicap'
         required: false
-        example: provident
+        example: quod
         type: string
         custom: []
       bank_account_number:
         name: bank_account_number
         description: 'the number of the bank account used by the handicap'
         required: false
-        example: nulla
+        example: quidem
         type: string
         custom: []
       story:
         name: story
         description: 'the story of the handicap'
         required: true
-        example: nobis
+        example: cumque
         type: string
         custom: []
       needed_money:
         name: needed_money
         description: 'the amount of money for the operation'
         required: true
-        example: 6
+        example: 1
         type: integer
         custom: []
       state_of_health:
         name: state_of_health
         description: 'the health of the patient can take those values (simple, bad, worst)'
         required: true
-        example: placeat
+        example: accusamus
         type: string
         custom: []
       main_image:
         name: main_image
         description: 'the most important picture of the handicap'
         required: true
-        example: qui
+        example: aut
         type: string
         custom: []
       first_primary_image:
         name: first_primary_image
         description: 'just another picture of the handicap'
         required: false
-        example: soluta
+        example: fuga
         type: string
         custom: []
       second_primary_image:
         name: second_primary_image
         description: 'just another picture of the handicap the second one'
         required: false
-        example: rerum
-        type: string
-        custom: []
-      donation_status:
-        name: donation_status
-        description: 'just the status of the donation process (not started, in progress, done)'
-        required: false
-        example: et
+        example: veniam
         type: string
         custom: []
       user_id:
         name: user_id
         description: 'the id of the user who gonna add the handicap'
         required: true
-        example: 9
+        example: 5
         type: integer
         custom: []
       family_situation:
         name: family_situation
         description: 'the state of his familly situation (orphans or with parents)'
         required: true
-        example: sapiente
+        example: et
+        type: string
+        custom: []
+      lumitel_number:
+        name: lumitel_number
+        description: 'the lumicash number of the handicap'
+        required: false
+        example: 3
+        type: integer
+        custom: []
+      donation_status:
+        name: donation_status
+        description: 'just the status of the donation process (not started, in progress, done)'
+        required: false
+        example: rerum
         type: string
         custom: []
     responses:
       -
         status: 201
         content: |-
-          {'status' => 'ok',
+          {'success' => 'true',
                 'data' => [
                      'message' => 'successfuly updated the handicap data'
                ]}
@@ -376,7 +390,7 @@ endpoints:
       -
         status: 201
         content: |-
-          {'status' => 'ok',
+          {'success' => 'true',
                 'data' => [
                      'message' => 'successfuly deleted the handicap data'
                ]}

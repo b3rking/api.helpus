@@ -26,7 +26,7 @@
             </style>
 
     <script>
-        var baseUrl = "helpus.test";
+        var baseUrl = "http://localhost";
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
@@ -145,7 +145,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: May 15 2022</li>
+        <li>Last updated: October 11 2022</li>
     </ul>
 </div>
 
@@ -183,14 +183,14 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "helpus.test/api/roles" \
+    --get "http://localhost/api/roles" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/roles"
+    "http://localhost/api/roles"
 );
 
 const headers = {
@@ -214,18 +214,18 @@ fetch(url, {
 <code class="language-json">{
     &quot;data&quot;: [
         {
-            &quot;name&quot;: &quot;Tool and Die Maker&quot;,
-            &quot;user_id&quot;: 7,
-            &quot;updated_at&quot;: &quot;2022-05-15T14:35:29.000000Z&quot;,
-            &quot;created_at&quot;: &quot;2022-05-15T14:35:29.000000Z&quot;,
-            &quot;id&quot;: 12
+            &quot;name&quot;: &quot;Child Care Worker&quot;,
+            &quot;user_id&quot;: 4,
+            &quot;updated_at&quot;: &quot;2022-10-11T08:40:19.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-10-11T08:40:19.000000Z&quot;,
+            &quot;id&quot;: 3
         },
         {
-            &quot;name&quot;: &quot;Clinical School Psychologist&quot;,
-            &quot;user_id&quot;: 8,
-            &quot;updated_at&quot;: &quot;2022-05-15T14:35:29.000000Z&quot;,
-            &quot;created_at&quot;: &quot;2022-05-15T14:35:29.000000Z&quot;,
-            &quot;id&quot;: 13
+            &quot;name&quot;: &quot;Home Health Aide&quot;,
+            &quot;user_id&quot;: 2,
+            &quot;updated_at&quot;: &quot;2022-10-11T08:40:19.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-10-11T08:40:19.000000Z&quot;,
+            &quot;id&quot;: 4
         }
     ]
 }</code>
@@ -294,19 +294,19 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "helpus.test/api/roles" \
+    "http://localhost/api/roles" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"qui\",
-    \"user_id\": 17
+    \"name\": \"suscipit\",
+    \"user_id\": 1
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/roles"
+    "http://localhost/api/roles"
 );
 
 const headers = {
@@ -315,8 +315,8 @@ const headers = {
 };
 
 let body = {
-    "name": "qui",
-    "user_id": 17
+    "name": "suscipit",
+    "user_id": 1
 };
 
 fetch(url, {
@@ -333,10 +333,10 @@ fetch(url, {
         </blockquote>
                 <pre>
 
-<code class="language-json">{'status' =&gt; 'ok',
-'data' =&gt; [
-'message' =&gt; 'role created successfuly'
-]}</code>
+<code class="language-json">{'success' =&gt; 'true',
+      'data' =&gt; [
+          'message' =&gt; 'role created successfuly'
+      ]}</code>
  </pre>
     </span>
 <span id="execution-results-POSTapi-roles" hidden>
@@ -392,7 +392,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-roles"
-               value="qui"
+               value="suscipit"
                data-component="body" hidden>
     <br>
 <p>the name of the role</p>
@@ -402,7 +402,7 @@ fetch(url, {
                 <input type="number"
                name="user_id"
                data-endpoint="POSTapi-roles"
-               value="17"
+               value="1"
                data-component="body" hidden>
     <br>
 <p>the id of the user who created the new role</p>
@@ -423,14 +423,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "helpus.test/api/roles/10" \
+    --get "http://localhost/api/roles/8" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/roles/10"
+    "http://localhost/api/roles/8"
 );
 
 const headers = {
@@ -453,11 +453,11 @@ fetch(url, {
 
 <code class="language-json">{
     &quot;data&quot;: {
-        &quot;name&quot;: &quot;Municipal Court Clerk&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;updated_at&quot;: &quot;2022-05-15T14:35:29.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2022-05-15T14:35:29.000000Z&quot;,
-        &quot;id&quot;: 14
+        &quot;name&quot;: &quot;Makeup Artists&quot;,
+        &quot;user_id&quot;: 2,
+        &quot;updated_at&quot;: &quot;2022-10-11T08:40:19.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-10-11T08:40:19.000000Z&quot;,
+        &quot;id&quot;: 5
     }
 }</code>
  </pre>
@@ -515,7 +515,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="GETapi-roles--id-"
-               value="10"
+               value="8"
                data-component="url" hidden>
     <br>
 <p>id of the role</p>
@@ -536,19 +536,19 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "helpus.test/api/roles/18" \
+    "http://localhost/api/roles/14" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"quisquam\",
-    \"user_id\": 17
+    \"name\": \"qui\",
+    \"user_id\": 3
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/roles/18"
+    "http://localhost/api/roles/14"
 );
 
 const headers = {
@@ -557,8 +557,8 @@ const headers = {
 };
 
 let body = {
-    "name": "quisquam",
-    "user_id": 17
+    "name": "qui",
+    "user_id": 3
 };
 
 fetch(url, {
@@ -575,10 +575,10 @@ fetch(url, {
         </blockquote>
                 <pre>
 
-<code class="language-json">{'status' =&gt; 'ok',
-'response' =&gt; [
-'message' =&gt; 'role updated successfuly'
-]}</code>
+<code class="language-json">{'success' =&gt; 'true',
+      'response' =&gt; [
+          'message' =&gt; 'role updated successfuly'
+      ]}</code>
  </pre>
     </span>
 <span id="execution-results-PUTapi-roles--id-" hidden>
@@ -638,7 +638,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-roles--id-"
-               value="18"
+               value="14"
                data-component="url" hidden>
     <br>
 <p>id of the role</p>
@@ -649,7 +649,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="PUTapi-roles--id-"
-               value="quisquam"
+               value="qui"
                data-component="body" hidden>
     <br>
 <p>the name of the role</p>
@@ -659,7 +659,7 @@ fetch(url, {
                 <input type="number"
                name="user_id"
                data-endpoint="PUTapi-roles--id-"
-               value="17"
+               value="3"
                data-component="body" hidden>
     <br>
 <p>the id of the user who created the new role</p>
@@ -680,14 +680,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "helpus.test/api/roles/2" \
+    "http://localhost/api/roles/9" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/roles/2"
+    "http://localhost/api/roles/9"
 );
 
 const headers = {
@@ -708,10 +708,10 @@ fetch(url, {
         </blockquote>
                 <pre>
 
-<code class="language-json">{'status' =&gt; 'ok',
-'response' =&gt; [
-'message' =&gt; 'role deleted'
-]}</code>
+<code class="language-json">{'success' =&gt; 'true',
+      'response' =&gt; [
+          'message' =&gt; 'role deleted'
+      ]}</code>
  </pre>
     </span>
 <span id="execution-results-DELETEapi-roles--id-" hidden>
@@ -767,7 +767,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-roles--id-"
-               value="2"
+               value="9"
                data-component="url" hidden>
     <br>
 <p>id of the role to delete</p>
@@ -794,14 +794,14 @@ like admins or simple user.</p>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "helpus.test/api/users" \
+    --get "http://localhost/api/users" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/users"
+    "http://localhost/api/users"
 );
 
 const headers = {
@@ -825,22 +825,22 @@ fetch(url, {
 <code class="language-json">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 20,
-            &quot;fullname&quot;: &quot;Ludie Stokes&quot;,
-            &quot;username&quot;: &quot;Camron&quot;,
-            &quot;role&quot;: &quot;Insurance Investigator&quot;,
-            &quot;adress&quot;: &quot;6514 Braun Walk\nSteuberburgh, IL 78009-7254&quot;,
-            &quot;number&quot;: 76507092,
-            &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/001144?text=+autem&quot;
+            &quot;id&quot;: 11,
+            &quot;fullname&quot;: &quot;Ernie Pfeffer&quot;,
+            &quot;username&quot;: &quot;Manley&quot;,
+            &quot;role&quot;: &quot;Building Cleaning Worker&quot;,
+            &quot;adress&quot;: &quot;985 Ward Shoal Apt. 802\nPort Marina, CO 96684-1757&quot;,
+            &quot;number&quot;: 75825108,
+            &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/00ff44?text=+dolores&quot;
         },
         {
-            &quot;id&quot;: 21,
-            &quot;fullname&quot;: &quot;Lamont Hill DVM&quot;,
-            &quot;username&quot;: &quot;Charles&quot;,
-            &quot;role&quot;: &quot;Event Planner&quot;,
-            &quot;adress&quot;: &quot;116 Annabell Hollow Apt. 602\nTorpview, AL 07775&quot;,
-            &quot;number&quot;: 72178055,
-            &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/0044ee?text=+ut&quot;
+            &quot;id&quot;: 12,
+            &quot;fullname&quot;: &quot;Emilia Stoltenberg&quot;,
+            &quot;username&quot;: &quot;Kim&quot;,
+            &quot;role&quot;: &quot;Food Preparation and Serving Worker&quot;,
+            &quot;adress&quot;: &quot;105 Arlo Springs\nNew Laverna, PA 49156&quot;,
+            &quot;number&quot;: 79004147,
+            &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/00dd44?text=+saepe&quot;
         }
     ]
 }</code>
@@ -910,24 +910,24 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "helpus.test/api/users" \
+    "http://localhost/api/users" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"fullname\": \"qui\",
-    \"username\": \"quibusdam\",
-    \"role_id\": 1,
-    \"password\": \"aliquid\",
-    \"adress\": \"pariatur\",
-    \"number\": 18,
-    \"avatar\": \"vitae\"
+    \"fullname\": \"impedit\",
+    \"username\": \"consectetur\",
+    \"password\": \"vel\",
+    \"role_id\": 10,
+    \"adress\": \"accusantium\",
+    \"number\": 6,
+    \"avatar\": \"ratione\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/users"
+    "http://localhost/api/users"
 );
 
 const headers = {
@@ -936,13 +936,13 @@ const headers = {
 };
 
 let body = {
-    "fullname": "qui",
-    "username": "quibusdam",
-    "role_id": 1,
-    "password": "aliquid",
-    "adress": "pariatur",
-    "number": 18,
-    "avatar": "vitae"
+    "fullname": "impedit",
+    "username": "consectetur",
+    "password": "vel",
+    "role_id": 10,
+    "adress": "accusantium",
+    "number": 6,
+    "avatar": "ratione"
 };
 
 fetch(url, {
@@ -960,10 +960,10 @@ fetch(url, {
                 <pre>
 
 <code class="language-json">{
-'status' =&gt; 'ok',
-'data' =&gt; [
-'message' =&gt; 'successfuly created the account'
-]
+      'success' =&gt; 'true',
+      'data' =&gt; [
+          'message' =&gt; 'successfuly created the account'
+     ]
   }</code>
  </pre>
     </span>
@@ -1020,7 +1020,7 @@ fetch(url, {
                 <input type="text"
                name="fullname"
                data-endpoint="POSTapi-users"
-               value="qui"
+               value="impedit"
                data-component="body" hidden>
     <br>
 <p>this user fullname</p>
@@ -1030,27 +1030,27 @@ fetch(url, {
                 <input type="text"
                name="username"
                data-endpoint="POSTapi-users"
-               value="quibusdam"
+               value="consectetur"
                data-component="body" hidden>
     <br>
 <p>this user username</p>
-        </p>
-                <p>
-            <b><code>role_id</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
-                <input type="number"
-               name="role_id"
-               data-endpoint="POSTapi-users"
-               value="1"
-               data-component="body" hidden>
-    <br>
-<p>this user role in the system</p>
         </p>
                 <p>
             <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-users"
-               value="aliquid"
+               value="vel"
+               data-component="body" hidden>
+    <br>
+<p>this user role in the system</p>
+        </p>
+                <p>
+            <b><code>role_id</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="role_id"
+               data-endpoint="POSTapi-users"
+               value="10"
                data-component="body" hidden>
     <br>
 <p>this user role in the system</p>
@@ -1060,7 +1060,7 @@ fetch(url, {
                 <input type="text"
                name="adress"
                data-endpoint="POSTapi-users"
-               value="pariatur"
+               value="accusantium"
                data-component="body" hidden>
     <br>
 <p>this user adress</p>
@@ -1070,7 +1070,7 @@ fetch(url, {
                 <input type="number"
                name="number"
                data-endpoint="POSTapi-users"
-               value="18"
+               value="6"
                data-component="body" hidden>
     <br>
 <p>this user mobile number</p>
@@ -1080,7 +1080,7 @@ fetch(url, {
                 <input type="text"
                name="avatar"
                data-endpoint="POSTapi-users"
-               value="vitae"
+               value="ratione"
                data-component="body" hidden>
     <br>
 <p>this user avatar link</p>
@@ -1101,14 +1101,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "helpus.test/api/users/4" \
+    --get "http://localhost/api/users/4" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/users/4"
+    "http://localhost/api/users/4"
 );
 
 const headers = {
@@ -1131,13 +1131,13 @@ fetch(url, {
 
 <code class="language-json">{
     &quot;data&quot;: {
-        &quot;id&quot;: 22,
-        &quot;fullname&quot;: &quot;Prof. Edmund Vandervort&quot;,
-        &quot;username&quot;: &quot;Ramon&quot;,
-        &quot;role&quot;: &quot;Insurance Investigator&quot;,
-        &quot;adress&quot;: &quot;8115 Lyla Extensions\nRolfsontown, MD 22991-2342&quot;,
-        &quot;number&quot;: 75276074,
-        &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/000055?text=+vitae&quot;
+        &quot;id&quot;: 13,
+        &quot;fullname&quot;: &quot;Mr. Giuseppe Dicki DDS&quot;,
+        &quot;username&quot;: &quot;Dawson&quot;,
+        &quot;role&quot;: &quot;Food Preparation and Serving Worker&quot;,
+        &quot;adress&quot;: &quot;5158 Sawayn Inlet Suite 212\nEast Aileen, NE 19296-7408&quot;,
+        &quot;number&quot;: 70424282,
+        &quot;avatar&quot;: &quot;https://via.placeholder.com/640x480.png/00aabb?text=+ut&quot;
     }
 }</code>
  </pre>
@@ -1216,24 +1216,24 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "helpus.test/api/users/3" \
+    "http://localhost/api/users/15" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"fullname\": \"rerum\",
-    \"username\": \"similique\",
-    \"role_id\": 3,
-    \"password\": \"voluptatum\",
-    \"adress\": \"similique\",
-    \"number\": 16,
-    \"avatar\": \"esse\"
+    \"fullname\": \"dolorem\",
+    \"username\": \"qui\",
+    \"password\": \"iusto\",
+    \"role_id\": 8,
+    \"adress\": \"dolorum\",
+    \"number\": 6,
+    \"avatar\": \"aut\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/users/3"
+    "http://localhost/api/users/15"
 );
 
 const headers = {
@@ -1242,13 +1242,13 @@ const headers = {
 };
 
 let body = {
-    "fullname": "rerum",
-    "username": "similique",
-    "role_id": 3,
-    "password": "voluptatum",
-    "adress": "similique",
-    "number": 16,
-    "avatar": "esse"
+    "fullname": "dolorem",
+    "username": "qui",
+    "password": "iusto",
+    "role_id": 8,
+    "adress": "dolorum",
+    "number": 6,
+    "avatar": "aut"
 };
 
 fetch(url, {
@@ -1266,10 +1266,10 @@ fetch(url, {
                 <pre>
 
 <code class="language-json">{
-'status' =&gt; 'ok',
-'data' =&gt; [
-'message' =&gt; 'successfuly updated the account'
-]
+      'success' =&gt; 'true',
+      'data' =&gt; [
+          'message' =&gt; 'successfuly updated the account'
+      ]
   }</code>
  </pre>
     </span>
@@ -1330,7 +1330,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-users--id-"
-               value="3"
+               value="15"
                data-component="url" hidden>
     <br>
 <p>id of the user to update</p>
@@ -1341,7 +1341,7 @@ fetch(url, {
                 <input type="text"
                name="fullname"
                data-endpoint="PUTapi-users--id-"
-               value="rerum"
+               value="dolorem"
                data-component="body" hidden>
     <br>
 <p>this user fullname</p>
@@ -1351,27 +1351,27 @@ fetch(url, {
                 <input type="text"
                name="username"
                data-endpoint="PUTapi-users--id-"
-               value="similique"
+               value="qui"
                data-component="body" hidden>
     <br>
 <p>this user username</p>
-        </p>
-                <p>
-            <b><code>role_id</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
-                <input type="number"
-               name="role_id"
-               data-endpoint="PUTapi-users--id-"
-               value="3"
-               data-component="body" hidden>
-    <br>
-<p>this user role in the system</p>
         </p>
                 <p>
             <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
                 <input type="text"
                name="password"
                data-endpoint="PUTapi-users--id-"
-               value="voluptatum"
+               value="iusto"
+               data-component="body" hidden>
+    <br>
+<p>this user role in the system</p>
+        </p>
+                <p>
+            <b><code>role_id</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="role_id"
+               data-endpoint="PUTapi-users--id-"
+               value="8"
                data-component="body" hidden>
     <br>
 <p>this user role in the system</p>
@@ -1381,7 +1381,7 @@ fetch(url, {
                 <input type="text"
                name="adress"
                data-endpoint="PUTapi-users--id-"
-               value="similique"
+               value="dolorum"
                data-component="body" hidden>
     <br>
 <p>this user adress</p>
@@ -1391,7 +1391,7 @@ fetch(url, {
                 <input type="number"
                name="number"
                data-endpoint="PUTapi-users--id-"
-               value="16"
+               value="6"
                data-component="body" hidden>
     <br>
 <p>this user mobile number</p>
@@ -1401,7 +1401,7 @@ fetch(url, {
                 <input type="text"
                name="avatar"
                data-endpoint="PUTapi-users--id-"
-               value="esse"
+               value="aut"
                data-component="body" hidden>
     <br>
 <p>this user avatar link</p>
@@ -1422,14 +1422,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "helpus.test/api/users/2" \
+    "http://localhost/api/users/11" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/users/2"
+    "http://localhost/api/users/11"
 );
 
 const headers = {
@@ -1451,11 +1451,11 @@ fetch(url, {
                 <pre>
 
 <code class="language-json">{
-'status' =&gt; 'ok',
-'response' =&gt; [
-'message' =&gt; 'successfuly deleted the account'
-]
-}</code>
+      'success' =&gt; 'true',
+      'response' =&gt; [
+          'message' =&gt; 'successfuly deleted the account'
+      ]
+      }</code>
  </pre>
     </span>
 <span id="execution-results-DELETEapi-users--id-" hidden>
@@ -1511,7 +1511,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-users--id-"
-               value="2"
+               value="11"
                data-component="url" hidden>
     <br>
 <p>id of the user to delete</p>
@@ -1536,14 +1536,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "helpus.test/api/handicaps" \
+    --get "http://localhost/api/handicaps" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/handicaps"
+    "http://localhost/api/handicaps"
 );
 
 const headers = {
@@ -1567,45 +1567,47 @@ fetch(url, {
 <code class="language-json">{
     &quot;data&quot;: [
         {
-            &quot;fullname&quot;: &quot;Dr. Eladio Feil&quot;,
-            &quot;adress&quot;: &quot;6874 Emmett Throughway Suite 366\nMullerborough, DC 81777&quot;,
-            &quot;mobile_number&quot;: &quot;(907) 278-6828&quot;,
-            &quot;year_of_birth&quot;: &quot;1971&quot;,
+            &quot;id&quot;: 16,
+            &quot;fullname&quot;: &quot;Dr. Alexandre Feest V&quot;,
+            &quot;adress&quot;: &quot;8422 Prosacco Circle Apt. 318\nPort Buckport, IA 80576&quot;,
+            &quot;mobile_number&quot;: &quot;1-408-973-9723&quot;,
+            &quot;year_of_birth&quot;: &quot;2021&quot;,
             &quot;ecocash_number&quot;: 110022211,
             &quot;lumicash_number&quot;: 110022211,
-            &quot;bank_name&quot;: &quot;Bartoletti Parkway&quot;,
-            &quot;bank_account_number&quot;: 6086712,
-            &quot;story&quot;: &quot;Voluptatem ut optio et expedita soluta. Est sint omnis sunt explicabo amet sunt ipsa aut. Odio unde voluptate ut sit.&quot;,
-            &quot;needed_money&quot;: 2285787,
+            &quot;bank_name&quot;: &quot;Rolfson Coves&quot;,
+            &quot;bank_account_number&quot;: 6844845,
+            &quot;story&quot;: &quot;Odit temporibus non dolorem provident dolor. Cupiditate omnis libero numquam quidem nesciunt quas modi. Aperiam voluptatem repudiandae enim ea et reiciendis.&quot;,
+            &quot;needed_money&quot;: 3233033,
             &quot;state_of_health&quot;: &quot;bad&quot;,
             &quot;images&quot;: {
-                &quot;main_image&quot;: &quot;https://via.placeholder.com/640x480.png/00aa22?text=velit&quot;,
-                &quot;first_primary_image&quot;: &quot;https://via.placeholder.com/640x480.png/00eedd?text=voluptatem&quot;,
-                &quot;second_primary_image&quot;: &quot;https://via.placeholder.com/640x480.png/002211?text=et&quot;
+                &quot;main_image&quot;: &quot;https://via.placeholder.com/640x480.png/00ccaa?text=molestias&quot;,
+                &quot;first_primary_image&quot;: &quot;https://via.placeholder.com/640x480.png/00ffee?text=cum&quot;,
+                &quot;second_primary_image&quot;: &quot;https://via.placeholder.com/640x480.png/006622?text=ut&quot;
             },
             &quot;donation_status&quot;: &quot;en cours&quot;,
             &quot;user&quot;: 3,
             &quot;family_situation&quot;: &quot;orphelins&quot;
         },
         {
-            &quot;fullname&quot;: &quot;Casandra Rau&quot;,
-            &quot;adress&quot;: &quot;675 Adolphus Stravenue Apt. 881\nKuphaltown, CA 24603&quot;,
-            &quot;mobile_number&quot;: &quot;+1 (540) 236-6852&quot;,
-            &quot;year_of_birth&quot;: &quot;2013&quot;,
+            &quot;id&quot;: 17,
+            &quot;fullname&quot;: &quot;Enola O'Connell&quot;,
+            &quot;adress&quot;: &quot;468 Dicki Trail\nNorth Alanaborough, IN 07703-8148&quot;,
+            &quot;mobile_number&quot;: &quot;+18083970708&quot;,
+            &quot;year_of_birth&quot;: &quot;2001&quot;,
             &quot;ecocash_number&quot;: 110022211,
             &quot;lumicash_number&quot;: 110022211,
-            &quot;bank_name&quot;: &quot;Legros Locks&quot;,
-            &quot;bank_account_number&quot;: 5657964,
-            &quot;story&quot;: &quot;Quia culpa blanditiis et tempora possimus impedit. Consequuntur hic sapiente dicta ducimus illum. Ex repudiandae magnam eius aliquid est sint et.&quot;,
-            &quot;needed_money&quot;: 160578,
+            &quot;bank_name&quot;: &quot;Pablo Run&quot;,
+            &quot;bank_account_number&quot;: 5633246,
+            &quot;story&quot;: &quot;Sunt placeat dolor labore culpa. Fugiat esse ducimus architecto placeat ut nihil. Qui vero placeat rerum.&quot;,
+            &quot;needed_money&quot;: 3549525,
             &quot;state_of_health&quot;: &quot;bad&quot;,
             &quot;images&quot;: {
-                &quot;main_image&quot;: &quot;https://via.placeholder.com/640x480.png/001188?text=consequuntur&quot;,
-                &quot;first_primary_image&quot;: &quot;https://via.placeholder.com/640x480.png/007799?text=nostrum&quot;,
-                &quot;second_primary_image&quot;: &quot;https://via.placeholder.com/640x480.png/00eecc?text=quia&quot;
+                &quot;main_image&quot;: &quot;https://via.placeholder.com/640x480.png/00cc77?text=ullam&quot;,
+                &quot;first_primary_image&quot;: &quot;https://via.placeholder.com/640x480.png/00bb99?text=amet&quot;,
+                &quot;second_primary_image&quot;: &quot;https://via.placeholder.com/640x480.png/00eebb?text=architecto&quot;
             },
             &quot;donation_status&quot;: &quot;en cours&quot;,
-            &quot;user&quot;: 9,
+            &quot;user&quot;: 10,
             &quot;family_situation&quot;: &quot;orphelins&quot;
         }
     ]
@@ -1675,34 +1677,35 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "helpus.test/api/handicaps" \
+    "http://localhost/api/handicaps" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"fullname\": \"perspiciatis\",
-    \"adress\": \"perspiciatis\",
-    \"mobile_number\": \"eum\",
-    \"year_of_birth\": 9,
-    \"ecocash_number\": 5,
-    \"lumitel_number\": 12,
-    \"bank_name\": \"quo\",
-    \"bank_account_number\": \"autem\",
-    \"story\": \"perspiciatis\",
-    \"needed_money\": 18,
-    \"state_of_health\": \"qui\",
-    \"main_image\": \"quam\",
-    \"first_primary_image\": \"quasi\",
-    \"second_primary_image\": \"eos\",
-    \"donation_status\": \"rerum\",
-    \"user_id\": 19,
-    \"family_situation\": \"nisi\"
+    \"fullname\": \"aut\",
+    \"adress\": \"voluptas\",
+    \"mobile_number\": \"corrupti\",
+    \"year_of_birth\": 6,
+    \"ecocash_number\": 1,
+    \"lumicash_number\": \"dni\",
+    \"bank_name\": \"porro\",
+    \"bank_account_number\": \"et\",
+    \"story\": \"quia\",
+    \"needed_money\": 10,
+    \"state_of_health\": \"ut\",
+    \"main_image\": \"minus\",
+    \"first_primary_image\": \"aperiam\",
+    \"second_primary_image\": \"ut\",
+    \"user_id\": 8,
+    \"family_situation\": \"dolorem\",
+    \"lumitel_number\": 1,
+    \"donation_status\": \"sed\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/handicaps"
+    "http://localhost/api/handicaps"
 );
 
 const headers = {
@@ -1711,23 +1714,24 @@ const headers = {
 };
 
 let body = {
-    "fullname": "perspiciatis",
-    "adress": "perspiciatis",
-    "mobile_number": "eum",
-    "year_of_birth": 9,
-    "ecocash_number": 5,
-    "lumitel_number": 12,
-    "bank_name": "quo",
-    "bank_account_number": "autem",
-    "story": "perspiciatis",
-    "needed_money": 18,
-    "state_of_health": "qui",
-    "main_image": "quam",
-    "first_primary_image": "quasi",
-    "second_primary_image": "eos",
-    "donation_status": "rerum",
-    "user_id": 19,
-    "family_situation": "nisi"
+    "fullname": "aut",
+    "adress": "voluptas",
+    "mobile_number": "corrupti",
+    "year_of_birth": 6,
+    "ecocash_number": 1,
+    "lumicash_number": "dni",
+    "bank_name": "porro",
+    "bank_account_number": "et",
+    "story": "quia",
+    "needed_money": 10,
+    "state_of_health": "ut",
+    "main_image": "minus",
+    "first_primary_image": "aperiam",
+    "second_primary_image": "ut",
+    "user_id": 8,
+    "family_situation": "dolorem",
+    "lumitel_number": 1,
+    "donation_status": "sed"
 };
 
 fetch(url, {
@@ -1744,7 +1748,7 @@ fetch(url, {
         </blockquote>
                 <pre>
 
-<code class="language-json">{'status' =&gt; 'ok',
+<code class="language-json">{'success' =&gt; 'true',
       'data' =&gt; [
            'message' =&gt; 'handicap created successfuly'
      ]}</code>
@@ -1803,7 +1807,7 @@ fetch(url, {
                 <input type="text"
                name="fullname"
                data-endpoint="POSTapi-handicaps"
-               value="perspiciatis"
+               value="aut"
                data-component="body" hidden>
     <br>
 <p>the fullname of the handicap</p>
@@ -1813,7 +1817,7 @@ fetch(url, {
                 <input type="text"
                name="adress"
                data-endpoint="POSTapi-handicaps"
-               value="perspiciatis"
+               value="voluptas"
                data-component="body" hidden>
     <br>
 <p>the adress of the handicap</p>
@@ -1823,7 +1827,7 @@ fetch(url, {
                 <input type="text"
                name="mobile_number"
                data-endpoint="POSTapi-handicaps"
-               value="eum"
+               value="corrupti"
                data-component="body" hidden>
     <br>
 <p>the mobile number of the handicap or his host</p>
@@ -1833,7 +1837,7 @@ fetch(url, {
                 <input type="number"
                name="year_of_birth"
                data-endpoint="POSTapi-handicaps"
-               value="9"
+               value="6"
                data-component="body" hidden>
     <br>
 <p>the year of birth for the handicap</p>
@@ -1843,27 +1847,27 @@ fetch(url, {
                 <input type="number"
                name="ecocash_number"
                data-endpoint="POSTapi-handicaps"
-               value="5"
+               value="1"
                data-component="body" hidden>
     <br>
 <p>the ecocash number of the handicap</p>
         </p>
                 <p>
-            <b><code>lumitel_number</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
-                <input type="number"
-               name="lumitel_number"
+            <b><code>lumicash_number</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="lumicash_number"
                data-endpoint="POSTapi-handicaps"
-               value="12"
+               value="dni"
                data-component="body" hidden>
     <br>
-<p>the lumicash number of the handicap</p>
+<p>Must be at least 6 characters.</p>
         </p>
                 <p>
             <b><code>bank_name</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
                 <input type="text"
                name="bank_name"
                data-endpoint="POSTapi-handicaps"
-               value="quo"
+               value="porro"
                data-component="body" hidden>
     <br>
 <p>the name of the bank used by the handicap</p>
@@ -1873,7 +1877,7 @@ fetch(url, {
                 <input type="text"
                name="bank_account_number"
                data-endpoint="POSTapi-handicaps"
-               value="autem"
+               value="et"
                data-component="body" hidden>
     <br>
 <p>the number of the bank account used by the handicap</p>
@@ -1883,7 +1887,7 @@ fetch(url, {
                 <input type="text"
                name="story"
                data-endpoint="POSTapi-handicaps"
-               value="perspiciatis"
+               value="quia"
                data-component="body" hidden>
     <br>
 <p>the story of the handicap</p>
@@ -1893,7 +1897,7 @@ fetch(url, {
                 <input type="number"
                name="needed_money"
                data-endpoint="POSTapi-handicaps"
-               value="18"
+               value="10"
                data-component="body" hidden>
     <br>
 <p>the amount of money for the operation</p>
@@ -1903,7 +1907,7 @@ fetch(url, {
                 <input type="text"
                name="state_of_health"
                data-endpoint="POSTapi-handicaps"
-               value="qui"
+               value="ut"
                data-component="body" hidden>
     <br>
 <p>the health of the patient can take those values (simple, bad, worst)</p>
@@ -1913,7 +1917,7 @@ fetch(url, {
                 <input type="text"
                name="main_image"
                data-endpoint="POSTapi-handicaps"
-               value="quam"
+               value="minus"
                data-component="body" hidden>
     <br>
 <p>the most important picture of the handicap</p>
@@ -1923,7 +1927,7 @@ fetch(url, {
                 <input type="text"
                name="first_primary_image"
                data-endpoint="POSTapi-handicaps"
-               value="quasi"
+               value="aperiam"
                data-component="body" hidden>
     <br>
 <p>just another picture of the handicap</p>
@@ -1933,27 +1937,17 @@ fetch(url, {
                 <input type="text"
                name="second_primary_image"
                data-endpoint="POSTapi-handicaps"
-               value="eos"
+               value="ut"
                data-component="body" hidden>
     <br>
 <p>just another picture of the handicap the second one</p>
-        </p>
-                <p>
-            <b><code>donation_status</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-                <input type="text"
-               name="donation_status"
-               data-endpoint="POSTapi-handicaps"
-               value="rerum"
-               data-component="body" hidden>
-    <br>
-<p>just the status of the donation process (not started, in progress, done)</p>
         </p>
                 <p>
             <b><code>user_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
                 <input type="number"
                name="user_id"
                data-endpoint="POSTapi-handicaps"
-               value="19"
+               value="8"
                data-component="body" hidden>
     <br>
 <p>the id of the user who gonna add the handicap</p>
@@ -1963,10 +1957,30 @@ fetch(url, {
                 <input type="text"
                name="family_situation"
                data-endpoint="POSTapi-handicaps"
-               value="nisi"
+               value="dolorem"
                data-component="body" hidden>
     <br>
 <p>the state of his familly situation (orphans or with parents)</p>
+        </p>
+                <p>
+            <b><code>lumitel_number</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="lumitel_number"
+               data-endpoint="POSTapi-handicaps"
+               value="1"
+               data-component="body" hidden>
+    <br>
+<p>the lumicash number of the handicap</p>
+        </p>
+                <p>
+            <b><code>donation_status</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="donation_status"
+               data-endpoint="POSTapi-handicaps"
+               value="sed"
+               data-component="body" hidden>
+    <br>
+<p>just the status of the donation process (not started, in progress, done)</p>
         </p>
         </form>
 
@@ -1984,14 +1998,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "helpus.test/api/handicaps/1" \
+    --get "http://localhost/api/handicaps/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/handicaps/1"
+    "http://localhost/api/handicaps/1"
 );
 
 const headers = {
@@ -2014,24 +2028,25 @@ fetch(url, {
 
 <code class="language-json">{
     &quot;data&quot;: {
-        &quot;fullname&quot;: &quot;Cecil Bayer&quot;,
-        &quot;adress&quot;: &quot;792 Marquardt Freeway Apt. 473\nWest Sigrid, AL 07763&quot;,
-        &quot;mobile_number&quot;: &quot;1-551-549-3241&quot;,
-        &quot;year_of_birth&quot;: &quot;1976&quot;,
+        &quot;id&quot;: 18,
+        &quot;fullname&quot;: &quot;Genevieve Hahn&quot;,
+        &quot;adress&quot;: &quot;283 McDermott Springs Apt. 852\nMcKenziehaven, TX 68216-6351&quot;,
+        &quot;mobile_number&quot;: &quot;+1-747-857-8073&quot;,
+        &quot;year_of_birth&quot;: &quot;2002&quot;,
         &quot;ecocash_number&quot;: 110022211,
         &quot;lumicash_number&quot;: 110022211,
-        &quot;bank_name&quot;: &quot;Pedro Way&quot;,
-        &quot;bank_account_number&quot;: 6993384,
-        &quot;story&quot;: &quot;Corporis qui quia explicabo rerum id fuga vel. Sint quibusdam quo neque.&quot;,
-        &quot;needed_money&quot;: 2787138,
+        &quot;bank_name&quot;: &quot;Gaylord Locks&quot;,
+        &quot;bank_account_number&quot;: 6486774,
+        &quot;story&quot;: &quot;Omnis eveniet harum dicta quasi est assumenda optio. Reiciendis et praesentium ab molestiae. Dolor quos delectus distinctio non ut inventore unde. Rerum consequatur consequuntur quia porro.&quot;,
+        &quot;needed_money&quot;: 3182255,
         &quot;state_of_health&quot;: &quot;bad&quot;,
         &quot;images&quot;: {
-            &quot;main_image&quot;: &quot;https://via.placeholder.com/640x480.png/0066aa?text=ut&quot;,
-            &quot;first_primary_image&quot;: &quot;https://via.placeholder.com/640x480.png/0044dd?text=ut&quot;,
-            &quot;second_primary_image&quot;: &quot;https://via.placeholder.com/640x480.png/008822?text=dolores&quot;
+            &quot;main_image&quot;: &quot;https://via.placeholder.com/640x480.png/0022aa?text=hic&quot;,
+            &quot;first_primary_image&quot;: &quot;https://via.placeholder.com/640x480.png/0000ee?text=accusantium&quot;,
+            &quot;second_primary_image&quot;: &quot;https://via.placeholder.com/640x480.png/002233?text=autem&quot;
         },
         &quot;donation_status&quot;: &quot;en cours&quot;,
-        &quot;user&quot;: 7,
+        &quot;user&quot;: 9,
         &quot;family_situation&quot;: &quot;orphelins&quot;
     }
 }</code>
@@ -2111,34 +2126,35 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "helpus.test/api/handicaps/1" \
+    "http://localhost/api/handicaps/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"fullname\": \"cupiditate\",
-    \"adress\": \"aspernatur\",
-    \"mobile_number\": \"voluptatem\",
-    \"year_of_birth\": 1,
-    \"ecocash_number\": 5,
-    \"lumitel_number\": 8,
-    \"bank_name\": \"provident\",
-    \"bank_account_number\": \"nulla\",
-    \"story\": \"nobis\",
-    \"needed_money\": 6,
-    \"state_of_health\": \"placeat\",
-    \"main_image\": \"qui\",
-    \"first_primary_image\": \"soluta\",
-    \"second_primary_image\": \"rerum\",
-    \"donation_status\": \"et\",
-    \"user_id\": 9,
-    \"family_situation\": \"sapiente\"
+    \"fullname\": \"ut\",
+    \"adress\": \"aut\",
+    \"mobile_number\": \"fuga\",
+    \"year_of_birth\": 5,
+    \"ecocash_number\": 13,
+    \"lumicash_number\": \"mj\",
+    \"bank_name\": \"quod\",
+    \"bank_account_number\": \"quidem\",
+    \"story\": \"cumque\",
+    \"needed_money\": 1,
+    \"state_of_health\": \"accusamus\",
+    \"main_image\": \"aut\",
+    \"first_primary_image\": \"fuga\",
+    \"second_primary_image\": \"veniam\",
+    \"user_id\": 5,
+    \"family_situation\": \"et\",
+    \"lumitel_number\": 3,
+    \"donation_status\": \"rerum\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/handicaps/1"
+    "http://localhost/api/handicaps/1"
 );
 
 const headers = {
@@ -2147,23 +2163,24 @@ const headers = {
 };
 
 let body = {
-    "fullname": "cupiditate",
-    "adress": "aspernatur",
-    "mobile_number": "voluptatem",
-    "year_of_birth": 1,
-    "ecocash_number": 5,
-    "lumitel_number": 8,
-    "bank_name": "provident",
-    "bank_account_number": "nulla",
-    "story": "nobis",
-    "needed_money": 6,
-    "state_of_health": "placeat",
-    "main_image": "qui",
-    "first_primary_image": "soluta",
-    "second_primary_image": "rerum",
-    "donation_status": "et",
-    "user_id": 9,
-    "family_situation": "sapiente"
+    "fullname": "ut",
+    "adress": "aut",
+    "mobile_number": "fuga",
+    "year_of_birth": 5,
+    "ecocash_number": 13,
+    "lumicash_number": "mj",
+    "bank_name": "quod",
+    "bank_account_number": "quidem",
+    "story": "cumque",
+    "needed_money": 1,
+    "state_of_health": "accusamus",
+    "main_image": "aut",
+    "first_primary_image": "fuga",
+    "second_primary_image": "veniam",
+    "user_id": 5,
+    "family_situation": "et",
+    "lumitel_number": 3,
+    "donation_status": "rerum"
 };
 
 fetch(url, {
@@ -2180,7 +2197,7 @@ fetch(url, {
         </blockquote>
                 <pre>
 
-<code class="language-json">{'status' =&gt; 'ok',
+<code class="language-json">{'success' =&gt; 'true',
       'data' =&gt; [
            'message' =&gt; 'successfuly updated the handicap data'
      ]}</code>
@@ -2254,7 +2271,7 @@ fetch(url, {
                 <input type="text"
                name="fullname"
                data-endpoint="PUTapi-handicaps--id-"
-               value="cupiditate"
+               value="ut"
                data-component="body" hidden>
     <br>
 <p>the fullname of the handicap</p>
@@ -2264,7 +2281,7 @@ fetch(url, {
                 <input type="text"
                name="adress"
                data-endpoint="PUTapi-handicaps--id-"
-               value="aspernatur"
+               value="aut"
                data-component="body" hidden>
     <br>
 <p>the adress of the handicap</p>
@@ -2274,7 +2291,7 @@ fetch(url, {
                 <input type="text"
                name="mobile_number"
                data-endpoint="PUTapi-handicaps--id-"
-               value="voluptatem"
+               value="fuga"
                data-component="body" hidden>
     <br>
 <p>the mobile number of the handicap or his host</p>
@@ -2284,7 +2301,7 @@ fetch(url, {
                 <input type="number"
                name="year_of_birth"
                data-endpoint="PUTapi-handicaps--id-"
-               value="1"
+               value="5"
                data-component="body" hidden>
     <br>
 <p>the year of birth for the handicap</p>
@@ -2294,27 +2311,27 @@ fetch(url, {
                 <input type="number"
                name="ecocash_number"
                data-endpoint="PUTapi-handicaps--id-"
-               value="5"
+               value="13"
                data-component="body" hidden>
     <br>
 <p>the ecocash number of the handicap</p>
         </p>
                 <p>
-            <b><code>lumitel_number</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
-                <input type="number"
-               name="lumitel_number"
+            <b><code>lumicash_number</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="lumicash_number"
                data-endpoint="PUTapi-handicaps--id-"
-               value="8"
+               value="mj"
                data-component="body" hidden>
     <br>
-<p>the lumicash number of the handicap</p>
+<p>Must be at least 6 characters.</p>
         </p>
                 <p>
             <b><code>bank_name</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
                 <input type="text"
                name="bank_name"
                data-endpoint="PUTapi-handicaps--id-"
-               value="provident"
+               value="quod"
                data-component="body" hidden>
     <br>
 <p>the name of the bank used by the handicap</p>
@@ -2324,7 +2341,7 @@ fetch(url, {
                 <input type="text"
                name="bank_account_number"
                data-endpoint="PUTapi-handicaps--id-"
-               value="nulla"
+               value="quidem"
                data-component="body" hidden>
     <br>
 <p>the number of the bank account used by the handicap</p>
@@ -2334,7 +2351,7 @@ fetch(url, {
                 <input type="text"
                name="story"
                data-endpoint="PUTapi-handicaps--id-"
-               value="nobis"
+               value="cumque"
                data-component="body" hidden>
     <br>
 <p>the story of the handicap</p>
@@ -2344,7 +2361,7 @@ fetch(url, {
                 <input type="number"
                name="needed_money"
                data-endpoint="PUTapi-handicaps--id-"
-               value="6"
+               value="1"
                data-component="body" hidden>
     <br>
 <p>the amount of money for the operation</p>
@@ -2354,7 +2371,7 @@ fetch(url, {
                 <input type="text"
                name="state_of_health"
                data-endpoint="PUTapi-handicaps--id-"
-               value="placeat"
+               value="accusamus"
                data-component="body" hidden>
     <br>
 <p>the health of the patient can take those values (simple, bad, worst)</p>
@@ -2364,7 +2381,7 @@ fetch(url, {
                 <input type="text"
                name="main_image"
                data-endpoint="PUTapi-handicaps--id-"
-               value="qui"
+               value="aut"
                data-component="body" hidden>
     <br>
 <p>the most important picture of the handicap</p>
@@ -2374,7 +2391,7 @@ fetch(url, {
                 <input type="text"
                name="first_primary_image"
                data-endpoint="PUTapi-handicaps--id-"
-               value="soluta"
+               value="fuga"
                data-component="body" hidden>
     <br>
 <p>just another picture of the handicap</p>
@@ -2384,27 +2401,17 @@ fetch(url, {
                 <input type="text"
                name="second_primary_image"
                data-endpoint="PUTapi-handicaps--id-"
-               value="rerum"
+               value="veniam"
                data-component="body" hidden>
     <br>
 <p>just another picture of the handicap the second one</p>
-        </p>
-                <p>
-            <b><code>donation_status</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-                <input type="text"
-               name="donation_status"
-               data-endpoint="PUTapi-handicaps--id-"
-               value="et"
-               data-component="body" hidden>
-    <br>
-<p>just the status of the donation process (not started, in progress, done)</p>
         </p>
                 <p>
             <b><code>user_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
                 <input type="number"
                name="user_id"
                data-endpoint="PUTapi-handicaps--id-"
-               value="9"
+               value="5"
                data-component="body" hidden>
     <br>
 <p>the id of the user who gonna add the handicap</p>
@@ -2414,10 +2421,30 @@ fetch(url, {
                 <input type="text"
                name="family_situation"
                data-endpoint="PUTapi-handicaps--id-"
-               value="sapiente"
+               value="et"
                data-component="body" hidden>
     <br>
 <p>the state of his familly situation (orphans or with parents)</p>
+        </p>
+                <p>
+            <b><code>lumitel_number</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="lumitel_number"
+               data-endpoint="PUTapi-handicaps--id-"
+               value="3"
+               data-component="body" hidden>
+    <br>
+<p>the lumicash number of the handicap</p>
+        </p>
+                <p>
+            <b><code>donation_status</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="donation_status"
+               data-endpoint="PUTapi-handicaps--id-"
+               value="rerum"
+               data-component="body" hidden>
+    <br>
+<p>just the status of the donation process (not started, in progress, done)</p>
         </p>
         </form>
 
@@ -2435,14 +2462,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "helpus.test/api/handicaps/1" \
+    "http://localhost/api/handicaps/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "helpus.test/api/handicaps/1"
+    "http://localhost/api/handicaps/1"
 );
 
 const headers = {
@@ -2463,7 +2490,7 @@ fetch(url, {
         </blockquote>
                 <pre>
 
-<code class="language-json">{'status' =&gt; 'ok',
+<code class="language-json">{'success' =&gt; 'true',
       'data' =&gt; [
            'message' =&gt; 'successfuly deleted the handicap data'
      ]}</code>
