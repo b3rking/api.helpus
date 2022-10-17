@@ -35,7 +35,9 @@ class RoleController extends Controller
         return Response([
             'success' => 'true',
             'data' => RoleResource::collection(Role::orderBy('created_at', 'desc')->paginate(3))]
-        , 200);
+        , 200, [
+            'Accept' => 'application/json'
+        ]);
     }
 
     /**
