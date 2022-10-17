@@ -18,20 +18,17 @@ class AuthController extends Controller
             'username' => 'required',
             'password' => 'required|min:4'
         ]);
-        
+
         $credentials = $request->only(['username', 'password']);
 
         if (Auth::attempt($credentials)) {
             // $this->success($user, 'user loged in successfully', 200);
             $user = User::where('username', $credentials['username'])->first();
-            $token = $user->createToken('Token')->plainTextToken;
+            $token = $user->createToken($user->username.' token')->plainTextToken;
             return response([
-                'user' => User
-                            ::where('username', $credentials['username'])
-                            ->get([
-                                'fullname', 'number', 'adress'
-                            ])->first(),
-                'token' => $token]);
+                'user' => $user,
+                'token' => $token,
+                'auth' => Auth::user()]);
         } else {
             // $this->success(['error' => 'not recognized!'], 'not authorized', 401);
             return response(['message' => 'failure!'], 401);
@@ -39,9 +36,8 @@ class AuthController extends Controller
     }
 
     public function logout(Request $request) {
-
-        $user = User::where('username', $request->username)->get()->first();
-
+        $user = User::findOrFail($request->id);
+        $user->tokens()->delete();
         return $user;
     }
 }
