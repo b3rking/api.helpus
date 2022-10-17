@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-// use App\Traits\HttpResponses;
+use App\Traits\HttpResponses;
 
 class AuthController extends Controller
 {
@@ -14,6 +14,11 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
+        $request->validate([
+            'username' => 'required',
+            'password' => 'required|min:4'
+        ]);
+        
         $credentials = $request->only(['username', 'password']);
 
         if (Auth::attempt($credentials)) {
@@ -33,5 +38,10 @@ class AuthController extends Controller
         }
     }
 
-    public function logout(Request $request) {}
+    public function logout(Request $request) {
+
+        $user = User::where('username', $request->username)->get()->first();
+
+        return $user;
+    }
 }
