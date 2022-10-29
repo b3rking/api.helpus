@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Resources\User as UserResource;
+use App\Traits\HttpResponses;
 use Illuminate\Support\Facades\Validator;
 
 /**
@@ -16,6 +17,8 @@ use Illuminate\Support\Facades\Validator;
  */
 class UserController extends Controller
 {
+    use HttpResponses;
+    
     /**
      * 
      * show all users
@@ -31,7 +34,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return Response([
+        return response([
             'success' => 'true',
             'data' => User::all()]
         , 200, ['Content-type' => 'application/json']);
