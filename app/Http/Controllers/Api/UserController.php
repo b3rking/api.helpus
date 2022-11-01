@@ -67,25 +67,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            
-        ]);
-
-        $validated = Validator::make($request->all(), [
-            'fullname' => 'required',
-            'username' => 'required',
-            'password' => 'required',
-        ]);
-
-        if ($validated->fails()) {
-            return ['errors' => $validated->errors()];
-        }
-
-        $data = $request->all();
-
-        $data['avatar'] = $request->file('avatar')->store('avatar');
-
-        User::create($data);
+        
 
         return Response([
             'success' => 'true',
