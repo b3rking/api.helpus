@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Resources\User as UserResource;
 use Illuminate\Support\Facades\Validator;
+use App\Repositories\UserRepository;
 
 /**
  * 
@@ -16,7 +17,12 @@ use Illuminate\Support\Facades\Validator;
  */
 class UserController extends Controller
 {
-    
+    public $userRepository;
+
+    public function __construct(UserRepository $userRepository)
+    {
+        $this->userRepository = $userRepository;
+    }
     /**
      * 
      * show all users
@@ -66,13 +72,17 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $validated = Validator::make($request->all(), [
-            'fullname' => 'required',
-            'username' => 'required',
-            'password' => 'required',
+            'fullname' => ['required', 'unique:users'],
+            'username' => ['required', 'unique:users'],
+            'password' => ['required'],
+            'avatar' => ['image', 'mimes:png,jpg,jpeg']
         ]);
-        
+
         if ($validated->fails()) {
-            return ['errors' => $validated->errors()];
+            return response([
+                "status" => "error",
+                "errors" => $validated->errors()
+            ], 422);
         }
 
         $data = $request->all();
@@ -138,13 +148,17 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         $validated = Validator::make($request->all(), [
-            'fullname' => 'required',
-            'username' => 'required',
-            'password' => 'required'
+            'fullname' => ['required', 'unique:users'],
+            'username' => ['required', 'unique:users'],
+            'password' => ['required'],
+            'avatar' => ['image', 'mimes:png,jpg,jpeg']
         ]);
 
         if ($validated->fails()) {
-            return ['errors' => $validated->errors()];
+            return response([
+                "status" => "error",
+                "errors" => $validated->errors()
+            ], 422);
         }
 
         $user->update($request->all());
