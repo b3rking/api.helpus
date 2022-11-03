@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Resources\User as UserResource;
-use App\Traits\HttpResponses;
 use Illuminate\Support\Facades\Validator;
 
 /**
@@ -17,7 +16,6 @@ use Illuminate\Support\Facades\Validator;
  */
 class UserController extends Controller
 {
-    use HttpResponses;
     
     /**
      * 
@@ -67,13 +65,27 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        $validated = Validator::make($request->all(), [
+            'fullname' => 'required',
+            'username' => 'required',
+            'password' => 'required',
+        ]);
         
+        if ($validated->fails()) {
+            return ['errors' => $validated->errors()];
+        }
+
+        $data = $request->all();
+
+        $data['avatar'] = $request->file('avatar')->store('avatar');
+
+        User::create($data);
 
         return Response([
             'success' => 'true',
             'data' => [
                 'message' => 'successfuly created the account'
-            ]], 201);
+        ]], 201);
     }
 
     /**
