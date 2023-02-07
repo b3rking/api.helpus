@@ -1,6 +1,3 @@
 ## HELPUS -- API
 
-doc of the repository!
-
-- [] hourah!
-- [x] houraha!
+a simple api built with laravel
